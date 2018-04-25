@@ -59,15 +59,32 @@ export default class Col extends React.Component<ColProps, {}> {
 
       delete others[size];
 
-      sizeClassObj = {
-        ...sizeClassObj,
-        [`${prefixCls}-${size}-${sizeProps.span}`]: sizeProps.span !== undefined,
-        [`${prefixCls}-${size}-offset-${sizeProps.offset}`]: sizeProps.offset || sizeProps.offset === 0,
-      };
+      if (size === 'xs') {
+        sizeClassObj = {
+          ...sizeClassObj,
+          [`${prefixCls}-${sizeProps.span}`]: sizeProps.span !== undefined,
+          [`order-${sizeProps.order}`]: sizeProps.order || sizeProps.order === 0,
+          [`offset-${sizeProps.offset}`]: sizeProps.offset || sizeProps.offset === 0,
+          [`push-${sizeProps.push}`]: sizeProps.push || sizeProps.push === 0,
+          [`pull-${sizeProps.pull}`]: sizeProps.pull || sizeProps.pull === 0,
+        };
+      } else {
+        sizeClassObj = {
+          ...sizeClassObj,
+          [`${prefixCls}-${size}-${sizeProps.span}`]: sizeProps.span !== undefined,
+          [`order-${size}-${sizeProps.order}`]: sizeProps.order || sizeProps.order === 0,
+          [`offset-${size}-${sizeProps.offset}`]: sizeProps.offset || sizeProps.offset === 0,
+          [`push-${size}-${sizeProps.push}`]: sizeProps.push || sizeProps.push === 0,
+          [`pull-${size}-${sizeProps.pull}`]: sizeProps.pull || sizeProps.pull === 0,
+        };
+      }
     });
     const classes = classNames({
       [`${prefixCls}-${span}`]: span !== undefined,
+      [`order-${order}`]: order,
       [`offset-${offset}`]: offset,
+      [`push-${push}`]: push,
+      [`pull-${pull}`]: pull,
     }, className, sizeClassObj);
 
     return <div {...others} className={classes}>{children}</div>;
