@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -25,8 +26,9 @@ var __rest = (this && this.__rest) || function (s, e) {
             t[p[i]] = s[p[i]];
     return t;
 };
-import * as React from "react";
-import classNames from "classnames";
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var classnames_1 = require("classnames");
 var Col = /** @class */ (function (_super) {
     __extends(Col, _super);
     function Col() {
@@ -53,7 +55,7 @@ var Col = /** @class */ (function (_super) {
             }
             var _a, _b;
         });
-        var classes = classNames((_b = {},
+        var classes = classnames_1.default((_b = {},
             _b[prefixCls + "-" + span] = span !== undefined,
             _b["order-" + order] = order,
             _b["offset-" + offset] = offset,
@@ -65,4 +67,4 @@ var Col = /** @class */ (function (_super) {
     };
     return Col;
 }(React.Component));
-export default Col;
+exports.default = Col;
