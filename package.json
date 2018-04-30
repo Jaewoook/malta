@@ -1,22 +1,15 @@
 {
   "name": "malta",
   "version": "0.0.1",
-  "description": "Desc",
-  "author": "salesboostio",
-  "license": "MIT",
-  "repository": "teora/malta",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
-  "jsnext:main": "dist/index.es.js",
   "scripts": {
     "test": "CI=1 react-scripts test --env=jsdom",
     "test:watch": "react-scripts test --env=jsdom",
     "build": "rollup -c rollup/dev.js",
     "build:prod": "rollup -c rollup/prod.js",
     "start": "rollup -c -w",
-    "prepare": "npm run build",
-    "predeploy": "cd example && npm install && npm run build",
-    "deploy": "gh-pages -d example/build"
+    "prepare": "npm run build"
   },
   "dependencies": {
     "classnames": "^2.2.5",
@@ -34,7 +27,6 @@
     "babel-preset-env": "^1.6.0",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
-    "gh-pages": "^1.1.0",
     "postcss-clean": "^1.1.0",
     "rollup": "^0.54.0",
     "rollup-plugin-babili": "^3.1.1",
