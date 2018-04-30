@@ -32,7 +32,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
-var classnames_1 = require("classnames");
+var classNames = require("classnames");
 var styled_components_1 = require("styled-components");
 var colors_1 = require("../_variables/colors");
 var Layout = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  background: ", ";\n  padding: 0;\n  margin: 0;\n  display: block;\n"], ["\n  background: ", ";\n  padding: 0;\n  margin: 0;\n  display: block;\n"])), colors_1.$primaryBackground);
@@ -43,10 +43,10 @@ var App = /** @class */ (function (_super) {
     }
     App.prototype.render = function () {
         var _a = this.props, _b = _a.prefixCls, prefixCls = _b === void 0 ? "sb-app" : _b, className = _a.className, props = __rest(_a, ["prefixCls", "className"]);
-        var classString = classnames_1.default(prefixCls, className);
+        var classString = classNames(prefixCls, className);
         return (React.createElement(Layout, __assign({ className: classString }, props)));
     };
     return App;
 }(React.Component));
-exports.default = App;
+exports.App = App;
 var templateObject_1;

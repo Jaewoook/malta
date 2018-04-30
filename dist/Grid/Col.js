@@ -28,7 +28,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
-var classnames_1 = require("classnames");
+var classNames = require("classnames");
 var Col = /** @class */ (function (_super) {
     __extends(Col, _super);
     function Col() {
@@ -55,7 +55,7 @@ var Col = /** @class */ (function (_super) {
             }
             var _a, _b;
         });
-        var classes = classnames_1.default((_b = {},
+        var classes = classNames((_b = {},
             _b[prefixCls + "-" + span] = span !== undefined,
             _b["order-" + order] = order,
             _b["offset-" + offset] = offset,
@@ -67,4 +67,4 @@ var Col = /** @class */ (function (_super) {
     };
     return Col;
 }(React.Component));
-exports.default = Col;
+exports.Col = Col;
