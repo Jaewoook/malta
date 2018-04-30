@@ -4,8 +4,6 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "test": "CI=1 react-scripts test --env=jsdom",
-    "test:watch": "react-scripts test --env=jsdom",
     "build": "rm -rf dist && tsc",
     "start": "npm run build",
     "lint": "tslint -c tslint.json -p tsconfig.json"
