@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -25,6 +26,7 @@ var __rest = (this && this.__rest) || function (s, e) {
             t[p[i]] = s[p[i]];
     return t;
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 // matchMedia polyfill for
 // https://github.com/WickyNilliams/enquire.js/issues/82
 var enquire;
@@ -42,9 +44,9 @@ if (typeof window !== "undefined") {
     window.matchMedia = window.matchMedia || matchMediaPolyfill;
     enquire = require("enquire.js");
 }
-import * as React from "react";
-import { Children, cloneElement } from "react";
-import classNames from "classnames";
+var React = require("react");
+var react_1 = require("react");
+var classnames_1 = require("classnames");
 var responsiveArray = ["xxl", "xl", "lg", "md", "sm", "xs"];
 var responsiveMap = {
     xs: "(max-width: 575px)",
@@ -112,19 +114,19 @@ var Row = /** @class */ (function (_super) {
     Row.prototype.render = function () {
         var _a = this.props, type = _a.type, justify = _a.justify, align = _a.align, className = _a.className, style = _a.style, children = _a.children, _b = _a.prefixCls, prefixCls = _b === void 0 ? "row" : _b, others = __rest(_a, ["type", "justify", "align", "className", "style", "children", "prefixCls"]);
         var gutter = this.getGutter();
-        var classes = classNames((_c = {},
+        var classes = classnames_1.default((_c = {},
             _c[prefixCls] = !type,
             _c[prefixCls + "-" + type] = type,
             _c[prefixCls + "-" + type + "-" + justify] = type && justify,
             _c[prefixCls + "-" + type + "-" + align] = type && align,
             _c), className);
         var rowStyle = gutter > 0 ? __assign({ marginLeft: gutter / -2, marginRight: gutter / -2 }, style) : style;
-        var cols = Children.map(children, function (col) {
+        var cols = react_1.Children.map(children, function (col) {
             if (!col) {
                 return null;
             }
             if (col.props && gutter > 0) {
-                return cloneElement(col, {
+                return react_1.cloneElement(col, {
                     style: __assign({ paddingLeft: gutter / 2, paddingRight: gutter / 2 }, col.props.style),
                 });
             }
@@ -140,4 +142,4 @@ var Row = /** @class */ (function (_super) {
     };
     return Row;
 }(React.Component));
-export default Row;
+exports.default = Row;
