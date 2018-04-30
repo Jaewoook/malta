@@ -19,7 +19,6 @@ if (typeof window !== "undefined") {
 import * as React from "react";
 import { Children, cloneElement } from "react";
 import classNames from "classnames";
-import PropTypes from "prop-types";
 
 export type Breakpoint = "xxl" | "xl" | "lg" | "md" | "sm" | "xs";
 export type BreakpointMap = {
@@ -57,16 +56,6 @@ const responsiveMap: BreakpointMap = {
 export default class Row extends React.Component<RowProps, RowState> {
   static defaultProps = {
     gutter: 0,
-  };
-
-  static propTypes = {
-    type: PropTypes.string,
-    align: PropTypes.string,
-    justify: PropTypes.string,
-    className: PropTypes.string,
-    children: PropTypes.node,
-    gutter: PropTypes.oneOfType([PropTypes.object, PropTypes.number]),
-    prefixCls: PropTypes.string,
   };
 
   state: RowState = {
