@@ -5,7 +5,7 @@ import {
   $primaryBackground
 } from "../_variables/colors";
 
-interface IProps {
+export interface IProps {
   prefixCls?: string;
   className?: string;
 }

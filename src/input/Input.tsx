@@ -2,7 +2,7 @@ import * as React from "react";
 
 import styled from "styled-components";
 
-interface IProps {
+export interface IProps {
   btnType?: string;
   type?: string;
   noUseError?: boolean;

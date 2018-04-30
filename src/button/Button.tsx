@@ -11,7 +11,7 @@ import {
   $fontWeightBold
 } from "../_variables/fonts";
 
-interface IProps {
+export interface IProps {
   prefixCls?: string;
   className?: string;
   btnType?: string;
