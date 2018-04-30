@@ -9,8 +9,7 @@ export interface IProps {
     disabled?: boolean;
     onClick?: any;
 }
-declare class Button extends React.Component<IProps, any> {
+export declare class Button extends React.Component<IProps, any> {
     constructor(props: IProps);
     render(): JSX.Element;
 }
-export default Button;

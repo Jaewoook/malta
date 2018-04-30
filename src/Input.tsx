@@ -52,7 +52,7 @@ const Error = styled.span`
   padding: 0 2%;
 `;
 
-class Input extends React.Component<IProps, any> {
+export class Input extends React.Component<IProps, any> {
   constructor(props: IProps) {
     super(props);
   }
@@ -87,5 +87,3 @@ class Input extends React.Component<IProps, any> {
     );
   }
 }
-
-export default Input;

@@ -56,5 +56,5 @@ var Input = /** @class */ (function (_super) {
     };
     return Input;
 }(React.Component));
-export default Input;
+export { Input };
 var templateObject_1, templateObject_2, templateObject_3, templateObject_4;

@@ -32,19 +32,20 @@ var __rest = (this && this.__rest) || function (s, e) {
 import * as React from "react";
 import classNames from "classnames";
 import styled from "styled-components";
-import { $primaryBackground } from "../_variables/colors";
-var Layout = styled.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  background: ", ";\n  padding: 0;\n  margin: 0;\n  display: block;\n"], ["\n  background: ", ";\n  padding: 0;\n  margin: 0;\n  display: block;\n"])), $primaryBackground);
-var App = /** @class */ (function (_super) {
-    __extends(App, _super);
-    function App(props) {
+import { $white, $primary, $secondary } from "./_variables/colors";
+import { $fontSizeMd, $fontWeightBold } from "./_variables/fonts";
+var StyledButton = styled.button(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  font-size: ", ";\n  font-weight: ", ";\n  padding: 1rem;\n  cursor: pointer;\n  width: ", ";\n  color: ", ";\n  background: ", ";\n  &:hover {\n    background: ", ";\n    color: ", ";\n  }\n"], ["\n  font-size: ", ";\n  font-weight: ", ";\n  padding: 1rem;\n  cursor: pointer;\n  width: ", ";\n  color: ", ";\n  background: ", ";\n  &:hover {\n    background: ", ";\n    color: ", ";\n  }\n"])), $fontSizeMd, $fontWeightBold, function (props) { return props.width || "100%"; }, function (props) { return props.btnType === "primary" ? $white : $primary; }, function (props) { return props.btnType === "primary" ? $primary : "transparent"; }, function (props) { return props.btnType === "primary" ? $secondary : "transparent"; }, function (props) { return props.btnType === "primary" ? $white : $secondary; });
+var Button = /** @class */ (function (_super) {
+    __extends(Button, _super);
+    function Button(props) {
         return _super.call(this, props) || this;
     }
-    App.prototype.render = function () {
-        var _a = this.props, _b = _a.prefixCls, prefixCls = _b === void 0 ? "" : _b, className = _a.className, props = __rest(_a, ["prefixCls", "className"]);
+    Button.prototype.render = function () {
+        var _a = this.props, _b = _a.prefixCls, prefixCls = _b === void 0 ? "sb-button" : _b, className = _a.className, children = _a.children, props = __rest(_a, ["prefixCls", "className", "children"]);
         var classString = classNames(prefixCls, className);
-        return (React.createElement(Layout, __assign({ className: classString }, props)));
+        return (React.createElement(StyledButton, __assign({ className: classString }, props), children));
     };
-    return App;
+    return Button;
 }(React.Component));
-export default App;
+export { Button };
 var templateObject_1;

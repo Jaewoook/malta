@@ -11,9 +11,8 @@ export interface IProps {
         error?: string;
     };
 }
-declare class Input extends React.Component<IProps, any> {
+export declare class Input extends React.Component<IProps, any> {
     constructor(props: IProps);
     private renderError(touched, error);
     render(): JSX.Element;
 }
-export default Input;

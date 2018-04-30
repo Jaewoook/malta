@@ -5,11 +5,11 @@ import {
   $white,
   $primary,
   $secondary
-} from "../_variables/colors";
+} from "./_variables/colors";
 import {
   $fontSizeMd,
   $fontWeightBold
-} from "../_variables/fonts";
+} from "./_variables/fonts";
 
 export interface IProps {
   prefixCls?: string;
@@ -35,7 +35,7 @@ const StyledButton = styled.button`
   }
 `;
 
-class Button extends React.Component<IProps, any> {
+export class Button extends React.Component<IProps, any> {
   constructor(props: IProps) {
     super(props);
   }
@@ -54,5 +54,3 @@ class Button extends React.Component<IProps, any> {
     );
   }
 }
-
-export default Button;
