@@ -1,3 +1,4 @@
+"use strict";
 var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
     return cooked;
@@ -29,12 +30,13 @@ var __rest = (this && this.__rest) || function (s, e) {
             t[p[i]] = s[p[i]];
     return t;
 };
-import * as React from "react";
-import * as classNames from "classnames";
-import styled from "styled-components";
-import { $white, $primary, $secondary } from "./_variables/colors";
-import { $fontSizeMd, $fontWeightBold } from "./_variables/fonts";
-var StyledButton = styled.button(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  font-size: ", ";\n  font-weight: ", ";\n  padding: 1rem;\n  cursor: pointer;\n  width: ", ";\n  color: ", ";\n  background: ", ";\n  &:hover {\n    background: ", ";\n    color: ", ";\n  }\n"], ["\n  font-size: ", ";\n  font-weight: ", ";\n  padding: 1rem;\n  cursor: pointer;\n  width: ", ";\n  color: ", ";\n  background: ", ";\n  &:hover {\n    background: ", ";\n    color: ", ";\n  }\n"])), $fontSizeMd, $fontWeightBold, function (props) { return props.width || "100%"; }, function (props) { return props.btnType === "primary" ? $white : $primary; }, function (props) { return props.btnType === "primary" ? $primary : "transparent"; }, function (props) { return props.btnType === "primary" ? $secondary : "transparent"; }, function (props) { return props.btnType === "primary" ? $white : $secondary; });
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var classNames = require("classnames");
+var styled_components_1 = require("styled-components");
+var colors_1 = require("./_variables/colors");
+var fonts_1 = require("./_variables/fonts");
+var StyledButton = styled_components_1.default.button(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  font-size: ", ";\n  font-weight: ", ";\n  padding: 1rem;\n  cursor: pointer;\n  width: ", ";\n  color: ", ";\n  background: ", ";\n  &:hover {\n    background: ", ";\n    color: ", ";\n  }\n"], ["\n  font-size: ", ";\n  font-weight: ", ";\n  padding: 1rem;\n  cursor: pointer;\n  width: ", ";\n  color: ", ";\n  background: ", ";\n  &:hover {\n    background: ", ";\n    color: ", ";\n  }\n"])), fonts_1.$fontSizeMd, fonts_1.$fontWeightBold, function (props) { return props.width || "100%"; }, function (props) { return props.btnType === "primary" ? colors_1.$white : colors_1.$primary; }, function (props) { return props.btnType === "primary" ? colors_1.$primary : "transparent"; }, function (props) { return props.btnType === "primary" ? colors_1.$secondary : "transparent"; }, function (props) { return props.btnType === "primary" ? colors_1.$white : colors_1.$secondary; });
 var Button = /** @class */ (function (_super) {
     __extends(Button, _super);
     function Button(props) {
@@ -47,5 +49,5 @@ var Button = /** @class */ (function (_super) {
     };
     return Button;
 }(React.Component));
-export { Button };
+exports.Button = Button;
 var templateObject_1;

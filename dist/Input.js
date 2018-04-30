@@ -1,3 +1,4 @@
+"use strict";
 var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
     if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
     return cooked;
@@ -29,15 +30,16 @@ var __rest = (this && this.__rest) || function (s, e) {
             t[p[i]] = s[p[i]];
     return t;
 };
-import * as React from "react";
-import styled from "styled-components";
-var Wrapper = styled.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  margin: 0.5rem 0;\n"], ["\n  margin: 0.5rem 0;\n"])));
-var ErrorWrapper = styled.div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  height:1.5rem;\n  display:block;\n  position: relative;\n"], ["\n  height:1.5rem;\n  display:block;\n  position: relative;\n"])));
-var StyledInput = styled.input(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2);\n  border: ", ";\n  width: 100%;\n  border-rasius: 0;\n  background: transparent;\n  display: block;\n  padding: 1rem;\n  font-size: 1rem;\n  box-sizing: border-box;\n  &:focus {\n    outline: none;\n  }\n"], ["\n  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2);\n  border: ",
+Object.defineProperty(exports, "__esModule", { value: true });
+var React = require("react");
+var styled_components_1 = require("styled-components");
+var Wrapper = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  margin: 0.5rem 0;\n"], ["\n  margin: 0.5rem 0;\n"])));
+var ErrorWrapper = styled_components_1.default.div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  height:1.5rem;\n  display:block;\n  position: relative;\n"], ["\n  height:1.5rem;\n  display:block;\n  position: relative;\n"])));
+var StyledInput = styled_components_1.default.input(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2);\n  border: ", ";\n  width: 100%;\n  border-rasius: 0;\n  background: transparent;\n  display: block;\n  padding: 1rem;\n  font-size: 1rem;\n  box-sizing: border-box;\n  &:focus {\n    outline: none;\n  }\n"], ["\n  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2);\n  border: ",
     ";\n  width: 100%;\n  border-rasius: 0;\n  background: transparent;\n  display: block;\n  padding: 1rem;\n  font-size: 1rem;\n  box-sizing: border-box;\n  &:focus {\n    outline: none;\n  }\n"])), function (props) {
     return props.error ? "solid 1px #ff244e" : "solid 1px #22409a";
 });
-var Error = styled.span(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  font-size: 12px;\n  color: #ff244e;\n  position: absolute;\n  display: inline-block;\n  padding: 0 2%;\n"], ["\n  font-size: 12px;\n  color: #ff244e;\n  position: absolute;\n  display: inline-block;\n  padding: 0 2%;\n"])));
+var Error = styled_components_1.default.span(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  font-size: 12px;\n  color: #ff244e;\n  position: absolute;\n  display: inline-block;\n  padding: 0 2%;\n"], ["\n  font-size: 12px;\n  color: #ff244e;\n  position: absolute;\n  display: inline-block;\n  padding: 0 2%;\n"])));
 var Input = /** @class */ (function (_super) {
     __extends(Input, _super);
     function Input(props) {
@@ -56,5 +58,5 @@ var Input = /** @class */ (function (_super) {
     };
     return Input;
 }(React.Component));
-export { Input };
+exports.Input = Input;
 var templateObject_1, templateObject_2, templateObject_3, templateObject_4;

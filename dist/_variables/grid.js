@@ -1,8 +1,10 @@
+"use strict";
 // Grid breakpoints
 //
 // Define the minimum dimensions at which your layout will change,
 // adapting to different screen sizes, for use in media queries.
-export var $gridBreakpoints = {
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.$gridBreakpoints = {
     xs: 0,
     sm: "576px",
     md: "768px",
@@ -12,7 +14,7 @@ export var $gridBreakpoints = {
 // Grid containers
 //
 // Define the maximum width of `.container` for different screen sizes.
-export var $containerMaxWidths = {
+exports.$containerMaxWidths = {
     sm: "540px",
     md: "720px",
     lg: "960px",
