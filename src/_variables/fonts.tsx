@@ -8,7 +8,7 @@
 // $fontFamilyBase = $font-family-sans-serif;
 // stylelint-enable value-keyword-case
 
-export const $fontSizeUnit = 'rem';
+export const $fontSizeUnit = "rem";
 export const $fontSizeBase = 1; // Assumes the browser default, typically `16px`
 export const $fontSizeLg = ($fontSizeBase * 1.25) + $fontSizeUnit; // 20px
 export const $fontSizeMd = $fontSizeBase + $fontSizeUnit; // 16px

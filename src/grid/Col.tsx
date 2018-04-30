@@ -1,6 +1,6 @@
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+import * as React from "react";
+import PropTypes from "prop-types";
+import classNames from "classnames";
 
 const stringOrNumber = PropTypes.oneOfType([PropTypes.string, PropTypes.number]);
 const objectOrNumber = PropTypes.oneOfType([PropTypes.object, PropTypes.number]);
@@ -47,19 +47,19 @@ export default class Col extends React.Component<ColProps, {}> {
 
   render() {
     const props: any = this.props;
-    const { span, order, offset, push, pull, className, children, prefixCls = 'col', ...others } = props;
+    const { span, order, offset, push, pull, className, children, prefixCls = "col", ...others } = props;
     let sizeClassObj = {};
-    ['xs', 'sm', 'md', 'lg', 'xl', 'xxl'].forEach(size => {
+    ["xs", "sm", "md", "lg", "xl", "xxl"].forEach(size => {
       let sizeProps: ColSize = {};
-      if (typeof props[size] === 'number') {
+      if (typeof props[size] === "number") {
         sizeProps.span = props[size];
-      } else if (typeof props[size] === 'object') {
+      } else if (typeof props[size] === "object") {
         sizeProps = props[size] || {};
       }
 
       delete others[size];
 
-      if (size === 'xs') {
+      if (size === "xs") {
         sizeClassObj = {
           ...sizeClassObj,
           [`${prefixCls}-${sizeProps.span}`]: sizeProps.span !== undefined,

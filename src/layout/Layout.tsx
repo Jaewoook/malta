@@ -1,9 +1,9 @@
-import * as React from 'react';
-import classNames from 'classnames';
-import styled from 'styled-components';
+import * as React from "react";
+import classNames from "classnames";
+import styled from "styled-components";
 import {
   $primaryBackground
-} from '../_variables/colors';
+} from "../_variables/colors";
 
 interface IProps {
   prefixCls?: string;
@@ -24,7 +24,7 @@ class App extends React.Component<IProps, any> {
 
   public render() {
     const {
-      prefixCls = '',
+      prefixCls = "",
       className,
       ...props
     } = this.props;

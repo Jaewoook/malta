@@ -1,6 +1,6 @@
-import * as React from 'react';
+import * as React from "react";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
 interface IProps {
   btnType?: string;
@@ -31,7 +31,7 @@ const ErrorWrapper = styled.div`
 const StyledInput = styled.input`
   box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   border: ${(props: IStyledInput) =>
-    props.error ? 'solid 1px #ff244e' : 'solid 1px #22409a'};
+    props.error ? "solid 1px #ff244e" : "solid 1px #22409a"};
   width: 100%;
   border-rasius: 0;
   background: transparent;

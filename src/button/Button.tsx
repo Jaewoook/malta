@@ -1,15 +1,15 @@
-import * as React from 'react';
-import classNames from 'classnames';
-import styled from 'styled-components';
+import * as React from "react";
+import classNames from "classnames";
+import styled from "styled-components";
 import {
   $white,
   $primary,
   $secondary
-} from '../_variables/colors';
+} from "../_variables/colors";
 import {
   $fontSizeMd,
   $fontWeightBold
-} from '../_variables/fonts';
+} from "../_variables/fonts";
 
 interface IProps {
   prefixCls?: string;
@@ -26,12 +26,12 @@ const StyledButton = styled.button`
   font-weight: ${$fontWeightBold};
   padding: 1rem;
   cursor: pointer;
-  width: ${(props: IProps) => props.width || '100%' };
-  color: ${(props: IProps) => props.btnType === 'primary' ? $white : $primary};
-  background: ${(props: IProps) => props.btnType === 'primary' ? $primary : 'transparent'};
+  width: ${(props: IProps) => props.width || "100%" };
+  color: ${(props: IProps) => props.btnType === "primary" ? $white : $primary};
+  background: ${(props: IProps) => props.btnType === "primary" ? $primary : "transparent"};
   &:hover {
-    background: ${(props: IProps) => props.btnType === 'primary' ? $secondary : 'transparent'};
-    color: ${(props: IProps) => props.btnType === 'primary' ? $white : $secondary};
+    background: ${(props: IProps) => props.btnType === "primary" ? $secondary : "transparent"};
+    color: ${(props: IProps) => props.btnType === "primary" ? $white : $secondary};
   }
 `;
 
@@ -42,7 +42,7 @@ class Button extends React.Component<IProps, any> {
 
   public render() {
     const {
-      prefixCls = 'sb-button',
+      prefixCls = "sb-button",
       className,
       children, ...props
     } = this.props;

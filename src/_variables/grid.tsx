@@ -5,10 +5,10 @@
 
 export const $gridBreakpoints = {
     xs: 0,
-    sm: '576px',
-    md: '768px',
-    lg: '992px',
-    xl: '1200px'
+    sm: "576px",
+    md: "768px",
+    lg: "992px",
+    xl: "1200px"
 };
 
 // Grid containers
@@ -16,8 +16,8 @@ export const $gridBreakpoints = {
 // Define the maximum width of `.container` for different screen sizes.
 
 export const $containerMaxWidths = {
-    sm: '540px',
-    md: '720px',
-    lg: '960px',
-    xl: '1140px'
-}
+    sm: "540px",
+    md: "720px",
+    lg: "960px",
+    xl: "1140px"
+};

@@ -1,7 +1,7 @@
 // matchMedia polyfill for
 // https://github.com/WickyNilliams/enquire.js/issues/82
 let enquire: any;
-if (typeof window !== 'undefined') {
+if (typeof window !== "undefined") {
   const matchMediaPolyfill = (mediaQuery: string): MediaQueryList => {
     return {
       media: mediaQuery,
@@ -13,15 +13,15 @@ if (typeof window !== 'undefined') {
     };
   };
   window.matchMedia = window.matchMedia || matchMediaPolyfill;
-  enquire = require('enquire.js');
+  enquire = require("enquire.js");
 }
 
-import * as React from 'react';
-import { Children, cloneElement } from 'react';
-import classNames from 'classnames';
-import PropTypes from 'prop-types';
+import * as React from "react";
+import { Children, cloneElement } from "react";
+import classNames from "classnames";
+import PropTypes from "prop-types";
 
-export type Breakpoint = 'xxl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs';
+export type Breakpoint = "xxl" | "xl" | "lg" | "md" | "sm" | "xs";
 export type BreakpointMap = {
   xs?: string;
   sm?: string;
@@ -33,9 +33,9 @@ export type BreakpointMap = {
 
 export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
   gutter?: number | BreakpointMap;
-  type?: 'flex';
-  align?: 'top' | 'middle' | 'bottom';
-  justify?: 'start' | 'end' | 'center' | 'space-around' | 'space-between';
+  type?: "flex";
+  align?: "top" | "middle" | "bottom";
+  justify?: "start" | "end" | "center" | "space-around" | "space-between";
   prefixCls?: string;
 }
 
@@ -43,15 +43,15 @@ export interface RowState {
   screens: BreakpointMap;
 }
 
-const responsiveArray: Breakpoint[] = ['xxl', 'xl', 'lg', 'md', 'sm', 'xs'];
+const responsiveArray: Breakpoint[] = ["xxl", "xl", "lg", "md", "sm", "xs"];
 
 const responsiveMap: BreakpointMap = {
-  xs: '(max-width: 575px)',
-  sm: '(min-width: 576px)',
-  md: '(min-width: 768px)',
-  lg: '(min-width: 992px)',
-  xl: '(min-width: 1200px)',
-  xxl: '(min-width: 1600px)',
+  xs: "(max-width: 575px)",
+  sm: "(min-width: 576px)",
+  md: "(min-width: 768px)",
+  lg: "(min-width: 992px)",
+  xl: "(min-width: 1200px)",
+  xxl: "(min-width: 1600px)",
 };
 
 export default class Row extends React.Component<RowProps, RowState> {
@@ -77,7 +77,7 @@ export default class Row extends React.Component<RowProps, RowState> {
     Object.keys(responsiveMap)
       .map((screen: Breakpoint) => enquire.register(responsiveMap[screen], {
           match: () => {
-            if (typeof this.props.gutter !== 'object') {
+            if (typeof this.props.gutter !== "object") {
               return;
             }
             this.setState((prevState) => ({
@@ -88,7 +88,7 @@ export default class Row extends React.Component<RowProps, RowState> {
             }));
           },
           unmatch: () => {
-            if (typeof this.props.gutter !== 'object') {
+            if (typeof this.props.gutter !== "object") {
               return;
             }
             this.setState((prevState) => ({
@@ -109,7 +109,7 @@ export default class Row extends React.Component<RowProps, RowState> {
   }
   getGutter() {
     const { gutter } = this.props;
-    if (typeof gutter === 'object') {
+    if (typeof gutter === "object") {
       for (let i = 0; i <= responsiveArray.length; i++) {
         const breakpoint: Breakpoint = responsiveArray[i];
         if (this.state.screens[breakpoint] && gutter[breakpoint] !== undefined) {
@@ -122,7 +122,7 @@ export default class Row extends React.Component<RowProps, RowState> {
   render() {
     const {
       type, justify, align, className, style, children,
-      prefixCls = 'row', ...others,
+      prefixCls = "row", ...others,
     } = this.props;
     const gutter = this.getGutter();
     const classes = classNames({
