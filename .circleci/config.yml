@@ -1,0 +1,29 @@
+version: 2
+jobs:
+  build:
+    working_directory: ~/app
+    docker:
+      - image: node:9
+    steps:
+      - checkout
+      - restore_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+      - run:
+          name: Install npm packages
+          command: make install
+      - save_cache:
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - node_modules
+      - run:
+          name: Build typescript
+          command: make build
+      - run:
+          name: Check tslint
+          command: make lint
+      # - run:
+      #     name: Run unit tests
+      #     command: make test
+      # - run:
+      #     name: Report coverage
+      #     command: make report-coverage
