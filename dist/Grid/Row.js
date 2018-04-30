@@ -46,7 +46,7 @@ if (typeof window !== "undefined") {
 }
 var React = require("react");
 var react_1 = require("react");
-var classnames_1 = require("classnames");
+var classNames = require("classnames");
 var responsiveArray = ["xxl", "xl", "lg", "md", "sm", "xs"];
 var responsiveMap = {
     xs: "(max-width: 575px)",
@@ -114,7 +114,7 @@ var Row = /** @class */ (function (_super) {
     Row.prototype.render = function () {
         var _a = this.props, type = _a.type, justify = _a.justify, align = _a.align, className = _a.className, style = _a.style, children = _a.children, _b = _a.prefixCls, prefixCls = _b === void 0 ? "row" : _b, others = __rest(_a, ["type", "justify", "align", "className", "style", "children", "prefixCls"]);
         var gutter = this.getGutter();
-        var classes = classnames_1.default((_c = {},
+        var classes = classNames((_c = {},
             _c[prefixCls] = !type,
             _c[prefixCls + "-" + type] = type,
             _c[prefixCls + "-" + type + "-" + justify] = type && justify,
@@ -142,4 +142,4 @@ var Row = /** @class */ (function (_super) {
     };
     return Row;
 }(React.Component));
-exports.default = Row;
+exports.Row = Row;

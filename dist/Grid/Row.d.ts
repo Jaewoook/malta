@@ -19,7 +19,7 @@ export interface RowProps extends React.HTMLAttributes<HTMLDivElement> {
 export interface RowState {
     screens: BreakpointMap;
 }
-export default class Row extends React.Component<RowProps, RowState> {
+export declare class Row extends React.Component<RowProps, RowState> {
     static defaultProps: {
         gutter: number;
     };

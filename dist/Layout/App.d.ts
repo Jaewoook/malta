@@ -4,8 +4,7 @@ export interface IProps {
     prefixCls?: string;
     className?: string;
 }
-declare class App extends React.Component<IProps, any> {
+export declare class App extends React.Component<IProps, any> {
     constructor(props: IProps);
     render(): JSX.Element;
 }
-export default App;

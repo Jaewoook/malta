@@ -21,6 +21,6 @@ export interface ColProps extends React.HTMLAttributes<HTMLDivElement> {
     xxl?: number | ColSize;
     prefixCls?: string;
 }
-export default class Col extends React.Component<ColProps, {}> {
+export declare class Col extends React.Component<ColProps, {}> {
     render(): JSX.Element;
 }
