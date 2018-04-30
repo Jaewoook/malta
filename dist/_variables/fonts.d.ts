@@ -1,0 +1,17 @@
+export declare const $fontSizeUnit = "rem";
+export declare const $fontSizeBase = 1;
+export declare const $fontSizeLg: string;
+export declare const $fontSizeMd: string;
+export declare const $fontSizeSm: string;
+export declare const $fontSizeXs: string;
+export declare const $fontWeightLight = 300;
+export declare const $fontWeightNormal = 400;
+export declare const $fontWeightBold = 700;
+export declare const $fontWeightBase = 400;
+export declare const $lineHeightBase = 1.5;
+export declare const $h1FontSize: string;
+export declare const $h2FontSize: string;
+export declare const $h3FontSize: string;
+export declare const $h4FontSize: string;
+export declare const $h5FontSize: string;
+export declare const $h6FontSize: string;
