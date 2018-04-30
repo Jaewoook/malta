@@ -30,7 +30,7 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import * as React from "react";
-import classNames from "classnames";
+import * as classNames from "classnames";
 import styled from "styled-components";
 import { $white, $primary, $secondary } from "./_variables/colors";
 import { $fontSizeMd, $fontWeightBold } from "./_variables/fonts";
