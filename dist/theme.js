@@ -2,11 +2,17 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var theme = {
     colors: {
+        white: "#FFFFFF",
         blue: {
             royal: "#454EDF",
             deep: "#161FBA",
         },
-        black: "#161B48",
+        black: {
+            dark: "rgba(22, 27, 72, 0.9)",
+            standard: "rgba(22, 27, 72, 0.8)",
+            sub: "rgba(22, 27, 72, 0.6)",
+            hint: "rgba(22, 27, 72, 0.4)",
+        }
     },
     fontSizes: {
         h1: 40,

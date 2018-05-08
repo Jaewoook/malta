@@ -1,10 +1,16 @@
 declare const theme: {
     colors: {
+        white: string;
         blue: {
             royal: string;
             deep: string;
         };
-        black: string;
+        black: {
+            dark: string;
+            standard: string;
+            sub: string;
+            hint: string;
+        };
     };
     fontSizes: {
         h1: number;
