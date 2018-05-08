@@ -29,7 +29,6 @@
     "@types/react-dom": "^16.0.2",
     "@types/react-test-renderer": "^16.0.1",
     "@types/storybook__addon-actions": "^3.0.3",
-    "@types/storybook__addon-storyshots": "^3.4.0",
     "@types/storybook__react": "^3.0.7",
     "awesome-typescript-loader": "^4.0.0",
     "babel-core": "^6.26.3",
