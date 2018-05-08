@@ -4,7 +4,7 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 
 const { Button, Welcome } = require("@storybook/react/demo");
-import { App } from "../src";
+import { App } from "../src/App";
 
 storiesOf("Welcome", module).add("to Storybook", () => <Welcome/>);
 

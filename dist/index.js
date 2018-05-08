@@ -8,5 +8,5 @@ exports.Button = Button_1.Button;
 var Grid_1 = require("./Grid");
 exports.Row = Grid_1.Row;
 exports.Col = Grid_1.Col;
-var Layout_1 = require("./Layout");
-exports.App = Layout_1.App;
+var App_1 = require("./App");
+exports.App = App_1.App;
