@@ -13,5 +13,11 @@ declare const theme: {
         h4: number;
         h5: number;
     };
+    fontWeights: {
+        medium: number;
+        regular: number;
+        demiLight: number;
+        light: number;
+    };
 };
 export default theme;

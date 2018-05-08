@@ -13,6 +13,12 @@ const theme = {
     h4: 16,
     h5: 14,
   },
+  fontWeights: {
+    medium: 500,
+    regular: 400,
+    demiLight: 300,
+    light: 200,
+  },
 };
 
 export default theme;
