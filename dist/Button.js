@@ -24,35 +24,33 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var styled_components_1 = require("styled-components");
-var _a = require("styled-system"), color = _a.color, fontSize = _a.fontSize, fontWeight = _a.fontWeight, lineHeight = _a.lineHeight, space = _a.space, textAlign = _a.textAlign, width = _a.width;
-var StyledText = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"], ["\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), color, fontSize, fontWeight, lineHeight, space, textAlign, width);
-var Text = /** @class */ (function (_super) {
-    __extends(Text, _super);
-    function Text() {
+var _a = require("styled-system"), borderRadius = _a.borderRadius, color = _a.color, fontSize = _a.fontSize, height = _a.height, space = _a.space, width = _a.width;
+var StyledButton = styled_components_1.default.button(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  cursor: pointer;\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"], ["\n  cursor: pointer;\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), borderRadius, color, fontSize, space, width, height);
+var Button = /** @class */ (function (_super) {
+    __extends(Button, _super);
+    function Button() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    Text.prototype.render = function () {
-        return (React.createElement(StyledText, __assign({}, this.props), this.props.children));
+    Button.prototype.render = function () {
+        return (React.createElement(StyledButton, __assign({}, this.props)));
     };
-    Text.defaultProps = {
+    Button.defaultProps = {
+        // borderRadius
+        borderRadius: "30px",
         // color
-        color: "black.dark",
-        bg: "transparent",
+        color: "white",
+        bg: "blue.royal",
         // fontSize
         fontSize: "h3",
-        // fontWeight
-        fontWeight: "regular",
-        // lineHeight
-        lineHeight: "1.44",
+        // height
+        height: "60px",
         // space
         m: 0,
-        p: 0,
-        // textAlign
-        align: "left",
+        mb: 2,
         // width
         width: 1,
     };
-    return Text;
+    return Button;
 }(React.Component));
-exports.Text = Text;
+exports.Button = Button;
 var templateObject_1;
