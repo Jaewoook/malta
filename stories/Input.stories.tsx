@@ -1,8 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { storiesOf } from "@storybook/react";
-import { App } from "../src/App";
-import { Input } from "../src/Input";
+import { App, Input } from "../src";
 
 const Container = styled.div`
   width: 440px;
