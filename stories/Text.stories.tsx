@@ -2,8 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { withInfo } from "@storybook/addon-info";
 import { storiesOf } from "@storybook/react";
-import { App } from "../src/App";
-import { Text } from "../src/Text";
+import { App, Text } from "../src";
 
 storiesOf("Components/Text", module)
   .add("default", () => {

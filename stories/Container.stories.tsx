@@ -1,7 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import { App } from "../src/App";
-import { Container } from "../src/Container";
+import { App, Container } from "../src";
 
 storiesOf("Components/Container", module)
   .add("default", () => {

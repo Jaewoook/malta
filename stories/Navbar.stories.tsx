@@ -1,7 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import { App } from "../src/App";
-import { Navbar } from "../src/Navbar";
+import { App, Navbar } from "../src";
 
 storiesOf("Components/Navbar", module)
   .add("default", () => <App><Navbar /></App>)

@@ -1,8 +1,7 @@
 import * as React from "react";
 import { withInfo } from "@storybook/addon-info";
 import { storiesOf } from "@storybook/react";
-import { App } from "../src/App";
-import { Button } from "../src/Button";
+import { App, Button } from "../src";
 
 storiesOf("Components/Button", module)
   .add("default",
