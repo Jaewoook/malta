@@ -49,14 +49,21 @@ export interface IProps {
 
 export class Text extends React.Component<IProps, any> {
   public static defaultProps: IProps = {
+    // color
     color: "black.dark",
     bg: "transparent",
+    // fontSize
     fontSize: "h3",
+    // fontWeight
     fontWeight: "regular",
+    // lineHeight
     lineHeight: "1.44",
+    // space
     m: 0,
     p: 0,
+    // textAlign
     align: "left",
+    // width
     width: 1,
   };
 
