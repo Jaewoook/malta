@@ -9,7 +9,7 @@
     "lint": "tslint -c tslint.json -p tsconfig.json",
     "test": "jest --coverage",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook --output-dir docs"
   },
   "dependencies": {
     "classnames": "^2.2.5",
