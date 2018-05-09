@@ -44,7 +44,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run build-storybook"
+      "pre-commit": "npm run build-storybook && npm run build"
     }
   },
   "jest": {
