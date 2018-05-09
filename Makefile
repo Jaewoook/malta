@@ -12,8 +12,8 @@ build:
 lint:
 	npm run lint
 
-# test:
-# 	npm run test
+test:
+	npm run test
 
-# report-coverage:
-# 	npm run coverage
+report-coverage:
+	npm run coverage

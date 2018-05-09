@@ -8,19 +8,20 @@
     "start": "npm run build",
     "lint": "tslint -c tslint.json -p tsconfig.json",
     "test": "jest --coverage",
+    "coverage": "codecov --token=a6047fcd-bff1-49b8-9d1d-adb91e6f9859",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook --output-dir docs"
   },
   "dependencies": {
-    "classnames": "^2.2.5",
-    "enquire.js": "^2.1.6",
     "react": "^16.0.0",
     "react-dom": "16.0.0",
+    "react-select": "^2.0.0-beta.2",
     "styled-components": "^3.2.5",
     "styled-system": "^2.2.5"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.3",
+    "@storybook/addon-info": "^3.4.3",
     "@storybook/addon-links": "^3.4.3",
     "@storybook/addon-storyshots": "^3.4.3",
     "@storybook/addons": "^3.4.3",
@@ -30,10 +31,12 @@
     "@types/react-dom": "^16.0.2",
     "@types/react-test-renderer": "^16.0.1",
     "@types/storybook__addon-actions": "^3.0.3",
+    "@types/storybook__addon-info": "^3.2.3",
     "@types/storybook__react": "^3.0.7",
     "awesome-typescript-loader": "^4.0.0",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
+    "codecov": "^3.0.2",
     "husky": "^1.0.0-rc.3",
     "jest": "^22.4.3",
     "react-test-renderer": "^16.3.2",
@@ -43,7 +46,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run build-storybook"
+      "pre-commit": "npm run build-storybook && npm run build"
     }
   },
   "jest": {
