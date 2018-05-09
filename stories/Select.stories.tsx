@@ -22,7 +22,7 @@ const manyItems = [
   { id: "6", label: "6번 아이템", value: "6" },
 ];
 
-storiesOf("Select", module)
+storiesOf("Components/Select", module)
   .add("default", () => {
     return (
       <App>

@@ -8,7 +8,7 @@ const Container = styled.div`
   width: 440px;
 `;
 
-storiesOf("Input", module)
+storiesOf("Components/Input", module)
   .add("default", () => {
     return (
       <App>

@@ -5,7 +5,7 @@ import { storiesOf } from "@storybook/react";
 import { App } from "../src/App";
 import { Text } from "../src/Text";
 
-storiesOf("Text", module)
+storiesOf("Components/Text", module)
   .add("default", () => {
     return (
       <App>
