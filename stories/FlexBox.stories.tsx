@@ -1,8 +1,7 @@
 import * as React from "react";
 import { withInfo } from "@storybook/addon-info";
 import { storiesOf } from "@storybook/react";
-import { Flex } from "../src/Flex";
-import { Box } from "../src/Box";
+import { Box, Flex } from "../src";
 
 storiesOf("Components/Grid (Flex, Box)", module)
   .add("default",

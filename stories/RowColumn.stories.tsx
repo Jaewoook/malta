@@ -1,8 +1,7 @@
 import * as React from "react";
 import { withInfo } from "@storybook/addon-info";
 import { storiesOf } from "@storybook/react";
-import { Row } from "../src/Row";
-import { Column } from "../src/Column";
+import { Column, Row } from "../src";
 
 storiesOf("Components/Grid (Row, Column)", module)
   .add("default",

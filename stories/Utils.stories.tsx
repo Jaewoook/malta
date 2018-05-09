@@ -1,6 +1,6 @@
 import * as React from "react";
 import { storiesOf } from "@storybook/react";
-import { App } from "../src/App";
+import { App } from "../src";
 
 storiesOf("Utils", module)
   .add("colors", () => {
