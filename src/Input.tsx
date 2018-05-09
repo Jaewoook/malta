@@ -1,22 +1,22 @@
 import * as React from "react";
 import styled from "styled-components";
-const { theme } = require("styled-system");
+import { colors, fontSizes, fontWeights, space } from "./theme";
 
 const Wrapper = styled.div`
   width: 100%;
 `;
 
 const Label = styled.label`
-  color: ${theme("colors.black.dark")};
+  color: ${colors.black.dark};
   display: inline-block;
-  font-size: ${theme("fontSizes.h4")}px;
-  font-weight: ${theme("fontWeights.demiLight")};
-  margin-bottom: 16px;
+  font-size: ${fontSizes.h4}px;
+  font-weight: ${fontWeights.demiLight};
+  margin-bottom: ${space[2]}px;
 `;
 
 const ErrorLabel = Label.extend`
-  color: #f51a1a;
-  margin-top: 10px;
+  color: ${colors.red};
+  margin-top: ${space[1]};
 `;
 
 interface IStyledInputProps {
@@ -24,23 +24,23 @@ interface IStyledInputProps {
 }
 
 const StyledInput = styled.input`
-  background-color: #ffffff;
-  border: solid 1px ${(props: IStyledInputProps) => props.error ? "#f51a1a" : "rgba(22, 27, 72, 0.2)"};
+  background-color: ${colors.white};
+  border: solid 1px ${(props: IStyledInputProps) => props.error ? "#f51a1a" : colors.black._20};
   border-radius: 2px;
-  box-shadow: 0 2px 6px 2px rgba(22, 27, 72, 0.03);
-  color: ${theme("colors.black.dark")};
-  font-size: ${theme("fontSizes.h3")}px;
-  font-weight: ${theme("fontWeights.demiLight")};
+  box-shadow: 0 2px 6px 2px ${colors.black._3};
+  color: ${colors.black.dark};
+  font-size: ${fontSizes.h3}px;
+  font-weight: ${fontWeights.demiLight};
   height: 60px;
-  padding: 0 20px;
+  padding: 0 ${space[2]}px;
   width: 100%;
 
   &:disabled {
-    background-color: rgba(22, 27, 72, 0.05);
+    background-color: ${colors.black._5};
   }
 
   &:focus {
-    border: solid 1px ${(props: IStyledInputProps) => props.error ? "#f51a1a" : "#454edf"}
+    border: solid 1px ${(props: IStyledInputProps) => props.error ? colors.red : colors.blue.royal}
     outline: none;
   }
 `;

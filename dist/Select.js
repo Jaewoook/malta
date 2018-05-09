@@ -25,16 +25,16 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var react_select_1 = require("react-select");
 var styled_components_1 = require("styled-components");
-var theme = require("styled-system").theme;
+var theme_1 = require("./theme");
 var Wrapper = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  width: 100%;\n"], ["\n  width: 100%;\n"])));
-var Label = styled_components_1.default.label(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  color: ", ";\n  display: inline-block;\n  font-size: ", "px;\n  font-weight: ", ";\n  margin-bottom: 16px;\n"], ["\n  color: ", ";\n  display: inline-block;\n  font-size: ", "px;\n  font-weight: ", ";\n  margin-bottom: 16px;\n"])), theme("colors.black.dark"), theme("fontSizes.h4"), theme("fontWeights.demiLight"));
+var Label = styled_components_1.default.label(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  color: ", ";\n  display: inline-block;\n  font-size: ", "px;\n  font-weight: ", ";\n  margin-bottom: ", "px;\n"], ["\n  color: ", ";\n  display: inline-block;\n  font-size: ", "px;\n  font-weight: ", ";\n  margin-bottom: ", "px;\n"])), theme_1.colors.black.dark, theme_1.fontSizes.h4, theme_1.fontWeights.demiLight, theme_1.space[1]);
 var styles = {
     control: function (styles, props) {
         var isDisabled = props.isDisabled;
-        return __assign({}, styles, { height: "60px", borderWidth: 1, borderRadius: 2, borderColor: "rgba(22, 27, 72, 0.2)", boxShadow: "0 2px 6px 2px rgba(22, 27, 72, 0.03)", backgroundColor: isDisabled ? "rgba(22, 27, 72, 0.05)" : "#ffffff" });
+        return __assign({}, styles, { backgroundColor: isDisabled ? theme_1.colors.black._5 : theme_1.colors.white, borderWidth: 1, borderRadius: 2, borderColor: theme_1.colors.black._20, boxShadow: "0 2px 6px 2px " + theme_1.colors.black._3, height: "60px" });
     },
     valueContainer: function (styles) {
-        return __assign({}, styles, { padding: "0 20px", fontSize: "18px", color: "#162348", fontWeight: 400, opacity: 0.9 });
+        return __assign({}, styles, { color: theme_1.colors.black.dark, fontSize: theme_1.fontSizes.h3, fontWeight: theme_1.fontWeights.regular, padding: "0 " + theme_1.space[2] + "px" });
     },
     indicatorSeparator: function (styles) {
         return {
@@ -42,15 +42,15 @@ var styles = {
         };
     },
     placeholder: function (styles) {
-        return __assign({}, styles, { fontSize: "18px", color: "#162348", fontWeight: 300, opacity: 0.4 });
+        return __assign({}, styles, { color: theme_1.colors.black.hint, fontSize: theme_1.fontSizes.h3, fontWeight: theme_1.fontWeights.regular });
     },
     menu: function (styles) {
         return __assign({}, styles, { borderRadius: 2 });
     },
     option: function (styles, props) {
         var isFocused = props.isFocused;
-        return __assign({}, styles, { height: "60px", display: "flex", alignItems: "center", padding: "0 20px", fontSize: "18px", color: "#162348", fontWeight: 400, opacity: 0.9, backgroundColor: isFocused ? "rgb(22, 27, 72, 0.05)" : "#ffffff", ":active": {
-                backgroundColor: "rgb(22, 27, 72, 0.05)",
+        return __assign({}, styles, { alignItems: "center", backgroundColor: isFocused ? theme_1.colors.black._5 : theme_1.colors.white, color: theme_1.colors.black.dark, display: "flex", fontSize: theme_1.fontSizes.h3, fontWeight: theme_1.fontWeights.regular, height: "60px", padding: "0 " + theme_1.space[2] + "px", ":active": {
+                backgroundColor: theme_1.colors.black._5,
             } });
     },
 };

@@ -1,15 +1,15 @@
 import * as React from "react";
 import styled from "styled-components";
-const { theme } = require("styled-system");
+import { colors, fontSizes, fontWeights, space } from "./theme";
 
 const Wrapper = styled.div`
   align-items: center;
-  background-color: ${theme("colors.white")};
+  background-color: ${colors.white};
   display: flex;
   height: 70px;
   left: 0;
-  padding-left: 40px;
-  padding-right: 40px;
+  padding-left: ${space[3]}px;
+  padding-right: ${space[3]}px;
   position: absolute;
   right: 0;
   top: 0;
@@ -26,16 +26,16 @@ const Right = styled.div`
 `;
 
 const Title = styled.div`
-  font-size: ${theme("fontSizes.h5")}px;
-  font-weight: ${theme("fontWeights.regular")};
-  color: ${theme("colors.black.dark")};
+  color: ${colors.black.dark};
+  font-size: ${fontSizes.h5}px;
+  font-weight: ${fontWeights.regular};
 `;
 
 const Description = styled.div`
-  font-size: ${theme("fontSizes.h5")}px;
-  font-weight: ${theme("fontWeights.demiLight")};
-  color: ${theme("colors.black.standard")};
-  margin-top: 4px;
+  font-size: ${fontSizes.h5}px;
+  font-weight: ${fontWeights.demiLight};
+  color: ${colors.black.standard};
+  margin-top: ${space[1]}px;
 `;
 
 export interface IProps {

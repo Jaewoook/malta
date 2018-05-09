@@ -1,18 +1,18 @@
 import * as React from "react";
 import ReactSelect from "react-select";
 import styled from "styled-components";
-const { theme } = require("styled-system");
+import { colors, fontSizes, fontWeights, space } from "./theme";
 
 const Wrapper = styled.div`
   width: 100%;
 `;
 
 const Label = styled.label`
-  color: ${theme("colors.black.dark")};
+  color: ${colors.black.dark};
   display: inline-block;
-  font-size: ${theme("fontSizes.h4")}px;
-  font-weight: ${theme("fontWeights.demiLight")};
-  margin-bottom: 16px;
+  font-size: ${fontSizes.h4}px;
+  font-weight: ${fontWeights.demiLight};
+  margin-bottom: ${space[1]}px;
 `;
 
 export interface IItem {
@@ -33,22 +33,21 @@ const styles = {
     const { isDisabled } = props;
     return {
       ...styles,
-      height: "60px",
+      backgroundColor: isDisabled ? colors.black._5 : colors.white,
       borderWidth: 1,
       borderRadius: 2,
-      borderColor: "rgba(22, 27, 72, 0.2)",
-      boxShadow: "0 2px 6px 2px rgba(22, 27, 72, 0.03)",
-      backgroundColor: isDisabled ? "rgba(22, 27, 72, 0.05)" : "#ffffff",
+      borderColor: colors.black._20,
+      boxShadow: `0 2px 6px 2px ${colors.black._3}`,
+      height: "60px",
     };
   },
   valueContainer: (styles: any) => {
     return {
       ...styles,
-      padding: "0 20px",
-      fontSize: "18px",
-      color: "#162348",
-      fontWeight: 400,
-      opacity: 0.9,
+      color: colors.black.dark,
+      fontSize: fontSizes.h3,
+      fontWeight: fontWeights.regular,
+      padding: `0 ${space[2]}px`,
     };
   },
   indicatorSeparator: (styles: any) => {
@@ -59,10 +58,9 @@ const styles = {
   placeholder: (styles: any) => {
     return {
       ...styles,
-      fontSize: "18px",
-      color: "#162348",
-      fontWeight: 300,
-      opacity: 0.4,
+      color: colors.black.hint,
+      fontSize: fontSizes.h3,
+      fontWeight: fontWeights.regular,
     };
   },
   menu: (styles: any) => {
@@ -75,17 +73,16 @@ const styles = {
     const { isFocused } = props;
     return {
       ...styles,
-      height: "60px",
-      display: "flex",
       alignItems: "center",
-      padding: "0 20px",
-      fontSize: "18px",
-      color: "#162348",
-      fontWeight: 400,
-      opacity: 0.9,
-      backgroundColor: isFocused ? "rgb(22, 27, 72, 0.05)" : "#ffffff",
+      backgroundColor: isFocused ? colors.black._5 : colors.white,
+      color: colors.black.dark,
+      display: "flex",
+      fontSize: fontSizes.h3,
+      fontWeight: fontWeights.regular,
+      height: "60px",
+      padding: `0 ${space[2]}px`,
       ":active": {
-        backgroundColor: "rgb(22, 27, 72, 0.05)",
+        backgroundColor: colors.black._5,
       },
     };
   },

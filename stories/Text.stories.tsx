@@ -95,7 +95,18 @@ storiesOf("Text", module)
       return (
         <App>
           <div>
-            <Text>m, mt, mr, mb, ml, p, pt, pr, pb, pl 사용방법이 추가될 예정입니다.</Text>
+            <Text m={0}>이것은 margin(m)이 0단계인 텍스트입니다. (기본값)</Text>
+            <Text m={1}>이것은 margin(m)이 1단계인 텍스트입니다. m은 0~5단계까지 가능합니다.</Text>
+            <Text mt={1}>이것은 margin-top(mt)이 1단계인 텍스트입니다. mt는 0~5단계까지 가능합니다.</Text>
+            <Text mr={1}>이것은 margin-right(mr)이 1단계인 텍스트입니다. mr는 0~5단계까지 가능합니다.</Text>
+            <Text mb={1}>이것은 margin-bottom(mb)이 1단계인 텍스트입니다. mb는 0~5단계까지 가능합니다.</Text>
+            <Text ml={1}>이것은 margin-left(ml)이 1단계인 텍스트입니다. ml는 0~5단계까지 가능합니다.</Text>
+            <Text p={0}>이것은 padding(p)이 0단계인 텍스트입니다. (기본값)</Text>
+            <Text p={1}>이것은 padding(p)이 1단계인 텍스트입니다. p은 0~5단계까지 가능합니다.</Text>
+            <Text pt={1}>이것은 padding-top(pt)이 1단계인 텍스트입니다. pt는 0~5단계까지 가능합니다.</Text>
+            <Text pr={1}>이것은 padding-right(pr)이 1단계인 텍스트입니다. pr는 0~5단계까지 가능합니다.</Text>
+            <Text pb={1}>이것은 padding-bottom(pb)이 1단계인 텍스트입니다. pb는 0~5단계까지 가능합니다.</Text>
+            <Text pl={1}>이것은 padding-left(pl)이 1단계인 텍스트입니다. pl는 0~5단계까지 가능합니다.</Text>
           </div>
         </App>
       );
