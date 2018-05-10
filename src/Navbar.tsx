@@ -7,9 +7,11 @@ const Wrapper = styled.div`
   background-color: ${colors.white};
   display: flex;
   height: 70px;
+  left: 0;
   padding-left: ${space[3]}px;
   padding-right: ${space[3]}px;
-  position: sticky;
+  position: fixed;
+  right: 0;
 `;
 
 const Logo = styled.img`

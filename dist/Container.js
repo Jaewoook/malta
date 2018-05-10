@@ -10,4 +10,4 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var grid_styled_1 = require("grid-styled");
-exports.Container = function (props) { return (React.createElement(grid_styled_1.Box, __assign({}, props, { mx: "auto", style: { maxWidth: "1190px" } }))); };
+exports.Container = function (props) { return (React.createElement(grid_styled_1.Box, __assign({}, props, { mx: "auto", style: { minHeight: "100%", maxWidth: "1190px" } }))); };

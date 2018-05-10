@@ -5,6 +5,6 @@ export const Container = (props: any) => (
   <Box
     {...props}
     mx="auto"
-    style={{ maxWidth: "1190px" }}
+    style={{ minHeight: "100%", maxWidth: "1190px" }}
   />
 );
