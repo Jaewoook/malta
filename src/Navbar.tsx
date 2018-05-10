@@ -39,16 +39,17 @@ const Description = styled.div`
 `;
 
 export interface IProps {
+  logoUrl: string;
   title?: string;
   description?: string;
 }
 
 export class Navbar extends React.Component<IProps, any> {
   public render() {
-    const { title, description } = this.props;
+    const { logoUrl, title, description } = this.props;
     return (
       <Wrapper>
-        <Logo src={require("./images/img-gnb-logo.png")}/>
+        <Logo src={logoUrl}/>
         <Right>
           <Title>{title}</Title>
           <Description>{description}</Description>

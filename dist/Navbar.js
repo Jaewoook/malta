@@ -28,9 +28,9 @@ var Navbar = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Navbar.prototype.render = function () {
-        var _a = this.props, title = _a.title, description = _a.description;
+        var _a = this.props, logoUrl = _a.logoUrl, title = _a.title, description = _a.description;
         return (React.createElement(Wrapper, null,
-            React.createElement(Logo, { src: require("./images/img-gnb-logo.png") }),
+            React.createElement(Logo, { src: logoUrl }),
             React.createElement(Right, null,
                 React.createElement(Title, null, title),
                 React.createElement(Description, null, description))));
