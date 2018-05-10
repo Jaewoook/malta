@@ -5,13 +5,9 @@ const { theme } = require("styled-system");
 const Wrapper = styled.div`
   align-items: center;
   background-color: ${theme("colors.black.dark")};
-  bottom: 0;
   display: flex;
   height: 50px;
-  left: 0;
   padding-left: 40px;
-  position: absolute;
-  right: 0;
 `;
 
 const Copyright = styled.div`

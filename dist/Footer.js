@@ -17,7 +17,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var styled_components_1 = require("styled-components");
 var theme = require("styled-system").theme;
-var Wrapper = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  align-items: center;\n  background-color: ", ";\n  bottom: 0;\n  display: flex;\n  height: 50px;\n  left: 0;\n  padding-left: 40px;\n  position: absolute;\n  right: 0;\n"], ["\n  align-items: center;\n  background-color: ", ";\n  bottom: 0;\n  display: flex;\n  height: 50px;\n  left: 0;\n  padding-left: 40px;\n  position: absolute;\n  right: 0;\n"])), theme("colors.black.dark"));
+var Wrapper = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  align-items: center;\n  background-color: ", ";\n  display: flex;\n  height: 50px;\n  padding-left: 40px;\n"], ["\n  align-items: center;\n  background-color: ", ";\n  display: flex;\n  height: 50px;\n  padding-left: 40px;\n"])), theme("colors.black.dark"));
 var Copyright = styled_components_1.default.div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  color: ", ";\n  font-size: ", "px;\n  font-weight: ", ";\n"], ["\n  color: ", ";\n  font-size: ", "px;\n  font-weight: ", ";\n"])), theme("colors.white"), theme("fontSizes.h5"), theme("fontWeights.demiLight"));
 var Footer = /** @class */ (function (_super) {
     __extends(Footer, _super);
