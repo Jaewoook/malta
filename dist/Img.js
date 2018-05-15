@@ -24,38 +24,26 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var styled_components_1 = require("styled-components");
-var _a = require("styled-system"), borderColor = _a.borderColor, borderRadius = _a.borderRadius, borders = _a.borders, color = _a.color, fontSize = _a.fontSize, height = _a.height, space = _a.space, width = _a.width;
-var StyledButton = styled_components_1.default.button(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  align-items: center;\n  cursor: pointer;\n  display: flex;\n  justify-content: center;\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"], ["\n  align-items: center;\n  cursor: pointer;\n  display: flex;\n  justify-content: center;\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), borderColor, borderRadius, borders, color, fontSize, space, width, height);
-var Button = /** @class */ (function (_super) {
-    __extends(Button, _super);
-    function Button() {
+var _a = require("styled-system"), height = _a.height, space = _a.space, width = _a.width;
+var StyledImg = styled_components_1.default.img(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  ", "\n  ", "\n  ", "\n"], ["\n  ", "\n  ", "\n  ", "\n"])), height, space, width);
+var Img = /** @class */ (function (_super) {
+    __extends(Img, _super);
+    function Img() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    Button.prototype.render = function () {
-        return (React.createElement(StyledButton, __assign({}, this.props)));
+    Img.prototype.render = function () {
+        return (React.createElement(StyledImg, __assign({}, this.props)));
     };
-    Button.defaultProps = {
-        onClick: function () { },
-        // borderColor
-        borderColor: "transparent",
-        // borderRadius
-        borderRadius: "30px",
-        // borders
-        border: "none",
-        // color
-        color: "white",
-        bg: "blue.royal",
-        // fontSize
-        fontSize: "h3",
+    Img.defaultProps = {
+        src: "",
         // height
-        height: "60px",
+        height: "auto",
         // space
         m: 0,
-        mb: 2,
         // width
         width: 1,
     };
-    return Button;
+    return Img;
 }(React.Component));
-exports.Button = Button;
+exports.Img = Img;
 var templateObject_1;

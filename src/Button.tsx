@@ -1,7 +1,9 @@
 import * as React from "react";
 import styled from "styled-components";
 const {
+  borderColor,
   borderRadius,
+  borders,
   color,
   fontSize,
   height,
@@ -10,8 +12,13 @@ const {
 } = require("styled-system");
 
 const StyledButton = styled.button`
+  align-items: center;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  ${borderColor}
   ${borderRadius}
+  ${borders}
   ${color}
   ${fontSize}
   ${space}
@@ -21,8 +28,16 @@ const StyledButton = styled.button`
 
 export interface IProps {
   onClick?: React.MouseEventHandler<HTMLElement>;
+  // borderColor
+  borderColor?: string;
   // borderRadius
   borderRadius?: number | string;
+  // borders
+  border?: string;
+  borderTop?: string;
+  borderRight?: string;
+  borderBottom?: string;
+  borderLeft?: string;
   // color
   color?: string;
   bg?: string;
@@ -43,8 +58,12 @@ export interface IProps {
 export class Button extends React.Component<IProps, any> {
   public static defaultProps: IProps = {
     onClick: () => {},
+    // borderColor
+    borderColor: "transparent",
     // borderRadius
     borderRadius: "30px",
+    // borders
+    border: "none",
     // color
     color: "white",
     bg: "blue.royal",

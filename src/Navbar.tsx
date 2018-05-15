@@ -1,5 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
+import { Img } from "./Img";
 import {
   colors,
   containerWidth,
@@ -27,11 +28,6 @@ const Container = styled.div`
   max-width: ${containerWidth};
   padding-left: ${space[3]}px;
   padding-right: ${space[3]}px;
-`;
-
-const Logo = styled.img`
-  height: 34px;
-  width: 125px;
 `;
 
 const Right = styled.div`
@@ -64,7 +60,7 @@ export class Navbar extends React.Component<IProps, any> {
     return (
       <Wrapper>
         <Container>
-          <Logo src={logoUrl}/>
+          <Img src={logoUrl} width="125px" height="34px" />
           <Right>
             <Title>{title}</Title>
             <Description>{description}</Description>
