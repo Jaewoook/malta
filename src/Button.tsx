@@ -12,7 +12,10 @@ const {
 } = require("styled-system");
 
 const StyledButton = styled.button`
+  align-items: center;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
   ${borderColor}
   ${borderRadius}
   ${borders}
