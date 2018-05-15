@@ -1,3 +1,7 @@
+export const containerWidth = "1190px";
+
+export const navBarHeight = "70px";
+
 export const colors = {
   white: "#FFFFFF",
   blue: {

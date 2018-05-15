@@ -1,17 +1,32 @@
 import * as React from "react";
 import styled from "styled-components";
-import { colors, fontSizes, fontWeights, space } from "./theme";
+import {
+  colors,
+  containerWidth,
+  fontSizes,
+  fontWeights,
+  navBarHeight,
+  space
+} from "./theme";
+
 
 const Wrapper = styled.div`
-  align-items: center;
   background-color: ${colors.white};
-  display: flex;
-  height: 70px;
+  height: ${navBarHeight};
   left: 0;
-  padding-left: ${space[3]}px;
-  padding-right: ${space[3]}px;
   position: fixed;
   right: 0;
+`;
+
+const Container = styled.div`
+  align-items: center;
+  display: flex;
+  height: ${navBarHeight};
+  margin-left: auto;
+  margin-right: auto;
+  max-width: ${containerWidth};
+  padding-left: ${space[3]}px;
+  padding-right: ${space[3]}px;
 `;
 
 const Logo = styled.img`
@@ -48,11 +63,13 @@ export class Navbar extends React.Component<IProps, any> {
     const { logoUrl, title, description } = this.props;
     return (
       <Wrapper>
-        <Logo src={logoUrl}/>
-        <Right>
-          <Title>{title}</Title>
-          <Description>{description}</Description>
-        </Right>
+        <Container>
+          <Logo src={logoUrl}/>
+          <Right>
+            <Title>{title}</Title>
+            <Description>{description}</Description>
+          </Right>
+        </Container>
       </Wrapper>
     );
   }
