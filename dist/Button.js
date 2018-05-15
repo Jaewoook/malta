@@ -24,8 +24,8 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var styled_components_1 = require("styled-components");
-var _a = require("styled-system"), borderRadius = _a.borderRadius, color = _a.color, fontSize = _a.fontSize, height = _a.height, space = _a.space, width = _a.width;
-var StyledButton = styled_components_1.default.button(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  cursor: pointer;\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"], ["\n  cursor: pointer;\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), borderRadius, color, fontSize, space, width, height);
+var _a = require("styled-system"), borderColor = _a.borderColor, borderRadius = _a.borderRadius, borders = _a.borders, color = _a.color, fontSize = _a.fontSize, height = _a.height, space = _a.space, width = _a.width;
+var StyledButton = styled_components_1.default.button(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  cursor: pointer;\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"], ["\n  cursor: pointer;\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), borderColor, borderRadius, borders, color, fontSize, space, width, height);
 var Button = /** @class */ (function (_super) {
     __extends(Button, _super);
     function Button() {
@@ -36,8 +36,12 @@ var Button = /** @class */ (function (_super) {
     };
     Button.defaultProps = {
         onClick: function () { },
+        // borderColor
+        borderColor: "transparent",
         // borderRadius
         borderRadius: "30px",
+        // borders
+        border: "none",
         // color
         color: "white",
         bg: "blue.royal",
