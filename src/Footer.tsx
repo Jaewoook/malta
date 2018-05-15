@@ -1,26 +1,35 @@
 import * as React from "react";
 import styled from "styled-components";
 const { theme } = require("styled-system");
+import { colors, containerWidth, fontSizes, fontWeights, footerHeight } from "./theme";
 
 const Wrapper = styled.div`
+  background-color: ${colors.black.dark};
+`;
+
+const Container = styled.div`
   align-items: center;
-  background-color: ${theme("colors.black.dark")};
   display: flex;
-  height: 50px;
+  height: ${footerHeight};
   padding-left: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: ${containerWidth};
 `;
 
 const Copyright = styled.div`
-  color: ${theme("colors.white")};
-  font-size: ${theme("fontSizes.h5")}px;
-  font-weight: ${theme("fontWeights.demiLight")};
+  color: ${colors.white};
+  font-size: ${fontSizes.h5}px;
+  font-weight: ${fontWeights.demiLight};
 `;
 
 export class Footer extends React.Component<any, any> {
   public render() {
     return (
       <Wrapper>
-        <Copyright>Copyright © 2018 Salesboost. Inc</Copyright>
+        <Container>
+          <Copyright>Copyright © 2018 Salesboost. Inc</Copyright>
+        </Container>
       </Wrapper>
     );
   }

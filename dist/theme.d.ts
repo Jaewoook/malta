@@ -1,5 +1,6 @@
 export declare const containerWidth = "1190px";
 export declare const navBarHeight = "70px";
+export declare const footerHeight = "50px";
 export declare const colors: {
     white: string;
     blue: {

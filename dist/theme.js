@@ -2,6 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.containerWidth = "1190px";
 exports.navBarHeight = "70px";
+exports.footerHeight = "50px";
 exports.colors = {
     white: "#FFFFFF",
     blue: {
