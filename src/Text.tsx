@@ -11,6 +11,7 @@ const {
 } = require("styled-system");
 
 const StyledText = styled.div`
+  white-space: pre-line;
   ${color}
   ${fontSize}
   ${fontWeight}

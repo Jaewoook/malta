@@ -35,6 +35,7 @@ var Button = /** @class */ (function (_super) {
         return (React.createElement(StyledButton, __assign({}, this.props)));
     };
     Button.defaultProps = {
+        onClick: function () { },
         // borderRadius
         borderRadius: "30px",
         // color
