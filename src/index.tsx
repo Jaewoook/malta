@@ -7,6 +7,8 @@ export { Flex } from "./Flex";
 export { Footer } from "./Footer";
 export { Img } from "./Img";
 export { Input } from "./Input";
+export { Jumbotron } from "./Jumbotron";
+export { Main } from "./Main";
 export { Link } from "./Link";
 export { Navbar } from "./Navbar";
 export { Row } from "./Row";
