@@ -49,7 +49,7 @@ const Description = styled.div`
   font-size: ${fontSizes.h5}px;
   font-weight: ${fontWeights.demiLight};
   color: ${colors.black.standard};
-  margin-top: ${space[1]}px;
+  margin-top: 4px;
 `;
 
 export interface IProps {

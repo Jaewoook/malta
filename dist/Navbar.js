@@ -22,7 +22,7 @@ var Container = styled_components_1.default.div(templateObject_2 || (templateObj
 var Logo = styled_components_1.default.img(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  height: 34px;\n  width: 125px;\n"], ["\n  height: 34px;\n  width: 125px;\n"])));
 var Right = styled_components_1.default.div(templateObject_4 || (templateObject_4 = __makeTemplateObject(["\n  flex: 1;\n  text-align: right;\n"], ["\n  flex: 1;\n  text-align: right;\n"])));
 var Title = styled_components_1.default.div(templateObject_5 || (templateObject_5 = __makeTemplateObject(["\n  color: ", ";\n  font-size: ", "px;\n  font-weight: ", ";\n"], ["\n  color: ", ";\n  font-size: ", "px;\n  font-weight: ", ";\n"])), theme_1.colors.black.dark, theme_1.fontSizes.h5, theme_1.fontWeights.regular);
-var Description = styled_components_1.default.div(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  font-size: ", "px;\n  font-weight: ", ";\n  color: ", ";\n  margin-top: ", "px;\n"], ["\n  font-size: ", "px;\n  font-weight: ", ";\n  color: ", ";\n  margin-top: ", "px;\n"])), theme_1.fontSizes.h5, theme_1.fontWeights.demiLight, theme_1.colors.black.standard, theme_1.space[1]);
+var Description = styled_components_1.default.div(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  font-size: ", "px;\n  font-weight: ", ";\n  color: ", ";\n  margin-top: 4px;\n"], ["\n  font-size: ", "px;\n  font-weight: ", ";\n  color: ", ";\n  margin-top: 4px;\n"])), theme_1.fontSizes.h5, theme_1.fontWeights.demiLight, theme_1.colors.black.standard);
 var Navbar = /** @class */ (function (_super) {
     __extends(Navbar, _super);
     function Navbar() {
