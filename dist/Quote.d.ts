@@ -16,8 +16,6 @@ export interface IProps {
     pr?: number | string;
     pb?: number | string;
     pl?: number | string;
-    align?: string;
-    width?: number | string;
 }
 export declare class Quote extends React.Component<IProps, any> {
     static defaultProps: IProps;

@@ -13,13 +13,13 @@ const BlockQuote = styled.blockquote`
   display: inline-block;
   white-space: pre-line;
   position: relative;
+  margin: 0 0 0 20px;
 
   ${color}
   ${fontSize}
   ${fontWeight}
   ${lineHeight}
   ${space}
-  ${textAlign}
 
   &:before {
     content: "“";
@@ -69,10 +69,6 @@ export interface IProps {
   pr?: number | string;
   pb?: number | string;
   pl?: number | string;
-  // textAlign
-  align?: string;
-  // width
-  width?: number | string;
 }
 
 export class Quote extends React.Component<IProps, any> {
@@ -86,11 +82,6 @@ export class Quote extends React.Component<IProps, any> {
     fontWeight: "regular",
     // lineHeight
     lineHeight: "1.44",
-    // space
-    m: 0,
-    p: 0,
-    // textAlign
-    align: "left",
   };
 
   public render() {
