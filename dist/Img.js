@@ -37,7 +37,7 @@ var Img = /** @class */ (function (_super) {
     Img.defaultProps = {
         src: "",
         // height
-        height: "60px",
+        height: "auto",
         // space
         m: 0,
         // width

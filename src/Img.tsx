@@ -30,7 +30,7 @@ export class Img extends React.Component<IProps, any> {
   public static defaultProps: IProps = {
     src: "",
     // height
-    height: "60px",
+    height: "auto",
     // space
     m: 0,
     // width
