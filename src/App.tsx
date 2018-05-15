@@ -1,6 +1,10 @@
 import * as React from "react";
-import { ThemeProvider } from "styled-components";
+import styled, { ThemeProvider } from "styled-components";
 import theme from "./theme";
+
+const Wrapper = styled.div`
+  height: 100%;
+`;
 
 export class App extends React.Component<any, any> {
   constructor(props: any) {
@@ -10,7 +14,9 @@ export class App extends React.Component<any, any> {
   public render() {
     return (
       <ThemeProvider theme={theme}>
-        {this.props.children}
+        <Wrapper>
+          {this.props.children}
+        </Wrapper>
       </ThemeProvider>
     );
   }

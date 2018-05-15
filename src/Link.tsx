@@ -4,24 +4,21 @@ const {
   color,
   fontSize,
   fontWeight,
-  lineHeight,
   space,
-  textAlign,
-  width,
 } = require("styled-system");
 
-const StyledText = styled.div`
+const A = styled.a`
+  display: inline-block;
+  text-decoration: none;
   white-space: pre-line;
   ${color}
   ${fontSize}
   ${fontWeight}
-  ${lineHeight}
   ${space}
-  ${textAlign}
-  ${width}
 `;
 
 export interface IProps {
+  href: string;
   // color
   color?: string;
   bg?: string;
@@ -29,8 +26,6 @@ export interface IProps {
   fontSize?: number | string;
   // fontWeight
   fontWeight?: number | string;
-  // lineHeight
-  lineHeight?: number | string;
   // space
   m?: number | string;
   mt?: number | string;
@@ -42,14 +37,11 @@ export interface IProps {
   pr?: number | string;
   pb?: number | string;
   pl?: number | string;
-  // textAlign
-  align?: string;
-  // width
-  width?: number | string;
 }
 
-export class Text extends React.Component<IProps, any> {
+export class Link extends React.Component<IProps, any> {
   public static defaultProps: IProps = {
+    href: "#",
     // color
     color: "black.dark",
     bg: "transparent",
@@ -57,22 +49,16 @@ export class Text extends React.Component<IProps, any> {
     fontSize: "h3",
     // fontWeight
     fontWeight: "regular",
-    // lineHeight
-    lineHeight: "1.44",
     // space
     m: 0,
     p: 0,
-    // textAlign
-    align: "left",
-    // width
-    width: 1,
   };
 
   public render() {
     return (
-      <StyledText {...this.props}>
+      <A {...this.props}>
         {this.props.children}
-      </StyledText>
+      </A>
     );
   }
 }
