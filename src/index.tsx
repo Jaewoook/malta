@@ -10,4 +10,5 @@ export { Navbar } from "./Navbar";
 export { Row } from "./Row";
 export { Select } from "./Select";
 export { Text } from "./Text";
+export { Quote } from "./Quote";
 export * from "./theme";

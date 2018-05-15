@@ -27,4 +27,6 @@ var Select_1 = require("./Select");
 exports.Select = Select_1.Select;
 var Text_1 = require("./Text");
 exports.Text = Text_1.Text;
+var Quote_1 = require("./Quote");
+exports.Quote = Quote_1.Quote;
 __export(require("./theme"));
