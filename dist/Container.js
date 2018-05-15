@@ -11,4 +11,4 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var grid_styled_1 = require("grid-styled");
 var theme_1 = require("./theme");
-exports.Container = function (props) { return (React.createElement(grid_styled_1.Box, __assign({}, props, { mx: "auto", style: { minHeight: "100%", maxWidth: theme_1.containerWidth } }))); };
+exports.Container = function (props) { return (React.createElement(grid_styled_1.Box, __assign({}, props, { mx: "auto", mb: "-" + theme_1.footerHeight, pb: theme_1.footerHeight, pt: theme_1.navBarHeight, style: { minHeight: "100%", maxWidth: theme_1.containerWidth } }))); };
