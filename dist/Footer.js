@@ -17,8 +17,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var styled_components_1 = require("styled-components");
 var theme = require("styled-system").theme;
-var Wrapper = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  align-items: center;\n  background-color: ", ";\n  bottom: 0;\n  display: flex;\n  height: 50px;\n  left: 0;\n  padding-left: 40px;\n  position: absolute;\n  right: 0;\n"], ["\n  align-items: center;\n  background-color: ", ";\n  bottom: 0;\n  display: flex;\n  height: 50px;\n  left: 0;\n  padding-left: 40px;\n  position: absolute;\n  right: 0;\n"])), theme("colors.black.dark"));
-var Copyright = styled_components_1.default.div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  color: ", ";\n  font-size: ", "px;\n  font-weight: ", ";\n"], ["\n  color: ", ";\n  font-size: ", "px;\n  font-weight: ", ";\n"])), theme("colors.white"), theme("fontSizes.h5"), theme("fontWeights.demiLight"));
+var theme_1 = require("./theme");
+var Wrapper = styled_components_1.default.div(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  background-color: ", ";\n"], ["\n  background-color: ", ";\n"])), theme_1.colors.black.dark);
+var Container = styled_components_1.default.div(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  align-items: center;\n  display: flex;\n  height: ", ";\n  padding-left: 40px;\n  margin-left: auto;\n  margin-right: auto;\n  max-width: ", ";\n"], ["\n  align-items: center;\n  display: flex;\n  height: ", ";\n  padding-left: 40px;\n  margin-left: auto;\n  margin-right: auto;\n  max-width: ", ";\n"])), theme_1.footerHeight, theme_1.containerWidth);
+var Copyright = styled_components_1.default.div(templateObject_3 || (templateObject_3 = __makeTemplateObject(["\n  color: ", ";\n  font-size: ", "px;\n  font-weight: ", ";\n"], ["\n  color: ", ";\n  font-size: ", "px;\n  font-weight: ", ";\n"])), theme_1.colors.white, theme_1.fontSizes.h5, theme_1.fontWeights.demiLight);
 var Footer = /** @class */ (function (_super) {
     __extends(Footer, _super);
     function Footer() {
@@ -26,9 +28,10 @@ var Footer = /** @class */ (function (_super) {
     }
     Footer.prototype.render = function () {
         return (React.createElement(Wrapper, null,
-            React.createElement(Copyright, null, "Copyright \u00A9 2018 Salesboost. Inc")));
+            React.createElement(Container, null,
+                React.createElement(Copyright, null, "Copyright \u00A9 2018 Salesboost. Inc"))));
     };
     return Footer;
 }(React.Component));
 exports.Footer = Footer;
-var templateObject_1, templateObject_2;
+var templateObject_1, templateObject_2, templateObject_3;

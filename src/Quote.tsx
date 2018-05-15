@@ -7,18 +7,45 @@ const {
   lineHeight,
   space,
   textAlign,
-  width,
 } = require("styled-system");
 
-const StyledText = styled.div`
+const BlockQuote = styled.blockquote`
+  display: inline-block;
   white-space: pre-line;
+  position: relative;
+  margin: 0 0 0 20px;
+
   ${color}
   ${fontSize}
   ${fontWeight}
   ${lineHeight}
   ${space}
-  ${textAlign}
-  ${width}
+
+  &:before {
+    content: "“";
+    display: block;
+    font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
+    font-size: 40px;
+    height: 0;
+    left: -20px;
+    position: absolute;
+    top: -10px;
+    ${color}
+    ${fontWeight}
+  }
+
+  &:after {
+    content: "”";
+    display: block;
+    font: italic 400%/1 Cochin,Georgia,"Times New Roman", serif;
+    font-size: 40px;
+    height: 0;
+    right: -20px;
+    position: absolute;
+    top: -10px;
+    ${color}
+    ${fontWeight}
+  }
 `;
 
 export interface IProps {
@@ -42,13 +69,9 @@ export interface IProps {
   pr?: number | string;
   pb?: number | string;
   pl?: number | string;
-  // textAlign
-  align?: string;
-  // width
-  width?: number | string;
 }
 
-export class Text extends React.Component<IProps, any> {
+export class Quote extends React.Component<IProps, any> {
   public static defaultProps: IProps = {
     // color
     color: "black.dark",
@@ -59,20 +82,13 @@ export class Text extends React.Component<IProps, any> {
     fontWeight: "regular",
     // lineHeight
     lineHeight: "1.44",
-    // space
-    m: 0,
-    p: 0,
-    // textAlign
-    align: "left",
-    // width
-    width: 1,
   };
 
   public render() {
     return (
-      <StyledText {...this.props}>
+      <BlockQuote {...this.props}>
         {this.props.children}
-      </StyledText>
+      </BlockQuote>
     );
   }
 }
