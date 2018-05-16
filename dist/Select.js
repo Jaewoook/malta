@@ -67,10 +67,13 @@ var Select = /** @class */ (function (_super) {
         return null;
     };
     Select.prototype.render = function () {
-        var _a = this.props, placeholder = _a.placeholder, disabled = _a.disabled, items = _a.items;
+        var _a = this.props, placeholder = _a.placeholder, disabled = _a.disabled, items = _a.items, onChange = _a.onChange;
         return (React.createElement(Wrapper, null,
             this.renderLabel(),
-            React.createElement(react_select_1.default, { placeholder: placeholder || "", isDisabled: disabled, name: "item", options: items, styles: styles })));
+            React.createElement(react_select_1.default, { placeholder: placeholder || "", isDisabled: disabled, name: "item", options: items, styles: styles, onChange: onChange })));
+    };
+    Select.defaultProps = {
+        items: [],
     };
     return Select;
 }(React.Component));
