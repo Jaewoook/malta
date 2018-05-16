@@ -1,6 +1,7 @@
 export { App } from "./App";
 export { Box } from "./Box";
 export { Button } from "./Button";
+export { Checkbox } from "./Checkbox";
 export { Column } from "./Column";
 export { Container } from "./Container";
 export { Flex } from "./Flex";
@@ -11,6 +12,7 @@ export { Jumbotron } from "./Jumbotron";
 export { Main } from "./Main";
 export { Link } from "./Link";
 export { Navbar } from "./Navbar";
+export { Radio } from "./Radio";
 export { Row } from "./Row";
 export { Select } from "./Select";
 export { Text } from "./Text";
