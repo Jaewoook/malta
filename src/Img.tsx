@@ -22,6 +22,8 @@ export interface IProps {
   mr?: number | string;
   mb?: number | string;
   ml?: number | string;
+  mx?: number | string;
+  my?: number | string;
   // width
   width: number | string;
 }
