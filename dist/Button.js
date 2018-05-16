@@ -53,7 +53,7 @@ var Button = /** @class */ (function (_super) {
         m: 0,
         mb: 2,
         // width
-        width: 1,
+        width: "auto",
     };
     return Button;
 }(React.Component));
