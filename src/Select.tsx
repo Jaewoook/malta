@@ -18,7 +18,7 @@ const Label = styled.label`
 export interface IItem {
   id: string;
   label: string;
-  value: string;
+  value: any;
 }
 
 export interface IProps {
