@@ -10,8 +10,10 @@ export interface IProps {
     placeholder?: string;
     disabled?: boolean;
     items: IItem[];
+    onChange?: React.MouseEventHandler<HTMLElement>;
 }
 export declare class Select extends React.Component<IProps, any> {
+    static defaultProps: IProps;
     private renderLabel();
     render(): JSX.Element;
 }

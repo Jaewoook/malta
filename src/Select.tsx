@@ -26,6 +26,7 @@ export interface IProps {
   placeholder?: string;
   disabled?: boolean;
   items: IItem[];
+  onChange?: React.MouseEventHandler<HTMLElement>;
 }
 
 const styles = {
@@ -89,6 +90,10 @@ const styles = {
 };
 
 export class Select extends React.Component<IProps, any> {
+  public static defaultProps: IProps = {
+    items: [],
+  };
+
   private renderLabel() {
     const { label } = this.props;
     if (label) {
@@ -98,7 +103,7 @@ export class Select extends React.Component<IProps, any> {
   }
 
   public render() {
-    const { placeholder, disabled, items } = this.props;
+    const { placeholder, disabled, items, onChange } = this.props;
     return (
       <Wrapper>
         {this.renderLabel()}
@@ -108,6 +113,7 @@ export class Select extends React.Component<IProps, any> {
           name="item"
           options={items}
           styles={styles}
+          onChange={onChange}
         />
       </Wrapper>
     );
