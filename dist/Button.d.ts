@@ -18,11 +18,15 @@ export interface IProps {
     mr?: number | string;
     mb?: number | string;
     ml?: number | string;
+    mx?: number | string;
+    my?: number | string;
     p?: number | string;
     pt?: number | string;
     pr?: number | string;
     pb?: number | string;
     pl?: number | string;
+    px?: number | string;
+    py?: number | string;
     width?: number | string;
 }
 export declare class Button extends React.Component<IProps, any> {
