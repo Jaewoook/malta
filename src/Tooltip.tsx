@@ -25,6 +25,9 @@ const TooltipText = styled.span`
   position: absolute;
   white-space: pre-line;
   z-index: 1;
+  opacity: 0;
+  transform: translate3d(0,-10px,0);
+  transition: all .15s ease-in-out;
 
   &::after {
     content: "";
@@ -91,11 +94,12 @@ const TooltipText = styled.span`
 const StyledTooltip = styled.div`
   position: relative;
   display: inline-block;
-  cursor: pointer;
 
   &:hover {
     & ${TooltipText} {
       visibility: visible;
+      opacity: 1;
+      transform: translate3d(0,0,0);
     }
   }
 `;
