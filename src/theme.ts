@@ -17,7 +17,9 @@ export const colors = {
     _5: "rgba(22, 27, 72, 0.05)",
     _3: "rgba(22, 27, 72, 0.03)",
   },
-  red: "#F51A1A"
+  red: "#F51A1A",
+  yellow: "#F5A921",
+  green: "#059D5B",
 };
 
 export const fontSizes = {

@@ -61,4 +61,13 @@ storiesOf("Components/Input", module)
         </Container>
       </App>
     );
+  })
+  .add("with margin", () => {
+    return (
+      <App>
+        <Container>
+          <Input label="이것은 라벨입니다." placeholder="이것은 플레이스홀더입니다." m={4} />
+        </Container>
+      </App>
+    );
   });
