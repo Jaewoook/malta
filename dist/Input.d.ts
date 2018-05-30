@@ -6,9 +6,17 @@ export interface IProps {
     disabled?: boolean;
     error?: boolean;
     errorMessage?: string;
+    m?: number | string;
+    mt?: number | string;
+    mr?: number | string;
+    mb?: number | string;
+    ml?: number | string;
+    mx?: number | string;
+    my?: number | string;
 }
 export declare class Input extends React.Component<IProps, any> {
-    private renderLabel();
-    private renderErrorLabel();
+    static defaultProps: IProps;
+    private renderLabel(label);
+    private renderErrorLabel(error, errorMessage);
     render(): JSX.Element;
 }
