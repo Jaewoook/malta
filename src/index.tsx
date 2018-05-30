@@ -15,6 +15,7 @@ export { Navbar } from "./Navbar";
 export { Radio } from "./Radio";
 export { Row } from "./Row";
 export { Select } from "./Select";
+export { Step } from "./Step";
 export { Text } from "./Text";
 export { Quote } from "./Quote";
 export * from "./theme";
