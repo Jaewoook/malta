@@ -6,7 +6,7 @@ const {
   width,
 } = require("styled-system");
 
-/* 
+/*
   Total Step Width = 80% (Default Step = 4)
   StepWidth = (TotalStepWidth / StepCount)
   LeftLineOffset = -(10 / StepWidth), (absolute : -10%)
@@ -159,7 +159,7 @@ export class Step extends React.Component<IProps, any> {
     current: 1
   };
 
-  private renderStep(items: IItem[], current:number) {
+  private renderStep(items: IItem[], current: number) {
     const check = <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
       <path d="M16.9 26.627l13.435-13.435a1 1 0 1 1 1.414 1.415L17.607 28.749a1 1 0 0 1-1.415 0l-8.485-8.486a1 1 0 1 1 1.414-1.414l7.778 7.778z" />
     </svg>;
