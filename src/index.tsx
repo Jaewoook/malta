@@ -17,5 +17,6 @@ export { Row } from "./Row";
 export { Select } from "./Select";
 export { Step } from "./Step";
 export { Text } from "./Text";
+export { Tooltip } from "./Tooltip";
 export { Quote } from "./Quote";
 export * from "./theme";
