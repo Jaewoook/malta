@@ -164,24 +164,14 @@ export class Step extends React.Component<IProps, any> {
       <path d="M16.9 26.627l13.435-13.435a1 1 0 1 1 1.414 1.415L17.607 28.749a1 1 0 0 1-1.415 0l-8.485-8.486a1 1 0 1 1 1.414-1.414l7.778 7.778z" />
     </svg>;
     const stepItems = items.map((item, index) => {
-      let leftLine, rightLine;
-      if (index == 0) {
-        leftLine = <LeftLine />;
-      }
-
-      if ((index + 1) == items.length) { // Last Item
-        rightLine = <RightLine />;
-      } else {
-        rightLine = <DashedLine />;
-      }
-
       return <StepWrap className={"step-" + items.length} key={index}>
-        {leftLine}
+        {index == 0 && (<LeftLine />)}
         <StepItem className={index == (current - 1) ? "active" : ""} href={item.link} onClick={item.callback}>
           <StepSeq>{item.completed ? check : (index + 1)}</StepSeq>
           <StepTitle>{item.title}</StepTitle>
         </StepItem>
-        {rightLine}
+        {(index + 1) == items.length && (<RightLine />)}
+        {(index + 1) != items.length && (<DashedLine />)}
       </StepWrap>;
     });
     return stepItems;
