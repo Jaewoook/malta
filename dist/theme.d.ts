@@ -13,6 +13,7 @@ export declare const colors: {
         sub: string;
         hint: string;
         _20: string;
+        _10: string;
         _5: string;
         _3: string;
     };
@@ -47,6 +48,7 @@ declare const theme: {
             sub: string;
             hint: string;
             _20: string;
+            _10: string;
             _5: string;
             _3: string;
         };

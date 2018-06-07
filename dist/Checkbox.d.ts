@@ -1,8 +1,11 @@
 /// <reference types="react" />
 import * as React from "react";
 export interface IProps {
+    id?: string;
     name?: string;
     checked?: boolean;
+    disabled?: boolean;
+    onChange?: React.ChangeEventHandler<HTMLElement>;
     color?: string;
     fontSize?: number | string;
     fontWeight?: number | string;
@@ -19,8 +22,6 @@ export interface IProps {
     pl?: number | string;
 }
 export declare class Checkbox extends React.Component<IProps, any> {
-    constructor(props: any);
-    private handleInputChange(event);
     private renderCheckLinePoints();
     static defaultProps: IProps;
     render(): JSX.Element;

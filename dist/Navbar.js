@@ -32,7 +32,8 @@ var Navbar = /** @class */ (function (_super) {
         var _a = this.props, logoUrl = _a.logoUrl, title = _a.title, description = _a.description;
         return (React.createElement(Wrapper, null,
             React.createElement(Container, null,
-                React.createElement(Img_1.Img, { src: logoUrl, width: "125px", height: "34px" }),
+                React.createElement("a", { href: "/" },
+                    React.createElement(Img_1.Img, { src: logoUrl, width: "125px", height: "34px" })),
                 React.createElement(Right, null,
                     React.createElement(Title, null, title),
                     React.createElement(Description, null, description)))));
