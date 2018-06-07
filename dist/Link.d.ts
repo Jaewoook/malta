@@ -2,6 +2,7 @@
 import * as React from "react";
 export interface IProps {
     href: string;
+    target?: string;
     color?: string;
     bg?: string;
     fontSize?: number | string;
