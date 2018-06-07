@@ -60,7 +60,9 @@ export class Navbar extends React.Component<IProps, any> {
     return (
       <Wrapper>
         <Container>
-          <Img src={logoUrl} width="125px" height="34px" />
+          <a href="/">
+            <Img src={logoUrl} width="125px" height="34px" />
+          </a>
           <Right>
             <Title>{title}</Title>
             <Description>{description}</Description>

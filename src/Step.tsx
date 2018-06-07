@@ -111,6 +111,7 @@ const StepItem = styled.a`
   text-decoration: none;
   color: ${colors.black.hint};
   font-weight: ${fontWeights.demiLight};
+  cursor: pointer;
 
   & svg {
     fill: ${colors.blue.deep};
@@ -142,31 +143,52 @@ const StepTitle = styled.div`
 `;
 
 export interface IItem {
+  id?: string;
   title: string;
   link?: any;
   completed?: boolean;
-  callback?: any;
+  callback?: Function;
 }
 
 export interface IProps {
   items: IItem[];
   current?: number;
+  useRouter?: Boolean;
+  // event
+  onClick?: React.MouseEventHandler<HTMLElement>;
 }
 
 export class Step extends React.Component<IProps, any> {
+  constructor(props: IProps) {
+    super(props);
+    const { current } = props;
+    this.state = {
+      current: current
+    };
+  }
+
   public static defaultProps: IProps = {
     items: [],
-    current: 1
+    current: 1,
+    useRouter: false,
+    // event
+    onClick: () => {}
   };
 
-  private renderStep(items: IItem[], current: number) {
+  private renderStep(items: IItem[], useRouter: Boolean) {
     const check = <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
       <path d="M16.9 26.627l13.435-13.435a1 1 0 1 1 1.414 1.415L17.607 28.749a1 1 0 0 1-1.415 0l-8.485-8.486a1 1 0 1 1 1.414-1.414l7.778 7.778z" />
     </svg>;
     const stepItems = items.map((item, index) => {
       return <StepWrap className={"step-" + items.length} key={index}>
         {index == 0 && (<LeftLine />)}
-        <StepItem className={index == (current - 1) ? "active" : ""} href={item.link} onClick={item.callback}>
+        <StepItem
+          className={index == this.state.current ? "active" : ""}
+          href={useRouter ? undefined : item.link}
+          onClick={evt => {
+            if (item.callback !== undefined) item.callback(index, item.link, item.id, evt);
+          }}
+          >
           <StepSeq>{item.completed ? check : (index + 1)}</StepSeq>
           <StepTitle>{item.title}</StepTitle>
         </StepItem>
@@ -178,10 +200,11 @@ export class Step extends React.Component<IProps, any> {
   }
 
   public render() {
-    const { current, items } = this.props;
+    const { items, useRouter } = this.props;
+    const { current } = this.state;
     return (
       <StyledStep>
-        {this.renderStep(items, current)}
+        {this.renderStep(items, useRouter)}
       </StyledStep>
     );
   }
