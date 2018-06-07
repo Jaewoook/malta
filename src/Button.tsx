@@ -28,6 +28,7 @@ const StyledButton = styled.button`
 
 export interface IProps {
   onClick?: React.MouseEventHandler<HTMLElement>;
+  type?: string;
   // borderColor
   borderColor?: string;
   // borderRadius
