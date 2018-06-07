@@ -63,39 +63,64 @@ const Wrapper = styled.label`
   cursor: pointer;
   margin-bottom: 0;
 
-  &.active {
-    & ${Label} {
+  & ${Label} {
+    ${(props: IProps) => props.checked && `
       color: ${colors.blue.royal};
+    `};
+    ${(props: IProps) => props.disabled && `
+      color: ${colors.black.sub};
+    `};
+  }
+  & ${StyledCheckbox} {
+    ${(props: IProps) => props.checked && `
+    background-color: ${colors.blue.royal};
+    border-color: ${colors.blue.royal};
+    & svg {
+      & polyline {
+        stroke-dashoffset: 0;
+      }
+    }
+    `};
+    ${(props: IProps) => props.disabled && `
+      border-color: ${colors.black._20};
+      cursor: not-allowed;
+    `};
+    ${(props: IProps) => props.checked && props.disabled && `
+      background-color: ${colors.black.sub};
+    `};
+    ${(props: IProps) => !props.checked && props.disabled && `
+      background-color: ${colors.black._10};
+    `};
+  }
+
+  &:hover {
+    & ${Label} {
+      ${(props: IProps) => props.checked && !props.disabled && `
+        color: ${colors.blue.deep};
+      `};
     }
     & ${StyledCheckbox} {
-      background-color: ${colors.blue.royal};
-      border-color: ${colors.blue.royal};
-      & svg {
-        & polyline {
-          stroke-dashoffset: 0;
-        }
-      }
-    }
-    &:hover {
-      & ${Label} {
-        color: ${colors.blue.deep};
-      }
-      & ${StyledCheckbox} {
+      ${(props: IProps) => props.checked && !props.disabled && `
         background-color: ${colors.blue.deep};
         border-color: ${colors.blue.deep};
-      }
-    }
-  }
-  &:hover {
-    & ${StyledCheckbox} {
-      border-color: ${colors.black.standard};
+      `};
+      ${(props: IProps) => !props.checked && !props.disabled && `
+        border-color: ${colors.black.standard};
+      `};
     }
   }
 `;
 
 export interface IProps {
+  // attribue
+  id?: string;
   name?: string;
   checked?: boolean;
+  disabled?: boolean;
+
+  // event
+  onChange?: React.ChangeEventHandler<HTMLElement>;
+
   // color
   color?: string;
   // fontSize
@@ -118,25 +143,6 @@ export interface IProps {
 }
 
 export class Checkbox extends React.Component<IProps, any> {
-  constructor(props: any) {
-    super(props);
-    const { checked } = props;
-    this.state = {
-      checked: checked
-    };
-    this.handleInputChange = this.handleInputChange.bind(this);
-  }
-
-  private handleInputChange(event: any) {
-    const target = event.target;
-    const value = target.type === "checkbox" ? target.checked : target.value;
-    const name = target.name;
-
-    this.setState({
-      checked: value
-    });
-  }
-
   private renderCheckLinePoints() {
     return ( size * 0.2 ) + " " + ( size * 0.45 ) + " "
     + ( size * 0.45 ) + " " + ( size * 0.72 ) + " "
@@ -153,18 +159,22 @@ export class Checkbox extends React.Component<IProps, any> {
     fontWeight: "regular",
     // lineHeight
     lineHeight: "1.44",
+
+    // event
+    onChange: () => {}
   };
 
   public render() {
-    const { name } = this.props;
-    const { checked } = this.state;
+    const { checked, disabled, id, name, onChange } = this.props;
 
     return (
-      <Wrapper className={this.state.checked ? "active" : ""} {...this.props}>
+      <Wrapper {...{checked, disabled}}>
         <Input type="checkbox"
+          id={id}
           name={name}
           defaultChecked={checked}
-          onChange={this.handleInputChange}/>
+          disabled={disabled}
+          onChange={onChange}/>
         <StyledCheckbox>
           <svg width={size + "px"} height={size + "px"} viewBox={"0 0 " + size + " " + size}>
             <polyline points={this.renderCheckLinePoints()}></polyline>
