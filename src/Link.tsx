@@ -19,6 +19,7 @@ const A = styled.a`
 
 export interface IProps {
   href: string;
+  target?: string;
   // color
   color?: string;
   bg?: string;
