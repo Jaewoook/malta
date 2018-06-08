@@ -30,7 +30,7 @@ storiesOf("Components/Input", module)
     return (
       <App>
         <Container>
-          <Input label="이것은 라벨입니다." placeholder="이것은 플레이스홀더입니다." />
+          <Input label="이것은 라벨입니다." input={{ placeholder: "이것은 플레이스홀더입니다." }} />
         </Container>
       </App>
     );
@@ -39,7 +39,7 @@ storiesOf("Components/Input", module)
     return (
       <App>
         <Container>
-          <Input label="이것은 라벨입니다." placeholder="이것은 플레이스홀더입니다." disabled />
+          <Input label="이것은 라벨입니다." input={{ placeholder: "이것은 플레이스홀더입니다.", disabled: true }} />
         </Container>
       </App>
     );
@@ -48,7 +48,7 @@ storiesOf("Components/Input", module)
     return (
       <App>
         <Container>
-          <Input label="이것은 라벨입니다." placeholder="이것은 플레이스홀더입니다." error />
+          <Input label="이것은 라벨입니다." input={{ placeholder: "이것은 플레이스홀더입니다." }} error />
         </Container>
       </App>
     );
@@ -57,7 +57,7 @@ storiesOf("Components/Input", module)
     return (
       <App>
         <Container>
-          <Input label="이것은 라벨입니다." placeholder="이것은 플레이스홀더입니다." error errorMessage="이것은 에러 메시지입니다." />
+          <Input label="이것은 라벨입니다." input={{ placeholder: "이것은 플레이스홀더입니다." }} error errorMessage="이것은 에러 메시지입니다." />
         </Container>
       </App>
     );
@@ -66,7 +66,7 @@ storiesOf("Components/Input", module)
     return (
       <App>
         <Container>
-          <Input label="이것은 라벨입니다." placeholder="이것은 플레이스홀더입니다." m={4} />
+          <Input label="이것은 라벨입니다." input={{ placeholder: "이것은 플레이스홀더입니다." }} m={4} />
         </Container>
       </App>
     );

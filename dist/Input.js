@@ -57,10 +57,10 @@ var Input = /** @class */ (function (_super) {
         return null;
     };
     Input.prototype.render = function () {
-        var _a = this.props, label = _a.label, placeholder = _a.placeholder, disabled = _a.disabled, error = _a.error, errorMessage = _a.errorMessage, props = __rest(_a, ["label", "placeholder", "disabled", "error", "errorMessage"]);
+        var _a = this.props, label = _a.label, input = _a.input, error = _a.error, errorMessage = _a.errorMessage, props = __rest(_a, ["label", "input", "error", "errorMessage"]);
         return (React.createElement(Wrapper, __assign({}, props),
             this.renderLabel(label),
-            React.createElement(StyledInput, { placeholder: placeholder, disabled: disabled, error: error }),
+            React.createElement(StyledInput, __assign({}, input, { error: error })),
             this.renderErrorLabel(error, errorMessage)));
     };
     Input.defaultProps = {
