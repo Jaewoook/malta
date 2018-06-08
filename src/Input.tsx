@@ -53,17 +53,15 @@ export interface IProps {
   error?: boolean;
   errorMessage?: string;
   // input component
-  input?: {
-    disabled?: boolean;
-    name?: string;
-    onBlur?: React.FocusEventHandler<HTMLInputElement>;
-    onChange?: React.ChangeEventHandler<HTMLInputElement>;
-    onDragStart?: React.DragEventHandler<HTMLInputElement>;
-    onDrop?: React.DragEventHandler<HTMLInputElement>;
-    onFocus?: React.FocusEventHandler<HTMLInputElement>;
-    placeholder?: string;
-    value?: string;
-  };
+  disabled?: boolean;
+  name?: string;
+  onBlur?: React.FocusEventHandler<HTMLInputElement>;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
+  onDragStart?: React.DragEventHandler<HTMLInputElement>;
+  onDrop?: React.DragEventHandler<HTMLInputElement>;
+  onFocus?: React.FocusEventHandler<HTMLInputElement>;
+  placeholder?: string;
+  value?: string;
   // space
   m?: number | string;
   mt?: number | string;
@@ -95,11 +93,35 @@ export class Input extends React.Component<IProps, any> {
   }
 
   public render() {
-    const { label, input, error, errorMessage, ...props } = this.props;
+    const {
+      label,
+      error,
+      errorMessage,
+      // input
+      disabled,
+      name,
+      onBlur,
+      onChange,
+      onDragStart,
+      onDrop,
+      onFocus,
+      placeholder,
+      value,
+      ...props } = this.props;
     return (
       <Wrapper {...props}>
         {this.renderLabel(label)}
-        <StyledInput {...input} error={error} />
+        <StyledInput
+          disabled={disabled}
+          name={name}
+          onBlur={onBlur}
+          onChange={onChange}
+          onDragStart={onDragStart}
+          onDrop={onDrop}
+          onFocus={onFocus}
+          placeholder={placeholder}
+          value={value}
+          error={error} />
         {this.renderErrorLabel(error, errorMessage)}
       </Wrapper>
     );
