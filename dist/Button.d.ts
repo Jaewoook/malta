@@ -2,6 +2,7 @@
 import * as React from "react";
 export interface IProps {
     onClick?: React.MouseEventHandler<HTMLElement>;
+    type?: string;
     borderColor?: string;
     borderRadius?: number | string;
     border?: string;
