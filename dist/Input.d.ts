@@ -2,10 +2,19 @@
 import * as React from "react";
 export interface IProps {
     label?: string;
-    placeholder?: string;
-    disabled?: boolean;
     error?: boolean;
     errorMessage?: string;
+    input?: {
+        disabled?: boolean;
+        name?: string;
+        onBlur?: React.FocusEventHandler<HTMLInputElement>;
+        onChange?: React.ChangeEventHandler<HTMLInputElement>;
+        onDragStart?: React.DragEventHandler<HTMLInputElement>;
+        onDrop?: React.DragEventHandler<HTMLInputElement>;
+        onFocus?: React.FocusEventHandler<HTMLInputElement>;
+        placeholder?: string;
+        value?: string;
+    };
     m?: number | string;
     mt?: number | string;
     mr?: number | string;

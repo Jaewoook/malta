@@ -50,10 +50,20 @@ const StyledInput = styled.input`
 
 export interface IProps {
   label?: string;
-  placeholder?: string;
-  disabled?: boolean;
   error?: boolean;
   errorMessage?: string;
+  // input component
+  input?: {
+    disabled?: boolean;
+    name?: string;
+    onBlur?: React.FocusEventHandler<HTMLInputElement>;
+    onChange?: React.ChangeEventHandler<HTMLInputElement>;
+    onDragStart?: React.DragEventHandler<HTMLInputElement>;
+    onDrop?: React.DragEventHandler<HTMLInputElement>;
+    onFocus?: React.FocusEventHandler<HTMLInputElement>;
+    placeholder?: string;
+    value?: string;
+  };
   // space
   m?: number | string;
   mt?: number | string;
@@ -85,11 +95,11 @@ export class Input extends React.Component<IProps, any> {
   }
 
   public render() {
-    const { label, placeholder, disabled, error, errorMessage, ...props } = this.props;
+    const { label, input, error, errorMessage, ...props } = this.props;
     return (
       <Wrapper {...props}>
         {this.renderLabel(label)}
-        <StyledInput placeholder={placeholder} disabled={disabled} error={error} />
+        <StyledInput {...input} error={error} />
         {this.renderErrorLabel(error, errorMessage)}
       </Wrapper>
     );
