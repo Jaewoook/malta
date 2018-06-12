@@ -61,6 +61,7 @@ export interface IProps {
   onDrop?: React.DragEventHandler<HTMLInputElement>;
   onFocus?: React.FocusEventHandler<HTMLInputElement>;
   placeholder?: string;
+  type?: string;
   value?: string;
   // space
   m?: number | string;
@@ -106,6 +107,7 @@ export class Input extends React.Component<IProps, any> {
       onDrop,
       onFocus,
       placeholder,
+      type,
       value,
       ...props } = this.props;
     return (
@@ -120,6 +122,7 @@ export class Input extends React.Component<IProps, any> {
           onDrop={onDrop}
           onFocus={onFocus}
           placeholder={placeholder}
+          type={type}
           value={value}
           error={error} />
         {this.renderErrorLabel(error, errorMessage)}
