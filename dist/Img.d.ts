@@ -11,6 +11,8 @@ export interface IProps {
     mx?: number | string;
     my?: number | string;
     width: number | string;
+    hiddendown?: string;
+    hiddenup?: string;
 }
 export declare class Img extends React.Component<IProps, any> {
     static defaultProps: IProps;
