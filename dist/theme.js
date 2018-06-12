@@ -1,8 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.containerWidth = "1190px";
+exports.containerWidth = "1440px";
 exports.navBarHeight = "70px";
 exports.footerHeight = "50px";
+// grid-styled 패키지의 기본 옵션 형식을 따라 가기 위해 breakpoint의 name과 value를 구분해서 정의한다.
+exports.breakpoints = ["400px", "768px", "960px", "1200px", "1440px"];
+exports.breakpointNames = ["xs", "sm", "md", "lg", "xl"];
 exports.colors = {
     white: "#FFFFFF",
     blue: {
@@ -38,6 +41,7 @@ exports.fontWeights = {
 };
 exports.space = [0, 8, 16, 32, 64, 128];
 var theme = {
+    breakpoints: exports.breakpoints,
     colors: exports.colors,
     fontSizes: exports.fontSizes,
     fontWeights: exports.fontWeights,

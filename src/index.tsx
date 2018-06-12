@@ -10,6 +10,7 @@ export { Img } from "./Img";
 export { Input } from "./Input";
 export { Jumbotron } from "./Jumbotron";
 export { Link } from "./Link";
+export { Loader } from "./Loader";
 export { Main } from "./Main";
 export { Modal } from "./Modal/Modal";
 export { Navbar } from "./Navbar";

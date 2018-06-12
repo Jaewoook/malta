@@ -1,6 +1,10 @@
-export const containerWidth = "1190px";
+export const containerWidth = "1440px";
 export const navBarHeight = "70px";
 export const footerHeight = "50px";
+
+// grid-styled 패키지의 기본 옵션 형식을 따라 가기 위해 breakpoint의 name과 value를 구분해서 정의한다.
+export const breakpoints = ["400px", "768px", "960px", "1200px", "1440px"];
+export const breakpointNames = ["xs", "sm", "md", "lg", "xl"];
 
 export const colors = {
   white: "#FFFFFF",
@@ -41,6 +45,7 @@ export const fontWeights = {
 export const space = [0, 8, 16, 32, 64, 128];
 
 const theme = {
+  breakpoints,
   colors,
   fontSizes,
   fontWeights,

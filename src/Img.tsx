@@ -1,5 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
+import { breakpoints } from "./theme";
+import { hiddenDown, hiddenUp } from "./tools/responsiveHide";
+
 const {
   height,
   space,
@@ -10,6 +13,9 @@ const StyledImg = styled.img`
   ${height}
   ${space}
   ${width}
+
+  ${(props: IProps) => props.hiddendown && hiddenDown(props.hiddendown)};
+  ${(props: IProps) => props.hiddenup && hiddenUp(props.hiddenup)};
 `;
 
 export interface IProps {
@@ -26,6 +32,9 @@ export interface IProps {
   my?: number | string;
   // width
   width: number | string;
+  // etc
+  hiddendown?: string;
+  hiddenup?: string;
 }
 
 export class Img extends React.Component<IProps, any> {
