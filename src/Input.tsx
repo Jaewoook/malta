@@ -50,10 +50,18 @@ const StyledInput = styled.input`
 
 export interface IProps {
   label?: string;
-  placeholder?: string;
-  disabled?: boolean;
   error?: boolean;
   errorMessage?: string;
+  // input component
+  disabled?: boolean;
+  name?: string;
+  onBlur?: React.FocusEventHandler<HTMLInputElement>;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
+  onDragStart?: React.DragEventHandler<HTMLInputElement>;
+  onDrop?: React.DragEventHandler<HTMLInputElement>;
+  onFocus?: React.FocusEventHandler<HTMLInputElement>;
+  placeholder?: string;
+  value?: string;
   // space
   m?: number | string;
   mt?: number | string;
@@ -85,11 +93,35 @@ export class Input extends React.Component<IProps, any> {
   }
 
   public render() {
-    const { label, placeholder, disabled, error, errorMessage, ...props } = this.props;
+    const {
+      label,
+      error,
+      errorMessage,
+      // input
+      disabled,
+      name,
+      onBlur,
+      onChange,
+      onDragStart,
+      onDrop,
+      onFocus,
+      placeholder,
+      value,
+      ...props } = this.props;
     return (
       <Wrapper {...props}>
         {this.renderLabel(label)}
-        <StyledInput placeholder={placeholder} disabled={disabled} error={error} />
+        <StyledInput
+          disabled={disabled}
+          name={name}
+          onBlur={onBlur}
+          onChange={onChange}
+          onDragStart={onDragStart}
+          onDrop={onDrop}
+          onFocus={onFocus}
+          placeholder={placeholder}
+          value={value}
+          error={error} />
         {this.renderErrorLabel(error, errorMessage)}
       </Wrapper>
     );
