@@ -24,8 +24,8 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var grid_styled_1 = require("grid-styled");
-var responsiveHide_1 = require("./tools/responsiveHide");
-var StyledBox = grid_styled_1.Box.extend(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  ", ";\n  ", ";\n"], ["\n  ", ";\n  ", ";\n"])), function (props) { return props.hiddendown && responsiveHide_1.hiddenDown(props.hiddendown); }, function (props) { return props.hiddenup && responsiveHide_1.hiddenUp(props.hiddenup); });
+var mediaQuery_1 = require("./tools/mediaQuery");
+var StyledBox = grid_styled_1.Box.extend(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  ", ";\n  ", ";\n"], ["\n  ", ";\n  ", ";\n"])), function (props) { return props.hiddendown && mediaQuery_1.hiddenDown(props.hiddendown); }, function (props) { return props.hiddenup && mediaQuery_1.hiddenUp(props.hiddenup); });
 var Box = /** @class */ (function (_super) {
     __extends(Box, _super);
     function Box() {

@@ -4,7 +4,10 @@ export declare const footerHeight = "50px";
 export declare const breakpoints: string[];
 export declare const breakpointNames: string[];
 export declare const colors: {
-    white: string;
+    white: {
+        standard: string;
+        _50: string;
+    };
     blue: {
         royal: string;
         deep: string;
@@ -40,7 +43,10 @@ export declare const space: number[];
 declare const theme: {
     breakpoints: string[];
     colors: {
-        white: string;
+        white: {
+            standard: string;
+            _50: string;
+        };
         blue: {
             royal: string;
             deep: string;

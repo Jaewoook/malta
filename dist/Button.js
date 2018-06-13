@@ -43,7 +43,7 @@ var Button = /** @class */ (function (_super) {
         // borders
         border: "none",
         // color
-        color: "white",
+        color: "white.standard",
         bg: "blue.royal",
         // fontSize
         fontSize: "h3",
