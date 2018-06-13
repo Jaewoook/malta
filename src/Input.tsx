@@ -26,7 +26,7 @@ interface IStyledInputProps {
 }
 
 const StyledInput = styled.input`
-  background-color: ${colors.white};
+  background-color: ${colors.white.standard};
   border: solid 1px ${(props: IStyledInputProps) => props.error ? "#f51a1a" : colors.black._20};
   border-radius: 2px;
   box-shadow: 0 2px 6px 2px ${colors.black._3};

@@ -143,7 +143,7 @@ export interface IProps {
 export class Tooltip extends React.Component<IProps, any> {
   public static defaultProps: IProps = {
     // color
-    color: "white",
+    color: "white.standard",
     bg: "black.dark",
     borderColor: "black.dark",
     // fontSize

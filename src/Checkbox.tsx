@@ -19,14 +19,14 @@ const StyledCheckbox = styled.div`
   width: ${size}px;
   height: ${size}px;
   border-radius: 2px;
-  background-color: ${colors.white};
+  background-color: ${colors.white.standard};
   border: solid 1px ${colors.black._20};
 
   & svg {
     position: absolute;
     & polyline {
       fill: none;
-      stroke: ${colors.white};
+      stroke: ${colors.white.standard};
       stroke-width: ${lineThickness};
       stroke-linecap: round;
       stroke-linejoin: round;
