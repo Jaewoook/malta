@@ -43,26 +43,26 @@ export interface IProps {
   color?: string;
   bg?: string;
   // fontSize
-  fontSize?: number | string;
+  fontSize?: Array<number | string> | number | string;
   // height
-  height?: number | string;
+  height?: Array<number | string> | number | string;
   // space
-  m?: number | string;
-  mt?: number | string;
-  mr?: number | string;
-  mb?: number | string;
-  ml?: number | string;
-  mx?: number | string;
-  my?: number | string;
-  p?: number | string;
-  pt?: number | string;
-  pr?: number | string;
-  pb?: number | string;
-  pl?: number | string;
-  px?: number | string;
-  py?: number | string;
+  m?: Array<number | string> | number | string;
+  mt?: Array<number | string> | number | string;
+  mr?: Array<number | string> | number | string;
+  mb?: Array<number | string> | number | string;
+  ml?: Array<number | string> | number | string;
+  mx?: Array<number | string> | number | string;
+  my?: Array<number | string> | number | string;
+  p?: Array<number | string> | number | string;
+  pt?: Array<number | string> | number | string;
+  pr?: Array<number | string> | number | string;
+  pb?: Array<number | string> | number | string;
+  pl?: Array<number | string> | number | string;
+  px?: Array<number | string> | number | string;
+  py?: Array<number | string> | number | string;
   // width
-  width?: number | string;
+  width?: Array<number | string> | number | string;
 }
 
 export class Button extends React.Component<IProps, any> {
@@ -75,7 +75,7 @@ export class Button extends React.Component<IProps, any> {
     // borders
     border: "none",
     // color
-    color: "white",
+    color: "white.standard",
     bg: "blue.royal",
     // fontSize
     fontSize: "h3",

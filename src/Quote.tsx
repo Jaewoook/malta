@@ -10,7 +10,7 @@ const {
 } = require("styled-system");
 
 const BlockQuote = styled.blockquote`
-  display: inline-block;
+  display: ${(props: IProps) => props.display};
   white-space: pre-line;
   position: relative;
   margin: 0 0 0 20px;
@@ -20,6 +20,7 @@ const BlockQuote = styled.blockquote`
   ${fontWeight}
   ${lineHeight}
   ${space}
+  ${textAlign}
 
   &:before {
     content: "“";
@@ -52,27 +53,31 @@ export interface IProps {
   // color
   color?: string;
   bg?: string;
+  // display
+  display?: string;
   // fontSize
-  fontSize?: number | string;
+  fontSize?: Array<number | string> | number | string;
   // fontWeight
-  fontWeight?: number | string;
+  fontWeight?: Array<number | string> | number | string;
   // lineHeight
-  lineHeight?: number | string;
+  lineHeight?: Array<number | string> | number | string;
   // space
-  m?: number | string;
-  mt?: number | string;
-  mr?: number | string;
-  mb?: number | string;
-  ml?: number | string;
-  mx?: number | string;
-  my?: number | string;
-  p?: number | string;
-  pt?: number | string;
-  pr?: number | string;
-  pb?: number | string;
-  pl?: number | string;
-  px?: number | string;
-  py?: number | string;
+  m?: Array<number | string> | number | string;
+  mt?: Array<number | string> | number | string;
+  mr?: Array<number | string> | number | string;
+  mb?: Array<number | string> | number | string;
+  ml?: Array<number | string> | number | string;
+  mx?: Array<number | string> | number | string;
+  my?: Array<number | string> | number | string;
+  p?: Array<number | string> | number | string;
+  pt?: Array<number | string> | number | string;
+  pr?: Array<number | string> | number | string;
+  pb?: Array<number | string> | number | string;
+  pl?: Array<number | string> | number | string;
+  px?: Array<number | string> | number | string;
+  py?: Array<number | string> | number | string;
+  // textAlign
+  align?: Array<string> | string;
 }
 
 export class Quote extends React.Component<IProps, any> {
@@ -80,6 +85,8 @@ export class Quote extends React.Component<IProps, any> {
     // color
     color: "black.dark",
     bg: "transparent",
+    // display
+    display: "inline-block",
     // fontSize
     fontSize: "h3",
     // fontWeight
