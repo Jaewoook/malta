@@ -54,7 +54,7 @@ var Tooltip = /** @class */ (function (_super) {
     };
     Tooltip.defaultProps = {
         // color
-        color: "white",
+        color: "white.standard",
         bg: "black.dark",
         borderColor: "black.dark",
         // fontSize
