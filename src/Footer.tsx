@@ -2,6 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 const { theme } = require("styled-system");
 import { colors, containerWidth, fontSizes, fontWeights, footerHeight } from "./theme";
+import { generateQuery } from "./tools/mediaQuery";
 
 const Wrapper = styled.div`
   background-color: ${colors.black.dark};
@@ -15,12 +16,16 @@ const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-width: ${containerWidth};
+
+  ${generateQuery("max-width", "xs", "padding-left: 0;")};
 `;
 
 const Copyright = styled.div`
-  color: ${colors.white};
+  color: ${colors.white.standard};
   font-size: ${fontSizes.h5}px;
   font-weight: ${fontWeights.demiLight};
+
+  ${generateQuery("max-width", "xs", "margin: 0 auto;")};
 `;
 
 export class Footer extends React.Component<any, any> {

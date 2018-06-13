@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { Box as gridStyledBox } from "grid-styled";
 import { breakpoints } from "./theme";
-import { hiddenDown, hiddenUp } from "./tools/responsiveHide";
+import { hiddenDown, hiddenUp } from "./tools/mediaQuery";
 
 export interface IProps {
   hiddendown?: string;

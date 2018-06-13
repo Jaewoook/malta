@@ -2,6 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { Img } from "./Img";
 import {
+  breakpoints,
   colors,
   containerWidth,
   fontSizes,
@@ -9,14 +10,16 @@ import {
   navBarHeight,
   space
 } from "./theme";
+import { hiddenDown, hiddenUp } from "./tools/mediaQuery";
 
 
 const Wrapper = styled.div`
-  background-color: ${colors.white};
+  background-color: ${colors.white._50};
   height: ${navBarHeight};
   left: 0;
   position: fixed;
   right: 0;
+  z-index: 1000;
 `;
 
 const Container = styled.div`
@@ -33,6 +36,8 @@ const Container = styled.div`
 const Right = styled.div`
   flex: 1;
   text-align: right;
+
+  ${hiddenDown("xs")};
 `;
 
 const Title = styled.div`
