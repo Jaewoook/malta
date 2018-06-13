@@ -36,7 +36,7 @@ const ModalContainer = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: ${colors.white};
+  background-color: ${colors.white.standard};
   border-top: solid 2px ${colors.black.standard};
   max-height: 100%;
   height: 100%;

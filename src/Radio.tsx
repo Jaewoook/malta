@@ -19,13 +19,13 @@ const StyledRadio = styled.div`
   width: ${size}px;
   height: ${size}px;
   border-radius: 50%;
-  background-color: ${colors.white};
+  background-color: ${colors.white.standard};
   border: solid 1px ${colors.black._20};
 
   & svg {
     position: absolute;
     & circle {
-      fill: ${colors.white};
+      fill: ${colors.white.standard};
       stroke: none;
       r: 0;
       transition: all .3s ease;

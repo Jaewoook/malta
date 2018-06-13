@@ -34,7 +34,7 @@ const StyledTab = styled.li`
   }
 
   ${(props: IProps) => props.selected && `
-    background-color: ${colors.white};
+    background-color: ${colors.white.standard};
     border-top: solid 2px ${colors.blue.royal};
     border-bottom: none;
     color: ${colors.blue.deep};

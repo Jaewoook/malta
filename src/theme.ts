@@ -7,7 +7,10 @@ export const breakpoints = ["400px", "768px", "960px", "1200px", "1440px"];
 export const breakpointNames = ["xs", "sm", "md", "lg", "xl"];
 
 export const colors = {
-  white: "#FFFFFF",
+  white: {
+    standard: "#FFFFFF",
+    _50: "rgba(255, 255, 255, 0.5)",
+  },
   blue: {
     royal: "#454EDF",
     deep: "#161FBA",
