@@ -25,7 +25,6 @@ const StyledTab = styled.li`
   ${width}
   position: relative;
   display: inline-block;
-  border-radius: 2px;
   cursor: pointer;
   margin-left: -1px;
 
@@ -104,7 +103,7 @@ export class Tab extends React.Component<IProps, any> {
     // space
     m: 0,
     px: 0,
-    py: 2,
+    py: 3,
     // textAlign
     align: "center",
     // width
