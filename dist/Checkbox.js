@@ -54,7 +54,7 @@ var Checkbox = /** @class */ (function (_super) {
     Checkbox.prototype.render = function () {
         var _a = this.props, checked = _a.checked, disabled = _a.disabled, id = _a.id, name = _a.name, onChange = _a.onChange;
         return (React.createElement(Wrapper, __assign({}, { checked: checked, disabled: disabled }),
-            React.createElement(Input, { type: "checkbox", id: id, name: name, defaultChecked: checked, disabled: disabled, onChange: onChange }),
+            React.createElement(Input, { type: "checkbox", id: id, name: name, checked: checked, disabled: disabled, onChange: onChange }),
             React.createElement(StyledCheckbox, null,
                 React.createElement("svg", { width: size + "px", height: size + "px", viewBox: "0 0 " + size + " " + size },
                     React.createElement("polyline", { points: this.renderCheckLinePoints() }))),

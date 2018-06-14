@@ -23,19 +23,28 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
-var grid_styled_1 = require("grid-styled");
-var mediaQuery_1 = require("./tools/mediaQuery");
-var StyledBox = grid_styled_1.Box.extend(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  ", ";\n  ", ";\n  ", ";\n"], ["\n  ",
-    ";\n  ", ";\n  ", ";\n"])), function (props) { return props.display && "\n    display: " + props.display + ";\n  "; }, function (props) { return props.hiddendown && mediaQuery_1.hiddenDown(props.hiddendown); }, function (props) { return props.hiddenup && mediaQuery_1.hiddenUp(props.hiddenup); });
-var Box = /** @class */ (function (_super) {
-    __extends(Box, _super);
-    function Box() {
+var styled_components_1 = require("styled-components");
+var space = require("styled-system").space;
+var theme_1 = require("./theme");
+var StyledLine = styled_components_1.default.hr(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n", "\n  border: none;\n  border-bottom: solid 1px ", ";\n  box-shadow: 0 2px 6px 2px ", ";\n"], ["\n", "\n  border: none;\n  border-bottom: solid 1px ", ";\n  box-shadow: 0 2px 6px 2px ", ";\n"])), space, function (props) { return props.color; }, function (props) { return props.color; });
+var Line = /** @class */ (function (_super) {
+    __extends(Line, _super);
+    function Line() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
-    Box.prototype.render = function () {
-        return (React.createElement(StyledBox, __assign({}, this.props), this.props.children));
+    Line.prototype.render = function () {
+        return (React.createElement(StyledLine, __assign({}, this.props)));
     };
-    return Box;
+    Line.defaultProps = {
+        // color
+        color: theme_1.colors.black._3,
+        // space
+        m: 1,
+        p: 0,
+        // width
+        width: "100%"
+    };
+    return Line;
 }(React.Component));
-exports.Box = Box;
+exports.Line = Line;
 var templateObject_1;

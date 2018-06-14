@@ -9,16 +9,17 @@ const Wrapper = styled.div`
 `;
 
 const Label = styled.label`
-  color: ${colors.black.dark};
+  color: ${colors.black.standard};
   display: inline-block;
   font-size: ${fontSizes.h4}px;
-  font-weight: ${fontWeights.demiLight};
-  margin-bottom: ${spaces[2]}px;
+  font-weight: ${fontWeights.regular};
+  margin-bottom: ${spaces[1]}px;
 `;
 
 const ErrorLabel = Label.extend`
   color: ${colors.red};
-  margin-top: ${spaces[1]};
+  margin-left: ${spaces[1]}px;
+  margin-top: ${spaces[1]}px;
 `;
 
 interface IStyledInputProps {
@@ -26,25 +27,37 @@ interface IStyledInputProps {
 }
 
 const StyledInput = styled.input`
-  background-color: ${colors.white.standard};
   border: solid 1px ${(props: IStyledInputProps) => props.error ? "#f51a1a" : colors.black._20};
   border-radius: 2px;
   box-shadow: 0 2px 6px 2px ${colors.black._3};
   box-sizing: border-box;
   color: ${colors.black.dark};
   font-size: ${fontSizes.h3}px;
-  font-weight: ${fontWeights.demiLight};
+  font-weight: ${fontWeights.regular};
   height: 60px;
   padding: 0 ${spaces[2]}px;
   width: 100%;
 
   &:disabled {
     background-color: ${colors.black._5};
+    border: solid 1px ${colors.black._20} !important;
+    cursor: not-allowed;
   }
 
   &:focus {
-    border: solid 1px ${(props: IStyledInputProps) => props.error ? colors.red : colors.blue.royal}
+    border: solid 1px ${(props: IStyledInputProps) => props.error ? colors.red : colors.blue.royal} !important;
+    box-shadow: 0 2px 6px 2px ${colors.black._8};
     outline: none;
+  }
+
+  &:hover {
+    border: solid 1px ${(props: IStyledInputProps) => props.error ? colors.red : colors.black.half};
+    box-shadow: 0 2px 6px 2px ${colors.black._8};
+  }
+
+  &::placeholder {
+    color: inherit;
+    opacity: 0.4;
   }
 `;
 

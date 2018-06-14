@@ -16,10 +16,13 @@ export declare const colors: {
         dark: string;
         standard: string;
         sub: string;
+        half: string;
         hint: string;
         _20: string;
         _10: string;
+        _8: string;
         _5: string;
+        _4: string;
         _3: string;
     };
     red: string;
@@ -55,10 +58,13 @@ declare const theme: {
             dark: string;
             standard: string;
             sub: string;
+            half: string;
             hint: string;
             _20: string;
             _10: string;
+            _8: string;
             _5: string;
+            _4: string;
             _3: string;
         };
         red: string;

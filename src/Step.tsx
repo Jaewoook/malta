@@ -110,7 +110,7 @@ const StepWrap = styled.div`
 const StepItem = styled.a`
   text-decoration: none;
   color: ${colors.black.hint};
-  font-weight: ${fontWeights.demiLight};
+  font-weight: ${fontWeights.regular};
   cursor: pointer;
 
   & svg {

@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 const { theme } = require("styled-system");
-import { colors, containerWidth, fontSizes, fontWeights, footerHeight } from "./theme";
+import { colors, containerWidth, fontSizes, fontWeights, footerHeight, space } from "./theme";
 import { generateQuery } from "./tools/mediaQuery";
 
 const Wrapper = styled.div`
@@ -12,7 +12,7 @@ const Container = styled.div`
   align-items: center;
   display: flex;
   height: ${footerHeight};
-  padding-left: 40px;
+  padding-left: ${3}px;
   margin-left: auto;
   margin-right: auto;
   max-width: ${containerWidth};

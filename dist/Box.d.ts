@@ -1,6 +1,7 @@
 /// <reference types="react" />
 import * as React from "react";
 export interface IProps {
+    display?: string;
     hiddendown?: string;
     hiddenup?: string;
 }
