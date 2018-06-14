@@ -12,6 +12,7 @@ export interface IProps {
     onDrop?: React.DragEventHandler<HTMLInputElement>;
     onFocus?: React.FocusEventHandler<HTMLInputElement>;
     placeholder?: string;
+    type?: string;
     value?: string;
     m?: number | string;
     mt?: number | string;

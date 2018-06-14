@@ -59,10 +59,10 @@ var Input = /** @class */ (function (_super) {
     Input.prototype.render = function () {
         var _a = this.props, label = _a.label, error = _a.error, errorMessage = _a.errorMessage, 
         // input
-        disabled = _a.disabled, name = _a.name, onBlur = _a.onBlur, onChange = _a.onChange, onDragStart = _a.onDragStart, onDrop = _a.onDrop, onFocus = _a.onFocus, placeholder = _a.placeholder, value = _a.value, props = __rest(_a, ["label", "error", "errorMessage", "disabled", "name", "onBlur", "onChange", "onDragStart", "onDrop", "onFocus", "placeholder", "value"]);
+        disabled = _a.disabled, name = _a.name, onBlur = _a.onBlur, onChange = _a.onChange, onDragStart = _a.onDragStart, onDrop = _a.onDrop, onFocus = _a.onFocus, placeholder = _a.placeholder, type = _a.type, value = _a.value, props = __rest(_a, ["label", "error", "errorMessage", "disabled", "name", "onBlur", "onChange", "onDragStart", "onDrop", "onFocus", "placeholder", "type", "value"]);
         return (React.createElement(Wrapper, __assign({}, props),
             this.renderLabel(label),
-            React.createElement(StyledInput, { disabled: disabled, name: name, onBlur: onBlur, onChange: onChange, onDragStart: onDragStart, onDrop: onDrop, onFocus: onFocus, placeholder: placeholder, value: value, error: error }),
+            React.createElement(StyledInput, { disabled: disabled, name: name, onBlur: onBlur, onChange: onChange, onDragStart: onDragStart, onDrop: onDrop, onFocus: onFocus, placeholder: placeholder, type: type, value: value, error: error }),
             this.renderErrorLabel(error, errorMessage)));
     };
     Input.defaultProps = {
