@@ -28,7 +28,6 @@ const Container = styled.div`
   height: ${navBarHeight};
   margin-left: auto;
   margin-right: auto;
-  max-width: ${containerWidth};
   padding-left: ${space[3]}px;
   padding-right: ${space[3]}px;
 `;
@@ -48,8 +47,8 @@ const Title = styled.div`
 
 const Description = styled.div`
   font-size: ${fontSizes.h5}px;
-  font-weight: ${fontWeights.demiLight};
-  color: ${colors.black.standard};
+  font-weight: ${fontWeights.regular};
+  color: ${colors.black.sub};
   margin-top: 4px;
 `;
 
