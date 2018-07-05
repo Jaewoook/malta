@@ -5,7 +5,7 @@ import { colors, containerWidth, fontSizes, fontWeights, footerHeight, space } f
 import { generateQuery } from "./tools/mediaQuery";
 
 const Wrapper = styled.div`
-  background-color: ${colors.black.dark};
+  background-color: ${colors.black._5};
 `;
 
 const Container = styled.div`
@@ -20,7 +20,7 @@ const Container = styled.div`
 `;
 
 const Copyright = styled.div`
-  color: ${colors.white.standard};
+  color: ${colors.black.dark};
   font-size: ${fontSizes.h5}px;
   font-weight: ${fontWeights.demiLight};
 
