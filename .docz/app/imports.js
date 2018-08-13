@@ -15,6 +15,8 @@ export const imports = {
     import(/* webpackPrefetch: true, webpackChunkName: "src-atoms-text" */ 'src/atoms/Text.mdx'),
   'src/atoms/index.mdx': () =>
     import(/* webpackPrefetch: true, webpackChunkName: "src-atoms-index" */ 'src/atoms/index.mdx'),
+  'src/commons/Theme.mdx': () =>
+    import(/* webpackPrefetch: true, webpackChunkName: "src-commons-theme" */ 'src/commons/Theme.mdx'),
   'src/commons/index.mdx': () =>
     import(/* webpackPrefetch: true, webpackChunkName: "src-commons-index" */ 'src/commons/index.mdx'),
   'src/misc/Absolute.mdx': () =>
