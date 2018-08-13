@@ -1,7 +1,7 @@
 import * as React from "react";
-import { StyledText } from "../atoms/Text";
+import { Text } from "../atoms/Text";
 
-export const StyledSpan = StyledText.extend`
+export const StyledSpan = Text.extend`
   display: inline;
 `.withComponent("span");
 

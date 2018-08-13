@@ -2,16 +2,26 @@ import * as React from "react";
 import styled from "styled-components";
 import {
   space,
+  SpaceProps,
   width,
+  WidthProps,
   height,
+  HeightProps,
   color,
+  ColorProps,
   justifySelf,
+  JustifySelfProps,
   alignSelf,
+  AlignSelfProps,
   order,
-  border
+  OrderProps,
+  border,
+  BorderProps
 } from "styled-system";
 
-export const StyledBox = styled.div`
+type Props = SpaceProps & WidthProps & HeightProps & ColorProps & JustifySelfProps & AlignSelfProps & OrderProps & BorderProps;
+
+export const Box = styled.div<Props>`
   box-sizing: border-box;
   ${space}
   ${width}
@@ -23,16 +33,3 @@ export const StyledBox = styled.div`
   ${border}
 `;
 
-
-export class Box extends React.Component<any, any> {
-  constructor(props: any) {
-    super(props);
-  }
-
-  public render() {
-    const { children, ...props } = this.props;
-    return (
-      <StyledBox {...props}>{children}</StyledBox>
-    );
-  }
-}
