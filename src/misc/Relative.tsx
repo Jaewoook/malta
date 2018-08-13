@@ -1,22 +1,23 @@
 import * as React from "react";
 import styled from "styled-components";
-import { top, bottom, left, right, zIndex } from "styled-system";
+import {
+  top,
+  TopProps,
+  bottom,
+  BottomProps,
+  left,
+  LeftProps,
+  right,
+  RightProps,
+  zIndex,
+  ZIndexProps
+} from "styled-system";
 
-export const StyledRelative = styled.div`
+type Props = TopProps & BottomProps & LeftProps & RightProps & ZIndexProps;
+
+export const Relative = styled.div<Props>`
   position: relative;
   ${top} ${bottom} ${left} ${right}
   ${zIndex}
 `;
 
-export class Relative extends React.Component<any, any> {
-  constructor(props: any) {
-    super(props);
-  }
-
-  public render() {
-    const { children, ...props } = this.props;
-    return (
-      <StyledRelative {...props}>{children}</StyledRelative>
-    );
-  }
-}

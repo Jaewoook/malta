@@ -1,6 +1,3 @@
 import * as React from "react";
-export declare const StyledBox: import("../../../../../../Users/minidonut/dev/malta/node_modules/styled-components").StyledComponentClass<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, any, React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>>;
-export declare class Box extends React.Component<any, any> {
-    constructor(props: any);
-    render(): JSX.Element;
-}
+import { SpaceProps, WidthProps, HeightProps, ColorProps, JustifySelfProps, AlignSelfProps, OrderProps, BorderProps } from "styled-system";
+export declare const Box: import("styled-components").StyledComponentClass<React.ClassAttributes<HTMLDivElement> & React.HTMLAttributes<HTMLDivElement> & SpaceProps & WidthProps & HeightProps & ColorProps & JustifySelfProps & AlignSelfProps & OrderProps & BorderProps, any, React.ClassAttributes<HTMLDivElement> & React.HTMLAttributes<HTMLDivElement> & SpaceProps & WidthProps & HeightProps & ColorProps & JustifySelfProps & AlignSelfProps & OrderProps & BorderProps>;
