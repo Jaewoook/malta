@@ -1,27 +1,13 @@
 import * as React from "react";
 import styled from "styled-components";
-import { space, borderRadius, width, height } from "styled-system";
+import { Box } from "../atoms/Box";
+import { borderRadius, BorderRadiusProps } from "styled-system";
 
+type Props = BorderRadiusProps;
 
-export const StyledRounded = styled.div`
+export const Rounded = styled.div<Props>`
   width: fit-content;
   height: auto;
   overflow: hidden;
-  ${space}
-  ${width}
-  ${height}
   ${borderRadius}
 `;
-
-export class Rounded extends React.Component<any, any> {
-  constructor(props: any) {
-    super(props);
-  }
-
-  public render() {
-    const { children, ...props } = this.props;
-    return (
-      <StyledRounded {...props}>{children}</StyledRounded>
-    );
-  }
-}
