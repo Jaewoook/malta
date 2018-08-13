@@ -1,5 +1,5 @@
 import * as React from "react";
-import { StyledFlex as Flex } from "../atoms/Flex";
+import { Flex } from "../atoms/Flex";
 
 export const StyledFullScreen = Flex.extend`
   margin: 0;

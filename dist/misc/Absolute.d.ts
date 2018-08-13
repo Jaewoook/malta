@@ -1,6 +1,3 @@
 import * as React from "react";
-export declare const StyledAbsolute: import("../../../../../../Users/minidonut/dev/malta/node_modules/styled-components").StyledComponentClass<React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>, any, React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>>;
-export declare class Absolute extends React.Component<any, any> {
-    constructor(props: any);
-    render(): JSX.Element;
-}
+import { TopProps, BottomProps, LeftProps, RightProps, ZIndexProps } from "styled-system";
+export declare const Absolute: import("../../../../../../../Users/minidonut/dev/salesboost/malta/node_modules/styled-components").StyledComponentClass<React.ClassAttributes<HTMLDivElement> & React.HTMLAttributes<HTMLDivElement> & TopProps & BottomProps & LeftProps & RightProps & ZIndexProps, any, React.ClassAttributes<HTMLDivElement> & React.HTMLAttributes<HTMLDivElement> & TopProps & BottomProps & LeftProps & RightProps & ZIndexProps>;

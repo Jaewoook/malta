@@ -46,7 +46,7 @@ const underline = ({ underline }: Props) =>
 const through = ({ through }: Props) =>
   through ? { textDecorationLine: "line-through" } : null;
 
-export const StyledText = styled.div`
+export const Text = styled.div`
   overflow-wrap: break-word;
   hyphens: auto;
   overflow: hidden;
@@ -77,23 +77,10 @@ export const StyledText = styled.div`
   ${width}
 `.withComponent("p");
 
-StyledText.defaultProps = {
+Text.defaultProps = {
   color: "black.standard",
   fontSize: "h4",
   regular: true,
   left: true,
   lineHeight: "1.4em"
 };
-
-export class Text extends React.Component<any, any> {
-  constructor(props: any) {
-    super(props);
-  }
-
-  public render() {
-    const { children, ...props } = this.props;
-    return (
-      <StyledText {...props}>{children}</StyledText>
-    );
-  }
-}

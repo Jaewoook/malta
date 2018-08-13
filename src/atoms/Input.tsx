@@ -17,7 +17,7 @@ const borders = () => {
   };
 };
 
-export const StyledInput = styled.input`
+export const Input = styled.input`
   appearance: none;
   display: block;
   width: 100%;
@@ -42,16 +42,3 @@ export const StyledInput = styled.input`
   }
   ${borders} ${space};
 `;
-
-export class Input extends React.Component<any, any> {
-  constructor(props: any) {
-    super(props);
-  }
-
-  public render() {
-    const { children, ...props } = this.props;
-    return (
-      <StyledInput {...props}>{children}</StyledInput>
-    );
-  }
-}

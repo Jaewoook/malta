@@ -33,7 +33,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var Flex_1 = require("../atoms/Flex");
-exports.StyledFullScreen = Flex_1.StyledFlex.extend(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  margin: 0;\n  padding: 0;\n  height: 100vh;\n  width: 100vw;\n"], ["\n  margin: 0;\n  padding: 0;\n  height: 100vh;\n  width: 100vw;\n"])));
+exports.StyledFullScreen = Flex_1.Flex.extend(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  margin: 0;\n  padding: 0;\n  height: 100vh;\n  width: 100vw;\n"], ["\n  margin: 0;\n  padding: 0;\n  height: 100vh;\n  width: 100vw;\n"])));
 var FullScreen = /** @class */ (function (_super) {
     __extends(FullScreen, _super);
     function FullScreen(props) {

@@ -33,7 +33,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var Text_1 = require("../atoms/Text");
-exports.StyledSpan = Text_1.StyledText.extend(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  display: inline;\n"], ["\n  display: inline;\n"]))).withComponent("span");
+exports.StyledSpan = Text_1.Text.extend(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  display: inline;\n"], ["\n  display: inline;\n"]))).withComponent("span");
 var Span = /** @class */ (function (_super) {
     __extends(Span, _super);
     function Span(props) {

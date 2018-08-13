@@ -1,13 +1,19 @@
 import * as React from "react";
 import {
   alignItems,
+  AlignItemsProps,
   justifyContent,
+  JustifyContentProps,
   flexWrap,
-  flexDirection
+  FlexWrapProps,
+  flexDirection,
+  FlexDirectionProps
 } from "styled-system";
-import { StyledBox as Box } from "./Box";
+import { Box } from "./Box";
 
-export const StyledFlex = Box.extend`
+type FlexProps = AlignItemsProps & JustifyContentProps & FlexWrapProps & FlexDirectionProps;
+
+export const Flex = Box.extend<FlexProps>`
   display: flex;
   box-sizing: border-box;
   ${alignItems}
@@ -15,16 +21,3 @@ export const StyledFlex = Box.extend`
   ${flexWrap}
   ${flexDirection}
 `;
-
-export class Flex extends React.Component<any, any> {
-  constructor(props: any) {
-    super(props);
-  }
-
-  public render() {
-    const { children, ...props } = this.props;
-    return (
-      <StyledFlex {...props}>{children}</StyledFlex>
-    );
-  }
-}
