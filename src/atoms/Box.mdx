@@ -8,7 +8,9 @@ import { App, Text, Box, Container, Chip, Flex } from "../../dist"
 
 # Box
 
-가장 기본이 되는 Box 엘레먼트. 컨테이너로 사용하면 안된다. 즉 하나 이상의 자식노드를 가질 수 없다.
+가장 기본이 되는 Box 엘레먼트. 컨테이너로 사용하면 안됩니다. 즉 하나 이상의 자식노드를 가질 수 없습니다.
+컴포넌트의 wrapper로 사용하여 width, height, margin, padding, background, color등의 속성을 적용시키는 용도로 사용합니다.
+특히 Box안에 text를 집어 넣을 경우에는 `<Text>`를 하위 컴포넌트로 두는게 좋습니다.
 
 ## Dependencies
 <App>
@@ -28,6 +30,7 @@ import { App, Text, Box, Container, Chip, Flex } from "../../dist"
 |justifySelf|ResponsiveValue|none|
 |alignSelf|ResponsiveValue|none|
 |order|number[]|none|
+|border|ResponsiveValue|none|
 
 
 ## Usecase
@@ -39,6 +42,7 @@ import { App, Text, Box, Container, Chip, Flex } from "../../dist"
       <Box m={2} p={2} color="#FFF" bg="black.standard" width="300px">Fixed width</Box>
       <Box m={2} p={2} color="#FFF" bg="black.standard" width="300px" alignSelf="center">Centered</Box>
       <Box m={2} p={2} color="#FFF" bg="black.standard" width="300px" ml="auto">Right aligned</Box>
+      <Box m={2} p={2} color="black.standard" width="300px" alignSelf="center" border="1px solid blue">Right aligned</Box>
     </Flex>
   </App>
 </Playground>
@@ -49,9 +53,8 @@ import { App, Text, Box, Container, Chip, Flex } from "../../dist"
   <Chip bg="#00AA00"color="#FFF" width="100px">Do</Chip>
 </App>
 
-```javascript
-// somewhere in codebase
-
+```javascrip
+//하위 컴포넌트의 margin, padding, flex-child-props, color, bg를 설정하는 용도로 사용 
 <Box><Image...></Box>
 <Box><Text...></Box>
 ```
@@ -61,6 +64,7 @@ import { App, Text, Box, Container, Chip, Flex } from "../../dist"
 </App>
 
 ```javascript
+//하위 컴포넌트 여러개를 묶는 부모 컴포넌트로 사용하면 안됩니다. 대신 <Flex>를 사용하도록 합니다. 
 <Box>
   <Box>...box1</Box>
   <Box>...box2</Box>
