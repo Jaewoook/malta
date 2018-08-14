@@ -9,22 +9,38 @@ Salesboost UI library. Atomic Design 패러다임을 적용해 컴포넌트들�
 수준에 맞춰 카테고리가 나뉘어져 있습니다. 카테고리의 hierarchy는 `atom` - `molecule` - `organism` - `template`
 순이며 모든 컴포넌트는 자신보다 상위레벨의 컴포넌트를 참조해선 안됩니다.
 
-- [Atom](http://localhost:3000/src-atoms-index): Text, Box, Image...
-- [Molecules](http://localhost:3000/src-molecules-index): Shadow, RoundedBox, Label, Button, Span, HyperLink, Chip, ListContainer, ListItem...
-- [Organisms](http://localhost:3000/src-organisms-index): Card, FixedHeader, FeedItem, GridItem, Slider...
-- [Templates](http://localhost:3000/src-templates-index): SalesBoostFooter, SalesBoostHeader, CatalogNav...
+- [Atom](./src-atoms-index): Text, Box, Image...
+- [Molecules](./src-molecules-index): Shadow, Label, Button, Span, HyperLink, Chip...
+- [Organisms](./src-organisms-index): Card, FixedHeader, FeedItem, GridItem, Slider...
+- [Templates](./src-templates-index): SalesBoostFooter, SalesBoostHeader, CatalogNav...
+- [Misc](./src-misc-index): 단독으로 사용되지 않고 다른 컴포넌트들을 꾸며줄 수 있는 유틸리티들 및, 기타 분류되지 않은 컴포넌트들을 포함합니다.
+- [Commons](./src-commons-index): 공통으로 사용하는 App, Theme
 
+## Development Workflow
+malta 개발 워크플로우에 대한 설명입니다. github 사용법에 대해 이미 알고 있는 경우 4번부터 보면 됩니다.
 
+1. [github.com/salesboostio/malta](https://github.com/salesboostio/malta)에서 레포지토리를 fork합니다.
+2. `git clone git@github.com:<YOUR_ID>/malta.git`
+3. `git remote add upstream git@github.com:salesboostio/malta.git`
+4. `git checkout atomic && git checkout -b "<your_new_branch>"`
+5. `npm install && npm run docz` 명령어로 docz 서버를 실행합니다. [localhost:3000](http://localhost:3000)
+6. `npm run new` 명령어로 새로운 컴포넌트를 생성합니다. [[Tip참고]](./tips)
+7. 편집이 완료되었으면 `npm run build && npm run lint && npm run test`로 테스트 합니다.
+8. `git add * && git commit -m "<commit_message> && git push origin "<your_new_branch>"`로 본인의 깃에 올린뒤 pull request를 생성합니다. 
 
-- [Misc](http://localhost:3000/src-misc-index): 아직 분류되지 않은 draft 컴포넌트들, deprecate 컴포넌트들을 모아놓은 폴더
-- [Commons](http://localhost:3000/src-commons-index): 공통으로 사용하는 App, Theme, Other utils...
+## Usage Workflow
+malta를 사용하는 방법에 대한 설명입니다. 프로젝트 내에서 몰타를 사용할 때 참고하면 됩니다.
 
-## WorkFlow
+1. package.json의 dependencies에  `"malta": "git+ssh://git@github.com/salesboostio/malta.git#atomic"` 를 추가합니다. 
+   salesboostio/frontend-boilerplate를 사용하고 있는 경우 이미 추가가 되어 있습니다.
+2. 소스코드 내에서 `import { Box, Flex, ... } from "malta";` 로 컴포넌트들을 사용할 수 있습니다.
+3. 컴포넌트들을 확장하고싶을경우 devDependencies에 `styled-system`, `styled-components`를 추가해줍니다. 
+4. const ExtendedBox = Box.extend`...`; 로 확장해서 사용할 수 있습니다.
 
 ## Shell Command
 ```
 ~/malta$ tsc             # 컴파일
-~/malta$ ./bin/todo      # /src내에 존재하는 todo를 grep해서 src/index.mdx에 업데이트       
+~/malta$ npm run new     # 새 컴포넌트 생성 cli   
 ```
 
 ## Docz [[link]](https://www.docz.site/)

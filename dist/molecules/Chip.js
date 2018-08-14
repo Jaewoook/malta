@@ -33,8 +33,8 @@ var __rest = (this && this.__rest) || function (s, e) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
 var Text_1 = require("../atoms/Text");
-var styled_system_1 = require("styled-system");
 var Flex_1 = require("../atoms/Flex");
+var styled_system_1 = require("styled-system");
 var StyledChip = Flex_1.Flex.extend(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  align-items: center;\n  justify-content: center;\n  border-radius: 22px;\n  font-size: 16px;\n  padding: 8px;\n  width: fit-content;\n  ", "\n  ", "\n  ", "\n"], ["\n  align-items: center;\n  justify-content: center;\n  border-radius: 22px;\n  font-size: 16px;\n  padding: 8px;\n  width: fit-content;\n  ", "\n  ", "\n  ", "\n"])), styled_system_1.width, styled_system_1.height, styled_system_1.borderRadius);
 var Chip = /** @class */ (function (_super) {
     __extends(Chip, _super);

@@ -17,3 +17,4 @@ export { Shadow } from "./misc/Shadow";
 export { Span } from "./molecules/Span";
 export { Text } from "./atoms/Text";
 export { Button } from "./molecules/Button";
+export { Hr } from "./molecules/Hr";

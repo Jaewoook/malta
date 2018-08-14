@@ -38,3 +38,5 @@ var Text_1 = require("./atoms/Text");
 exports.Text = Text_1.Text;
 var Button_1 = require("./molecules/Button");
 exports.Button = Button_1.Button;
+var Hr_1 = require("./molecules/Hr");
+exports.Hr = Hr_1.Hr;
