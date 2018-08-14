@@ -1,0 +1,45 @@
+---
+name: Button
+menu: Molecules
+---
+
+import { Playground } from "docz"
+import { App, Chip, Flex, Button } from "../../dist"
+
+# Button
+
+This is Button
+
+## Dependencies
+<App>
+<Flex>
+<Chip bg="blue.deep" color="#FFF">None</Chip>
+</Flex>
+</App>
+
+## Properties
+
+|Property|Type|Default|
+|-|-|-|
+| color | string | white.standard |
+| height | ResponsiveValues | [52px, 60px] |
+| width | ResponsiveValue | fit-content |
+| fontSize | ResponsiveValues | [h5, h3] |
+| hoverColor | String | color.blue.deep |
+| focusColor | String | color.blue.dark |
+| bg | String | blue.royal |
+| onClick | function | ()=>{} |
+
+- hoverColor, focusColor는 theme적용이 안되므로 theme을 import해서 color.*으로 사용했습니다.
+
+## Usecase
+
+<Playground>
+  <App>
+    <Button>Click me</Button>
+  </App>
+</Playground>
+
+## Best Practices
+
+## Test

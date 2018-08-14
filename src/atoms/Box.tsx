@@ -15,11 +15,9 @@ import {
   AlignSelfProps,
   order,
   OrderProps,
-  border,
-  BorderProps
 } from "styled-system";
 
-type Props = SpaceProps & WidthProps & HeightProps & ColorProps & JustifySelfProps & AlignSelfProps & OrderProps & BorderProps;
+type Props = SpaceProps & WidthProps & HeightProps & ColorProps & JustifySelfProps & AlignSelfProps & OrderProps;
 
 export const Box = styled.div<Props>`
   box-sizing: border-box;
@@ -30,6 +28,5 @@ export const Box = styled.div<Props>`
   ${justifySelf}
   ${alignSelf}
   ${order}
-  ${border}
 `;
 

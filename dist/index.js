@@ -36,3 +36,5 @@ var Span_1 = require("./molecules/Span");
 exports.Span = Span_1.Span;
 var Text_1 = require("./atoms/Text");
 exports.Text = Text_1.Text;
+var Button_1 = require("./molecules/Button");
+exports.Button = Button_1.Button;
