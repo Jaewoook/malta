@@ -41,6 +41,9 @@ export declare const fontWeights: {
     demiLight: number;
     light: number;
 };
+export declare const fontFamilies: {
+    sans: string;
+};
 export declare const space: number[];
 export declare const shadow: string[];
 declare const theme: {

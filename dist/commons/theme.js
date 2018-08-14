@@ -43,6 +43,9 @@ exports.fontWeights = {
     demiLight: 300,
     light: 200,
 };
+exports.fontFamilies = {
+    sans: "Noto Sans KR, Arial, sans-serif"
+};
 exports.space = [0, 8, 16, 32, 64, 128];
 exports.shadow = [
     "none",
