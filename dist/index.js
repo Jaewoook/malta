@@ -40,3 +40,5 @@ var Button_1 = require("./molecules/Button");
 exports.Button = Button_1.Button;
 var Hr_1 = require("./molecules/Hr");
 exports.Hr = Hr_1.Hr;
+var Card_1 = require("./molecules/Card");
+exports.Card = Card_1.Card;
