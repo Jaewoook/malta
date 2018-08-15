@@ -1,0 +1,51 @@
+---
+name: Hr
+menu: Molecules
+---
+
+import { Playground } from "docz"
+import { App, Chip, Flex, Hr, Text } from "../../dist"
+
+# Hr
+
+수평선 입니다. 
+
+## Dependencies
+<App>
+<Flex>
+<Chip bg="blue.deep" color="#FFF">None</Chip>
+</Flex>
+</App>
+
+## Properties
+
+|Property|Type|Default|
+|-|-|-|
+|space|ResponsiveValue|my={2}|
+|width|ResponsiveValue| - |
+|thick|string\|number|1px|
+|lineStyle|solid\|dotted\|dashed|solid|
+|color|string|black._20|
+
+## Usecase
+
+<Playground>
+  <App>
+    <Flex flexDirection="column" bg="black._5" pb={2}>
+      <Text center>default style</Text>
+      <Hr />
+      <Text center>side margin 2</Text>
+      <Hr mx={2}/>
+      <Text center>blue.royal, 2px, dotted</Text>
+      <Hr color="blue.royal" thick="2px" lineStyle="dashed"/>
+      <Text center>#EEE, 2px, dotted</Text>
+      <Hr color="#EEE" thick="2px" lineStyle="dashed"/>
+      <Text center>right half</Text>
+      <Hr width={1/2} ml="auto"/>
+    </Flex>
+  </App>
+</Playground>
+
+## Best Practices
+
+## Test

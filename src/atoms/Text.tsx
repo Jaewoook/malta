@@ -51,8 +51,6 @@ export const Text = styled.div`
   hyphens: auto;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 100%;
-  width: 100%;
   margin: 0;
   ${caps}
   ${medium}

@@ -1,7 +1,7 @@
 import * as React from "react";
 import { Text } from "../atoms/Text";
-import { width, height, borderRadius } from "styled-system";
 import { Flex } from "../atoms/Flex";
+import { width, height, borderRadius } from "styled-system";
 
 const StyledChip = Flex.extend`
   align-items: center;

@@ -45,6 +45,10 @@ export const fontWeights = {
   light: 200,
 };
 
+export const fontFamilies = {
+  sans: "Noto Sans KR, Arial, sans-serif"
+};
+
 export const space = [0, 8, 16, 32, 64, 128];
 
 export const shadow = [

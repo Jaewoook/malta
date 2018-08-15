@@ -8,12 +8,17 @@ import { App, Flex, Chip } from "../../dist"
 
 # Chip
 
-기본 16px 폰트에, 중앙정렬되어있고 양쪽 모서리가 둥근 Chip 컴포넌트이다. 
+기본 16px 폰트에, 중앙정렬되어있고 양쪽 모서리가 둥근 Chip 컴포넌트입니다. 
 
 ## Dependencies
 <App>
 <Flex>
-<Chip bg="blue.deep" color="#FFF">Rounded</Chip>
+<Chip bg="blue.deep" color="#FFF">Flex</Chip>
+</Flex>
+</App>
+<App>
+<Flex>
+<Chip bg="blue.deep" color="#FFF">Text</Chip>
 </Flex>
 </App>
 
@@ -21,7 +26,7 @@ import { App, Flex, Chip } from "../../dist"
 
 |Property|Type|Default|
 |-|-|-|
-| width | ResponsiveValue | fit-ontent |
+| width | ResponsiveValue | fit-content |
 | height | ResponsiveValue | auto |
 | borderRadius | ResponsiveValue | 22px |
 
@@ -41,19 +46,5 @@ import { App, Flex, Chip } from "../../dist"
 </Playground>
 
 ## Best Practices
-
-<App>
-  <Chip bg="#00AA00" color="#FFF" width="100px">Do</Chip>
-</App>
-
-```javascript
-```
-
-<App>
-  <Chip bg="#AA0000" color="#FFF" width="100px">Don't</Chip>
-</App>
-
-```javascript
-```
 
 ## Test

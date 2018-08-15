@@ -1,0 +1,62 @@
+---
+name: Card
+menu: Molecules
+---
+
+import { Playground } from "docz"
+import { App, Chip, Flex, Card, Text, Hr, Image, Box } from "../../dist"
+
+# Card
+
+카드 컨테이너 입니다. Column Flexbox를 사용하며 기본적으로 boxShadow와 hover시의 boxShadow가 적용되어있습니다. 오버라이딩할 수 있습니다.
+
+## Dependencies
+<App>
+<Flex>
+<Chip bg="blue.deep" color="#FFF">Flex</Chip>
+</Flex>
+</App>
+
+## Properties
+
+|Property|Type|Default|
+|-|-|-|
+|width|ResponsiveValue|[100%, 300px]|
+|height|ResponsiveValue|auto|
+|borderRadius|ResponsiveValue|3px|
+|shadow|ResponsiveValue|2|
+|hoverShadow|ResponsiveValue|4|
+
+## Usecase
+
+<Playground>
+  <App>
+    <Flex p={2} bg="black._8">
+      <Card height="500px" bg="white.standard" p={2} css="cursor: pointer;" onClick={()=>{alert("clicked")}}>
+        <Text>This is Card Header</Text>
+        <Image src="http://res.cloudinary.com/ds9rfw9oy/image/upload/v1534263290/Salesboost/logo_copy_black.png" width="60px" height="auto"/>
+        <Hr width="100%" mx={-2}/>
+        <Text>This is CardBody</Text>
+      </Card>
+      <Flex flexDirection="column" ml={2}>
+        <Card height="240px" bg="white.standard" mb={2} shadow={0} hoverShadow={5} bg="blue.dark">
+          <Flex alignSelf="center" height="100%" alignItems="center">
+            <Text color="white.standard">Welcome to Salesboost</Text>
+          </Flex>
+          <Box height="160px" justifySelf="flex-end">
+            <Image src="http://res.cloudinary.com/ds9rfw9oy/image/upload/v1534264308/Samples/vicera_gyciui_geras_2-01_1x.png" />
+          </Box>
+        </Card>
+        <Card height="240px" bg="white.standard" p={2} hoverShadow={0}>
+          <Text>This is Card Header</Text>
+          <Hr width="100%" mx={-2}/>
+          <Text>This is CardBody</Text>
+        </Card>
+      </Flex>
+    </Flex>
+  </App>
+</Playground>
+
+## Best Practices
+
+## Test

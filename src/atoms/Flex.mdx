@@ -4,11 +4,18 @@ menu: Atoms
 ---
 
 import { Playground } from "docz"
-import { App, Flex, Chip } from "../../dist"
+import { App, Flex, Chip, Box, Text, Image } from "../../dist"
 
 # Flex
 
-Flex 레이아웃을 그리기 위한 부모 컨테이너다. CSS구조상 부모이자 자식으로 사용하는 것도 가능하다. Box와의 차이점은, Box는 부모 컨테이너가 될 수 없다. 
+<Image src="https://cdn-images-1.medium.com/max/2000/1*wyQwuPQq3CBP4p8lDX4sGQ.gif"/>
+
+Flex 레이아웃을 그리기 위한 부모 컨테이너입니다. CSS구이조상 부모이자 자식으로 사용하는 것도 가능하다. 
+다만 하위 컴포넌트가 하나일 경우  `<Box>`를 사용하는 것이 옳습니다.
+
+- [Flexbox — The Animated Tutorial - medium](https://medium.com/@js_tut/flexbox-the-animated-tutorial-8075cbe4c1b2)
+- [A Complete Guide to Flexbox - CSS tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [CSS flexbox cheatsheet](https://devhints.io/css-flexbox)
 
 ## Dependencies
 <App>
@@ -22,40 +29,81 @@ Flex 레이아웃을 그리기 위한 부모 컨테이너다. CSS구조상 부�
 |Property|Type|Default|
 |-|-|-|
 | flexDirection | row\|column | row |
-| justifyContent | flex-start\|flex-end\|center\|space-between | flex-start |
-| alignItems | flex-start\|flex-end\|center\|stretch | flex-start |
+| justifyContent | flex-start\|flex-end\|center\|space-between\|...| flex-start |
+| alignItems | flex-start\|flex-end\|center\|stretch\|... | flex-start |
 | order | number | 0 |
 | flexWrap | wrap\|no-wrap | no-wrap |
 
 
 ## Usecase
 
+
+
 <Playground>
   <App>
-    <Flex></Flex>
+    <Box bg="black.standard" p={1}>
+      <Text center color="#fff">
+        flexWrap="wrap"
+      </Text>
+    </Box>
+    <Flex bg="black._5" flexWrap="wrap">
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+    </Flex>
+  </App>
+</Playground>
+
+<Playground>
+  <App>
+    <Box bg="black.standard" p={1}>
+      <Text center color="#fff">
+        flexWrap="wrap" justifyContent="space-between"
+      </Text>
+    </Box>
+    <Flex bg="black._5" flexWrap="wrap" justifyContent="space-between">
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+    </Flex>
+  </App>
+</Playground>
+
+<Playground>
+  <App>
+    <Box bg="black.standard" p={1}>
+      <Text center color="#fff">
+        flexDirection="column"
+      </Text>
+    </Box>
+    <Flex bg="black._5" flexDirection="column">
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+      <Box bg="black.half" color="#fff" m={2} p={2}>child</Box>
+    </Flex>
   </App>
 </Playground>
 
 ## Best Practices
 
-<App>
-  <Chip bg="#00AA00"color="#FFF" width="100px">Do</Chip>
-</App>
-
-```javascript
-
-fill here
-
-```
-
-<App>
-  <Chip bg="#AA0000"color="#FFF" width="100px">Don't</Chip>
-</App>
-
-```javascript
-
-fill here
-
-```
 
 ## Test

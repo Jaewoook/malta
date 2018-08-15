@@ -1,4 +1,6 @@
 export const imports = {
+  'docz/Tips.mdx': () =>
+    import(/* webpackPrefetch: true, webpackChunkName: "docz-tips" */ 'docz/Tips.mdx'),
   'src/index.mdx': () =>
     import(/* webpackPrefetch: true, webpackChunkName: "src-index" */ 'src/index.mdx'),
   'src/atoms/Box.mdx': () =>

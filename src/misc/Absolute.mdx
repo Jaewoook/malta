@@ -8,11 +8,11 @@ import { App, Flex, Chip, Absolute, Relative, Box, Text } from "../../dist"
 
 # Absolute
 
-정상적인 document flow를 벗어난 곳에 컴포넌트를 위치시키고 싶을 때 사용하는 wrapper.  `<Relative>` 블락 안에서만 적용된다. 
+정상적인 document flow를 벗어난 곳에 컴포넌트를 위치시키고 싶을 때 사용하는 wrapper.  `<Relative>` 블락 안에서만 적용됩니다. 
 `<Absolute>` 내부에 있는 컴포넌트의 width, height는 그 부모 컴포넌트의 전체 width, height 계산에서 제외되며
-당연히 padding, margin 속성은 적용되지 않는다.
+당연히 padding, margin 속성은 적용되지 않습니다.
 
-top, left, right, bottom의 offset은 부모 컴포넌트를 기준으로 계산된다.
+top, left, right, bottom의 offset은 부모 컴포넌트를 기준으로 계산됩니다.
 
 ## Dependencies
 <App>
@@ -50,19 +50,5 @@ top, left, right, bottom의 offset은 부모 컴포넌트를 기준으로 계산
 </Playground>
 
 ## Best Practices
-
-<App>
-  <Chip bg="#00AA00" color="#FFF" width="100px">Do</Chip>
-</App>
-
-```javascript
-```
-
-<App>
-  <Chip bg="#AA0000" color="#FFF" width="100px">Don't</Chip>
-</App>
-
-```javascript
-```
 
 ## Test

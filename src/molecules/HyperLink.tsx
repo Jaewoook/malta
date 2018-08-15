@@ -1,8 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
-import { StyledSpan } from "./Span";
+import { Span } from "./Span";
 
-export const StyledHyperLink = StyledSpan.extend`
+export const HyperLink = Span.extend`
   text-decoration: none;
   &:hover{
     text-decoration-line: underline;
@@ -10,19 +10,6 @@ export const StyledHyperLink = StyledSpan.extend`
   cursor: pointer;
 `.withComponent("a");
 
-StyledHyperLink.defaultProps = {
+HyperLink.defaultProps = {
   target: "_blank"
 };
-
-export class HyperLink extends React.Component<any, any> {
-  constructor(props: any) {
-    super(props);
-  }
-
-  public render() {
-    const { children, ...props } = this.props;
-    return (
-      <StyledHyperLink {...props}>{children}</StyledHyperLink>
-    );
-  }
-}

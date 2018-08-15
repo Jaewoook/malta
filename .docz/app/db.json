@@ -4,13 +4,36 @@
     "description": "Salesboost UI library built with Styled-component",
     "themeConfig": {},
     "ordering": "descending",
-    "version": "0.2.0"
+    "version": "0.2.0",
+    "indexHtml": "./docz/index.html"
   },
   "entries": {
+    "docz/Tips.mdx": {
+      "name": "Tips",
+      "route": "/tips",
+      "id": "01CMVFZV44TJ22Y3WRPNEB7WF9",
+      "filepath": "docz/Tips.mdx",
+      "link": "https://github.com/salesboostio/malta/tree/master/docz/Tips.mdx",
+      "slug": "docz-tips",
+      "order": 0,
+      "menu": null,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "tips",
+          "value": "Tips"
+        },
+        {
+          "depth": 2,
+          "slug": "새-컴포넌트를-만들고-싶어요",
+          "value": "새 컴포넌트를 만들고 싶어요"
+        }
+      ]
+    },
     "src/index.mdx": {
-      "name": "Introduction",
+      "name": "About",
       "route": "/",
-      "id": "01CMSHN2AYKSVRNTX0RYKZEDPR",
+      "id": "01CMVFZV45DG3AD0QWDGBSZWPA",
       "filepath": "src/index.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/index.mdx",
       "slug": "src-index",
@@ -47,7 +70,7 @@
     "src/atoms/Box.mdx": {
       "name": "Box",
       "menu": "Atoms",
-      "id": "01CMSHN2AZKGRC29HQRTF51P1M",
+      "id": "01CMVFZV4675DSR6FAYCBN2DJK",
       "filepath": "src/atoms/Box.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/atoms/Box.mdx",
       "slug": "src-atoms-box",
@@ -89,7 +112,7 @@
     "src/atoms/Container.mdx": {
       "name": "Container",
       "menu": "Atoms",
-      "id": "01CMSHN2AZGGT0QQZCZFVXBY1Q",
+      "id": "01CMVFZV46N5ZFDSAEE6WVN2E9",
       "filepath": "src/atoms/Container.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/atoms/Container.mdx",
       "slug": "src-atoms-container",
@@ -131,7 +154,7 @@
     "src/atoms/Flex.mdx": {
       "name": "Flex",
       "menu": "Atoms",
-      "id": "01CMSHN2B0ACDWNYB7BGPT4S7R",
+      "id": "01CMVFZV46EPQBXHDN1KA81NRR",
       "filepath": "src/atoms/Flex.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/atoms/Flex.mdx",
       "slug": "src-atoms-flex",
@@ -173,7 +196,7 @@
     "src/atoms/Image.mdx": {
       "name": "Image",
       "menu": "Atoms",
-      "id": "01CMSHN2B0NKD13RYA57VE3RGV",
+      "id": "01CMVFZV46S930307X1PK4GC8C",
       "filepath": "src/atoms/Image.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/atoms/Image.mdx",
       "slug": "src-atoms-image",
@@ -215,7 +238,7 @@
     "src/atoms/Input.mdx": {
       "name": "Input",
       "menu": "Atoms",
-      "id": "01CMSHN2B07RNHPBGNAGZSVDVM",
+      "id": "01CMVFZV47H1FYPBB53S0VKQSS",
       "filepath": "src/atoms/Input.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/atoms/Input.mdx",
       "slug": "src-atoms-input",
@@ -257,7 +280,7 @@
     "src/atoms/Text.mdx": {
       "name": "Text",
       "menu": "Atoms",
-      "id": "01CMSHN2B0998JE9NNV7H6S2PC",
+      "id": "01CMVFZV471M196G8T8MBTB0W3",
       "filepath": "src/atoms/Text.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/atoms/Text.mdx",
       "slug": "src-atoms-text",
@@ -299,7 +322,7 @@
     "src/atoms/index.mdx": {
       "name": "Index",
       "menu": "Atoms",
-      "id": "01CMSHN2B1S330455EZD6K1QWN",
+      "id": "01CMVFZV47NHXDGDSCSR5MAH7G",
       "filepath": "src/atoms/index.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/atoms/index.mdx",
       "slug": "src-atoms-index",
@@ -316,7 +339,7 @@
     "src/commons/Theme.mdx": {
       "name": "Theme",
       "menu": "Commons",
-      "id": "01CMSHN2B1V16EZJVF6HQYQZVJ",
+      "id": "01CMVFZV487J2XQSWD0RXVVTJ4",
       "filepath": "src/commons/Theme.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/commons/Theme.mdx",
       "slug": "src-commons-theme",
@@ -363,7 +386,7 @@
     "src/commons/index.mdx": {
       "name": "Index",
       "menu": "Commons",
-      "id": "01CMSHN2B1PZRQEVNCKZ05X1NM",
+      "id": "01CMVFZV48M1PHJJHTX8H46F1K",
       "filepath": "src/commons/index.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/commons/index.mdx",
       "slug": "src-commons-index",
@@ -380,7 +403,7 @@
     "src/misc/Absolute.mdx": {
       "name": "Absolute",
       "menu": "Misc",
-      "id": "01CMSHN2B2F5YSV2DJW6TBWTV8",
+      "id": "01CMVFZV48WG91WHGNEK1FYN65",
       "filepath": "src/misc/Absolute.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/misc/Absolute.mdx",
       "slug": "src-misc-absolute",
@@ -422,7 +445,7 @@
     "src/misc/FullScreen.mdx": {
       "name": "FullScreen",
       "menu": "Misc",
-      "id": "01CMSHN2B2V5TQDGVSFSMSH6AB",
+      "id": "01CMVFZV48FGAEX1YTWH1DQS75",
       "filepath": "src/misc/FullScreen.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/misc/FullScreen.mdx",
       "slug": "src-misc-full-screen",
@@ -464,7 +487,7 @@
     "src/misc/Hide.mdx": {
       "name": "Hide",
       "menu": "Misc",
-      "id": "01CMSHN2B2W124XKMEAS3AC0C8",
+      "id": "01CMVFZV48EV1DZ2NAFZVPV9S7",
       "filepath": "src/misc/Hide.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/misc/Hide.mdx",
       "slug": "src-misc-hide",
@@ -506,7 +529,7 @@
     "src/misc/Overlay.mdx": {
       "name": "Overlay",
       "menu": "Misc",
-      "id": "01CMSHN2B24Z4JXNW7QVVYKFKS",
+      "id": "01CMVFZV49JF1BPWYE5XC1C05N",
       "filepath": "src/misc/Overlay.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/misc/Overlay.mdx",
       "slug": "src-misc-overlay",
@@ -548,7 +571,7 @@
     "src/misc/Relative.mdx": {
       "name": "Relative",
       "menu": "Misc",
-      "id": "01CMSHN2B3TF8GXX0C1WDJFVXG",
+      "id": "01CMVFZV49C4438YY2M672CN4A",
       "filepath": "src/misc/Relative.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/misc/Relative.mdx",
       "slug": "src-misc-relative",
@@ -590,7 +613,7 @@
     "src/misc/Rounded.mdx": {
       "name": "Rounded",
       "menu": "Misc",
-      "id": "01CMSHN2B3SASGFH2T3V30MEAH",
+      "id": "01CMVFZV49F11AJQ4RPDN05CRB",
       "filepath": "src/misc/Rounded.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/misc/Rounded.mdx",
       "slug": "src-misc-rounded",
@@ -632,7 +655,7 @@
     "src/misc/Shadow.mdx": {
       "name": "Shadow",
       "menu": "Misc",
-      "id": "01CMSHN2B3A74X6S1SDH9V0ZQJ",
+      "id": "01CMVFZV4ARYGWB20FMNXCX1SG",
       "filepath": "src/misc/Shadow.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/misc/Shadow.mdx",
       "slug": "src-misc-shadow",
@@ -674,7 +697,7 @@
     "src/misc/index.mdx": {
       "name": "Index",
       "menu": "Misc",
-      "id": "01CMSHN2B3731WF92D8YXWMARR",
+      "id": "01CMVFZV4AG3EHVRR5NAEHG6F5",
       "filepath": "src/misc/index.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/misc/index.mdx",
       "slug": "src-misc-index",
@@ -691,7 +714,7 @@
     "src/molecules/Chip.mdx": {
       "name": "Chip",
       "menu": "Molecules",
-      "id": "01CMSHN2B35MRC9GNNTJ7R09AS",
+      "id": "01CMVFZV4A0RAJHS6Q10H6084J",
       "filepath": "src/molecules/Chip.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/molecules/Chip.mdx",
       "slug": "src-molecules-chip",
@@ -733,7 +756,7 @@
     "src/molecules/HyperLink.mdx": {
       "name": "HyperLink",
       "menu": "Molecules",
-      "id": "01CMSHN2B4HCFV27HDW91FEBXM",
+      "id": "01CMVFZV4AXM4JRGBWCV1BBT0F",
       "filepath": "src/molecules/HyperLink.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/molecules/HyperLink.mdx",
       "slug": "src-molecules-hyper-link",
@@ -775,7 +798,7 @@
     "src/molecules/Span.mdx": {
       "name": "Span",
       "menu": "Molecules",
-      "id": "01CMSHN2B4TEDXE5MEF8ERF2B5",
+      "id": "01CMVFZV4B86V4PH1EWCPT32NK",
       "filepath": "src/molecules/Span.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/molecules/Span.mdx",
       "slug": "src-molecules-span",
@@ -817,7 +840,7 @@
     "src/molecules/index.mdx": {
       "name": "Index",
       "menu": "Molecules",
-      "id": "01CMSHN2B44FJNT4DXJM115S1F",
+      "id": "01CMVFZV4BKAX2Q4KF943QPYW2",
       "filepath": "src/molecules/index.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/molecules/index.mdx",
       "slug": "src-molecules-index",
@@ -834,7 +857,7 @@
     "src/organisms/index.mdx": {
       "name": "Index",
       "menu": "Organisms",
-      "id": "01CMSHN2B4VXE7SKVBE2PKV6QR",
+      "id": "01CMVFZV4B0REHYNPYHKBQ19X2",
       "filepath": "src/organisms/index.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/organisms/index.mdx",
       "slug": "src-organisms-index",
@@ -851,7 +874,7 @@
     "src/templates/SalesboostFooter.mdx": {
       "name": "SalesboostFooter",
       "menu": "Templates",
-      "id": "01CMSHN2B4ZC7F47X4SNC7JVJW",
+      "id": "01CMVFZV4B5NSTV1YGKCYY44PA",
       "filepath": "src/templates/SalesboostFooter.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/templates/SalesboostFooter.mdx",
       "slug": "src-templates-salesboost-footer",
@@ -890,10 +913,52 @@
         }
       ]
     },
+    "src/templates/SalesboostNav.mdx": {
+      "name": "SalesboostNav",
+      "menu": "Templates",
+      "id": "01CMVFZV4BKWR53P6C4Y1TS10V",
+      "filepath": "src/templates/SalesboostNav.mdx",
+      "link": "https://github.com/salesboostio/malta/tree/master/src/templates/SalesboostNav.mdx",
+      "slug": "src-templates-salesboost-nav",
+      "route": "/src-templates-salesboost-nav",
+      "order": 0,
+      "headings": [
+        {
+          "depth": 1,
+          "slug": "salesboostnav",
+          "value": "Salesboostnav"
+        },
+        {
+          "depth": 2,
+          "slug": "dependencies",
+          "value": "Dependencies"
+        },
+        {
+          "depth": 2,
+          "slug": "properties",
+          "value": "Properties"
+        },
+        {
+          "depth": 2,
+          "slug": "usecase",
+          "value": "Usecase"
+        },
+        {
+          "depth": 2,
+          "slug": "best-practices",
+          "value": "Best practices"
+        },
+        {
+          "depth": 2,
+          "slug": "test",
+          "value": "Test"
+        }
+      ]
+    },
     "src/templates/index.mdx": {
       "name": "Index",
       "menu": "Templates",
-      "id": "01CMSHN2B50KDECEKNQTFDJCY6",
+      "id": "01CMVFZV4BBCRQ51B7P5FR7E73",
       "filepath": "src/templates/index.mdx",
       "link": "https://github.com/salesboostio/malta/tree/master/src/templates/index.mdx",
       "slug": "src-templates-index",
