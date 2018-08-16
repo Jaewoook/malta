@@ -19,3 +19,5 @@ export { Text } from "./atoms/Text";
 export { Button } from "./molecules/Button";
 export { Hr } from "./molecules/Hr";
 export { Card } from "./molecules/Card";
+export { Row } from "./molecules/Row";
+export { Col } from "./molecules/Col";
