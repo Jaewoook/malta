@@ -42,3 +42,7 @@ var Hr_1 = require("./molecules/Hr");
 exports.Hr = Hr_1.Hr;
 var Card_1 = require("./molecules/Card");
 exports.Card = Card_1.Card;
+var Row_1 = require("./molecules/Row");
+exports.Row = Row_1.Row;
+var Col_1 = require("./molecules/Col");
+exports.Col = Col_1.Col;
