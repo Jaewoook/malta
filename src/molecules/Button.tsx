@@ -17,6 +17,7 @@ export const Button = Box.extend<Props>`
   cursor: pointer;
   align-items: center;
   justify-content: center;
+  font-weight: 500;
   width: fit-content;
   &:hover {
     background: ${(props: Props) => props.hoverColor};
