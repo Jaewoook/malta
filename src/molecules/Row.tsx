@@ -3,7 +3,10 @@ import styled from "styled-components";
 import { Flex } from "../atoms/Flex";
 
 export const Row = Flex.extend`
-  flex-direction: row;
-  align-items: center;
-  juetify-contents: center;
 `;
+
+Row.defaultProps = {
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center"
+};

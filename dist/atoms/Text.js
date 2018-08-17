@@ -55,7 +55,6 @@ exports.Text = styled_components_1.default.div(templateObject_1 || (templateObje
 exports.Text.defaultProps = {
     color: "black.standard",
     fontSize: "h4",
-    regular: true,
     left: true,
     lineHeight: "1.4em"
 };

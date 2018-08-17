@@ -78,7 +78,6 @@ export const Text = styled.div`
 Text.defaultProps = {
   color: "black.standard",
   fontSize: "h4",
-  regular: true,
   left: true,
   lineHeight: "1.4em"
 };

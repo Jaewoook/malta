@@ -5,5 +5,10 @@ var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cook
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var Flex_1 = require("../atoms/Flex");
-exports.Col = Flex_1.Flex.extend(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  flex-direction: column;\n  align-items: center;\n  juetify-contents: center;\n"], ["\n  flex-direction: column;\n  align-items: center;\n  juetify-contents: center;\n"])));
+exports.Col = Flex_1.Flex.extend(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n"], ["\n"])));
+exports.Col.defaultProps = {
+    justifyContent: "center",
+    flexDirection: "column",
+    alignItems: "center"
+};
 var templateObject_1;
