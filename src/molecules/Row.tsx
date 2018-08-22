@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { Flex } from "../atoms/Flex";
 
-export const Row = Flex.extend`
+export const Row = styled(Flex)`
 `;
 
 Row.defaultProps = {
