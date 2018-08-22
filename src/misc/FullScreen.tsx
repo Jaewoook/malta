@@ -7,4 +7,5 @@ export const FullScreen = styled(Flex)`
   padding: 0;
   height: 100vh;
   width: 100vw;
+  flex-direction: column;
 `;
