@@ -14,8 +14,7 @@
     "coverage": "codecov --token=a6047fcd-bff1-49b8-9d1d-adb91e6f9859",
     "docz": "docz dev",
     "docz-build": "docz build",
-    "new": "./bin/new",
-    "svg": "styled-svg src/icons/**/*.svg"
+    "new": "./bin/new"
   },
   "dependencies": {
     "docz": "^0.9.6",
@@ -33,7 +32,6 @@
     "codecov": "^3.0.4",
     "inquirer": "^6.1.0",
     "jest": "^23.5.0",
-    "styled-svg": "^1.4.1",
     "tslint": "^5.11.0",
     "typescript": "^3.0.1"
   },
