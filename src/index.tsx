@@ -21,3 +21,4 @@ export { Hr } from "./molecules/Hr";
 export { Card } from "./molecules/Card";
 export { Row } from "./molecules/Row";
 export { Col } from "./molecules/Col";
+export { SalesboostHeader } from "./templates/SalesboostHeader";

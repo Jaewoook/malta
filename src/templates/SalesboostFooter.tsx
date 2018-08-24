@@ -19,7 +19,7 @@ export class SalesboostFooter extends React.Component<any, any> {
     const { color, fontFamily, fontSize, bg, height} = this.props;
     return (
       <Flex alignItems="center" justifyContent="center" bg={bg} height={height} mt="auto">
-        <Text color={color} fontFamily={fontFamily} fontSize={fontSize} width="fit-content" height="fit-content">Copyright &copy; 2018 Salesboost. Inc</Text>
+        <Text color={color} fontFamily={fontFamily} fontSize={fontSize} width="fit-content" height="fit-content" demiLight>Copyright &copy; 2018 Salesboost. Inc</Text>
       </Flex>
     );
   }

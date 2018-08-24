@@ -24,13 +24,13 @@ var SalesboostFooter = /** @class */ (function (_super) {
     SalesboostFooter.prototype.render = function () {
         var _a = this.props, color = _a.color, fontFamily = _a.fontFamily, fontSize = _a.fontSize, bg = _a.bg, height = _a.height;
         return (React.createElement(Flex_1.Flex, { alignItems: "center", justifyContent: "center", bg: bg, height: height, mt: "auto" },
-            React.createElement(Text_1.Text, { color: color, fontFamily: fontFamily, fontSize: fontSize, width: "fit-content", height: "fit-content" }, "Copyright \u00A9 2018 Salesboost. Inc")));
+            React.createElement(Text_1.Text, { color: color, fontFamily: fontFamily, fontSize: fontSize, width: "fit-content", height: "fit-content", demiLight: true }, "Copyright \u00A9 2018 Salesboost. Inc")));
     };
     SalesboostFooter.defaultProps = {
         color: "black.hint",
         bg: "black._20",
         fontSize: ["h4", "h3", "h3"],
-        fontFamily: "Arial",
+        fontFamily: "Noto Sans KR",
         height: ["32px", "50px"]
     };
     return SalesboostFooter;
