@@ -25,7 +25,6 @@ export const Input = styled.input`
   color: inherit;
   font-size: 16px;
   background-color: transparent;
-  border-radius: 2px;
   border-width: 0px;
   border-style: solid;
   border-color: ${theme.colors.blue.dark};

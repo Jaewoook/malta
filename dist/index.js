@@ -46,3 +46,5 @@ var Row_1 = require("./molecules/Row");
 exports.Row = Row_1.Row;
 var Col_1 = require("./molecules/Col");
 exports.Col = Col_1.Col;
+var SalesboostHeader_1 = require("./templates/SalesboostHeader");
+exports.SalesboostHeader = SalesboostHeader_1.SalesboostHeader;
