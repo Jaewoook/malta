@@ -3,6 +3,7 @@ import { ResponsiveValue } from "styled-system";
 interface Props {
     logoSrc: string;
     headerHeight?: ResponsiveValue<string | number>;
+    imageWidth?: ResponsiveValue<string | number>;
     imageHeight?: ResponsiveValue<string | number>;
     bg?: string;
     padding?: ResponsiveValue<string | number>;

@@ -8,6 +8,7 @@ import { ResponsiveValue } from "styled-system";
 interface Props {
   logoSrc: string;
   headerHeight?: ResponsiveValue<string | number>;
+  imageWidth?: ResponsiveValue<string | number>;
   imageHeight?: ResponsiveValue<string | number>;
   bg?: string;
   padding?: ResponsiveValue<string | number>;
@@ -18,9 +19,9 @@ interface Props {
 export const SalesboostHeader: React.SFC<Props> = (props) => {
   return (
     <Flex width="100%" height={props.headerHeight} bg={props.bg} alignItems="center" pl={props.padding}>
-      <Box mr="auto" height={props.imageHeight} style={{ cursor: "pointer" }} onClick={props.onClick}>
+      <Box mr="auto" height={props.imageHeight} style={{ cursor: "pointer" }} onClick={props.onClick} width={props.imageWidth}>
         <a href={props.href}>
-          <Image src={props.logoSrc} fit="scale-down" />
+          <Image src={props.logoSrc} fit="contain" />
         </a>
       </Box>
       {props.children}

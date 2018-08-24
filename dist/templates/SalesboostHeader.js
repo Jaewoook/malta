@@ -6,9 +6,9 @@ var Image_1 = require("../atoms/Image");
 var Box_1 = require("../atoms/Box");
 exports.SalesboostHeader = function (props) {
     return (React.createElement(Flex_1.Flex, { width: "100%", height: props.headerHeight, bg: props.bg, alignItems: "center", pl: props.padding },
-        React.createElement(Box_1.Box, { mr: "auto", height: props.imageHeight, style: { cursor: "pointer" }, onClick: props.onClick },
+        React.createElement(Box_1.Box, { mr: "auto", height: props.imageHeight, style: { cursor: "pointer" }, onClick: props.onClick, width: props.imageWidth },
             React.createElement("a", { href: props.href },
-                React.createElement(Image_1.Image, { src: props.logoSrc, fit: "scale-down" }))),
+                React.createElement(Image_1.Image, { src: props.logoSrc, fit: "contain" }))),
         props.children));
 };
 exports.SalesboostHeader.defaultProps = {
