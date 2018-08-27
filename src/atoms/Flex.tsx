@@ -14,9 +14,8 @@ import { Box } from "./Box";
 
 type FlexProps = AlignItemsProps & JustifyContentProps & FlexWrapProps & FlexDirectionProps;
 
-export const Flex = styled(Box)<FlexProps>`
+export const Flex = styled(Box) <FlexProps>`
   display: flex;
-  box-sizing: border-box;
   ${alignItems}
   ${justifyContent}
   ${flexWrap}
