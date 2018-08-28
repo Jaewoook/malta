@@ -23,3 +23,5 @@ export { Row } from "./molecules/Row";
 export { Col } from "./molecules/Col";
 export { SalesboostHeader } from "./templates/SalesboostHeader";
 export { Icon } from "./molecules/Icon";
+export * from "./commons/theme";
+

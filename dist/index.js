@@ -1,4 +1,7 @@
 "use strict";
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
 Object.defineProperty(exports, "__esModule", { value: true });
 var Absolute_1 = require("./misc/Absolute");
 exports.Absolute = Absolute_1.Absolute;
@@ -50,3 +53,4 @@ var SalesboostHeader_1 = require("./templates/SalesboostHeader");
 exports.SalesboostHeader = SalesboostHeader_1.SalesboostHeader;
 var Icon_1 = require("./molecules/Icon");
 exports.Icon = Icon_1.Icon;
+__export(require("./commons/theme"));
