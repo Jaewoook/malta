@@ -34,3 +34,29 @@ exports.Input.defaultProps = {
     error: false
 };
 var templateObject_1;
+/* const Wrapper = styled.div`
+ *   display: flex;
+ *   flex-direction: column;
+ *   ${space}
+ * `;
+ *
+ * export class Input2 extends React.Component<Props, any> {
+ *   static defaultProps = {
+ *     width: ["440px", "320px"],
+ *     height: ["60px", "52px"]
+ *   };
+ *
+ *   onChange = () => {
+ *
+ *   };
+ *
+ *   onSubmit = () => {
+ *   };
+ *
+ *
+ *   render() {
+ *     const { width, state } = this.props;
+ *     return (
+ *     );
+ *   }
+ * } */
