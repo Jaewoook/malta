@@ -27,4 +27,5 @@ export * from "./commons/theme";
 export { Spinner } from "./molecules/Spinner";
 export { AsyncButton } from "./molecules/AsyncButton";
 export { ToggleSwitch } from "./molecules/ToggleSwitch";
-export { VerticalSplit } from "./molecules/VerticalSplit"
+export { VerticalSplit } from "./molecules/VerticalSplit";
+export { CheckBox } from "./molecules/CheckBox";
