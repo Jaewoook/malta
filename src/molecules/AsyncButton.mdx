@@ -32,7 +32,7 @@ import { Playground } from "docz"
 | disabled | boolean | false |
 | loading | boolean | false |
 
-- width는 spinner의 width를 의미한다. 왜냐하면 label의 width를 텍스트에 맞추면서 spinner의 width를 동기화시키기 힘들기 때문이다.
+- hoverColor, focusColor는 theme적용이 안되므로 theme을 import해서 color.*으로 사용했습니다.
 
 ## Usecase
 
@@ -44,7 +44,7 @@ import { Playground } from "docz"
     label="Click me"
     disabled={false}
     loading={true}
-    width={["40px", "60px"]}
+    width={["50px", "70px"]}
     onClick={()=>{console.log("ButtonClicked!");}}/>
   </App>
 </Playground>

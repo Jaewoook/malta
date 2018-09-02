@@ -62,3 +62,5 @@ var ToggleSwitch_1 = require("./molecules/ToggleSwitch");
 exports.ToggleSwitch = ToggleSwitch_1.ToggleSwitch;
 var VerticalSplit_1 = require("./molecules/VerticalSplit");
 exports.VerticalSplit = VerticalSplit_1.VerticalSplit;
+var CheckBox_1 = require("./molecules/CheckBox");
+exports.CheckBox = CheckBox_1.CheckBox;
