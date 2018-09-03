@@ -158,6 +158,15 @@ const getIcons = (fill: string, name: string) => {
         <path fill={fill} d="M12.854 3.904l4.242 4.242a.5.5 0 1 1-.707.708L12.5 4.964l-3.89 3.89a.5.5 0 0 1-.706-.708l4.242-4.242a.5.5 0 0 1 .708 0z" />
         <path stroke={fill} strokeLinecap="round" strokeLinejoin="round" d="M2 14v4a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-4" />
       </g>
+    },
+    "reload": {
+      width: 24,
+      height: 24,
+      path: <g fill="none" fillRule="evenodd">
+        <path stroke={fill} strokeLinecap="round" strokeWidth="2" d="M19.816 1.818v4.908h-4.909" />
+        <path stroke={fill} strokeLinecap="round" strokeWidth="2" d="M2.363 11.635a9.27 9.27 0 0 1 9.271-9.272 9.248 9.248 0 0 1 7.805 4.265M3.454 21.452v-4.909h4.908" />
+        <path stroke={fill} strokeLinecap="round" strokeWidth="2" d="M20.907 11.635a9.27 9.27 0 0 1-9.272 9.271 9.25 9.25 0 0 1-7.804-4.264" />
+      </g>
     }
   };
 
