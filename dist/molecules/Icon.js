@@ -117,7 +117,7 @@ var getIcons = function (fill, name) {
         "search": {
             width: 24,
             height: 24,
-            path: React.createElement("path", { fillRule: "nonzero", stroke: "#000", strokeWidth: "2", d: "M14.69 14.69l.55-.684A7.96 7.96 0 0 0 17 9a8 8 0 1 0-8 8 7.96 7.96 0 0 0 5.006-1.76l.685-.55z" })
+            path: React.createElement("path", { fillRule: "nonzero", stroke: fill, strokeWidth: "2", d: "M15.736 15.736l3.518 3.518-3.518-3.518zm3.518 3.518l3.202 3.202-3.202-3.202zm-3.518-3.518l-.316-.316.56-.7A8.001 8.001 0 0 0 4.07 4.072a8.001 8.001 0 1 0 10.65 11.909l.699-.56.316.316z" })
         },
         "selectall": {
             width: 24,
