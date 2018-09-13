@@ -144,7 +144,52 @@ var getIcons = function (fill, name) {
                 React.createElement("path", { stroke: fill, strokeLinecap: "round", strokeWidth: "2", d: "M19.816 1.818v4.908h-4.909" }),
                 React.createElement("path", { stroke: fill, strokeLinecap: "round", strokeWidth: "2", d: "M2.363 11.635a9.27 9.27 0 0 1 9.271-9.272 9.248 9.248 0 0 1 7.805 4.265M3.454 21.452v-4.909h4.908" }),
                 React.createElement("path", { stroke: fill, strokeLinecap: "round", strokeWidth: "2", d: "M20.907 11.635a9.27 9.27 0 0 1-9.272 9.271 9.25 9.25 0 0 1-7.804-4.264" }))
-        }
+        },
+        "add": {
+            width: 24,
+            height: 24,
+            path: React.createElement("path", { fill: fill, d: "M11 11V3a1 1 0 0 1 2 0v8h8a1 1 0 0 1 0 2h-8v8a1 1 0 0 1-2 0v-8H3a1 1 0 0 1 0-2h8z" })
+        },
+        "delete": {
+            width: 20,
+            height: 20,
+            path: React.createElement("path", { fill: fill, fillRule: "nonzero", d: "M10 8.821L6.464 5.286a.833.833 0 1 0-1.178 1.178L8.821 10l-3.535 3.536a.833.833 0 1 0 1.178 1.178L10 11.179l3.536 3.535a.833.833 0 0 0 1.178-1.178L11.179 10l3.535-3.536a.833.833 0 0 0-1.178-1.178L10 8.821zM10 20C4.477 20 0 15.523 0 10S4.477 0 10 0s10 4.477 10 10-4.477 10-10 10z" })
+        },
+        "doublearrow-left": {
+            width: 24,
+            height: 24,
+            path: React.createElement("g", { fill: fill },
+                React.createElement("path", { d: "M11.828 11.9l6.364-6.364a1 1 0 0 0-1.414-1.415l-7.07 7.071a1 1 0 0 0 0 1.415l7.07 7.07a1 1 0 1 0 1.414-1.414L11.828 11.9z" }),
+                React.createElement("path", { d: "M5.828 11.9l6.364-6.364a1 1 0 0 0-1.414-1.415l-7.07 7.071a1 1 0 0 0 0 1.415l7.07 7.07a1 1 0 1 0 1.414-1.414L5.828 11.9z" }))
+        },
+        "doublearrow-right": {
+            width: 24,
+            height: 24,
+            path: React.createElement("g", { fill: fill },
+                React.createElement("path", { d: "M10.97 11.9L4.608 5.535A1 1 0 0 1 6.02 4.12l7.07 7.071a1 1 0 0 1 0 1.415l-7.07 7.07a1 1 0 1 1-1.414-1.414L10.97 11.9z" }),
+                React.createElement("path", { d: "M16.97 11.9l-6.363-6.364A1 1 0 0 1 12.02 4.12l7.07 7.071a1 1 0 0 1 0 1.415l-7.07 7.07a1 1 0 1 1-1.414-1.414L16.97 11.9z" }))
+        },
+        "edit": {
+            width: 24,
+            height: 24,
+            path: React.createElement("path", { fill: fill, fillRule: "nonzero", d: "M19.912 3.906c-1.229-1.208-3.374-1.208-4.604 0L4.388 14.62a.794.794 0 0 0-.214.37l-1.15 4.517a.793.793 0 0 0 .214.76.822.822 0 0 0 .772.21l4.605-1.13a.81.81 0 0 0 .377-.21l10.92-10.715a3.145 3.145 0 0 0 .954-2.259c0-.853-.338-1.654-.954-2.257zM8.002 17.85l-3.07.753.767-3.012 9.034-8.863 2.302 2.259-9.033 8.863zm10.76-10.558l-.576.564-2.302-2.26.575-.563c.614-.603 1.688-.603 2.302 0 .307.301.477.702.477 1.13 0 .427-.17.827-.477 1.129z" })
+        },
+        "function": {
+            width: 24,
+            height: 24,
+            path: React.createElement("g", { fill: fill, fillRule: "nonzero" },
+                React.createElement("circle", { cx: "11.5", cy: "4.5", r: "1.5" }),
+                React.createElement("circle", { cx: "11.5", cy: "11.5", r: "1.5" }),
+                React.createElement("circle", { cx: "11.5", cy: "18.5", r: "1.5" }))
+        },
+        "home": {
+            width: 24,
+            height: 24,
+            path: React.createElement("g", { fill: fill, fillRule: "nonzero", transform: "translate(0 2)" },
+                React.createElement("rect", { width: "22", height: "2", x: ".766", y: "17.643", rx: "1" }),
+                React.createElement("path", { d: "M17.792 7.417l-6.08-5.101L5.72 7.344a1 1 0 0 1 .046.299v10h-2v-8.66l-2.123 1.782A1 1 0 1 1 .357 9.233L10.932.36l.002-.003c.2-.239.489-.36.778-.357a.998.998 0 0 1 .781.36l10.574 8.873a1 1 0 1 1-1.285 1.532l-2.016-1.691v8.569h-2v-10c0-.078.009-.153.026-.226z" }),
+                React.createElement("path", { d: "M11.766 11.643a1 1 0 0 1 1 1v5h-2v-5a1 1 0 0 1 1-1z" }))
+        },
     };
     return icons[name];
 };
