@@ -185,10 +185,31 @@ var getIcons = function (fill, name) {
         "home": {
             width: 24,
             height: 24,
-            path: React.createElement("g", { fill: fill, fillRule: "nonzero", transform: "translate(0 2)" },
-                React.createElement("rect", { width: "22", height: "2", x: ".766", y: "17.643", rx: "1" }),
-                React.createElement("path", { d: "M17.792 7.417l-6.08-5.101L5.72 7.344a1 1 0 0 1 .046.299v10h-2v-8.66l-2.123 1.782A1 1 0 1 1 .357 9.233L10.932.36l.002-.003c.2-.239.489-.36.778-.357a.998.998 0 0 1 .781.36l10.574 8.873a1 1 0 1 1-1.285 1.532l-2.016-1.691v8.569h-2v-10c0-.078.009-.153.026-.226z" }),
-                React.createElement("path", { d: "M11.766 11.643a1 1 0 0 1 1 1v5h-2v-5a1 1 0 0 1 1-1z" }))
+            path: React.createElement("g", { fill: fill, fillRule: "nonzero", transform: "translate(2 3)" },
+                React.createElement("rect", { width: "18", height: "1", x: "1", y: "17", rx: ".5" }),
+                React.createElement("path", { d: "M3.5 9a.5.5 0 0 1 .5.5V17H3V9.5a.5.5 0 0 1 .5-.5zm13 0a.5.5 0 0 1 .5.5V17h-1V9.5a.5.5 0 0 1 .5-.5zM10.006 1.346l-8.88 7.45a.5.5 0 1 1-.643-.765L9.678.316a.498.498 0 0 1 .328-.117.498.498 0 0 1 .328.117l9.192 7.712a.5.5 0 0 1-.643.766l-8.877-7.448zM10 12a.5.5 0 0 1 .5.5V17h-1v-4.5a.5.5 0 0 1 .5-.5z" }))
+        },
+        "ascending": {
+            width: 24,
+            height: 24,
+            path: React.createElement("g", { fill: fill, transform: "translate(1 5)" },
+                React.createElement("rect", { width: "12", height: "2", x: "8", rx: "1" }),
+                React.createElement("rect", { width: "10", height: "2", x: "10", y: "4", rx: "1" }),
+                React.createElement("rect", { width: "7", height: "2", x: "13", y: "8", rx: "1" }),
+                React.createElement("rect", { width: "4", height: "2", x: "16", y: "12", rx: "1" }),
+                React.createElement("rect", { width: "2", height: "14", x: "3", rx: "1" }),
+                React.createElement("path", { d: "M3.282 14.671L.807 12.196a1 1 0 0 1 1.414-1.414L3.99 12.55l1.768-1.768a1 1 0 0 1 1.414 1.414l-2.475 2.475a1 1 0 0 1-1.414 0z" }))
+        },
+        "descending": {
+            width: 24,
+            height: 24,
+            path: React.createElement("g", { fill: fill, transform: "translate(1 3)" },
+                React.createElement("rect", { width: "4", height: "2", x: "9", y: "2", rx: "1" }),
+                React.createElement("path", { d: "M4.696 1.307l2.475 2.475a1 1 0 1 1-1.414 1.414L3.989 3.428 2.221 5.196A1 1 0 1 1 .807 3.782l2.475-2.475a1 1 0 0 1 1.414 0z" }),
+                React.createElement("rect", { width: "7", height: "2", x: "9", y: "6", rx: "1" }),
+                React.createElement("rect", { width: "10", height: "2", x: "9", y: "10", rx: "1" }),
+                React.createElement("rect", { width: "12", height: "2", x: "9", y: "14", rx: "1" }),
+                React.createElement("rect", { width: "2", height: "13", rx: "1", transform: "translate(3 3)" }))
         },
     };
     return icons[name];
