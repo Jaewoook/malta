@@ -1,8 +1,4 @@
 "use strict";
-var __makeTemplateObject = (this && this.__makeTemplateObject) || function (cooked, raw) {
-    if (Object.defineProperty) { Object.defineProperty(cooked, "raw", { value: raw }); } else { cooked.raw = raw; }
-    return cooked;
-};
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -18,10 +14,8 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var React = require("react");
-var styled_components_1 = require("styled-components");
 var Flex_1 = require("../atoms/Flex");
 var Text_1 = require("../atoms/Text");
-var Wrapper = styled_components_1.default(Flex_1.Flex)(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n"], ["\n"])));
 var SalesboostFooter = /** @class */ (function (_super) {
     __extends(SalesboostFooter, _super);
     function SalesboostFooter(props) {
@@ -29,9 +23,8 @@ var SalesboostFooter = /** @class */ (function (_super) {
     }
     SalesboostFooter.prototype.render = function () {
         var _a = this.props, color = _a.color, fontFamily = _a.fontFamily, fontSize = _a.fontSize, bg = _a.bg, height = _a.height, mt = _a.mt;
-        return (React.createElement(Flex_1.Flex, { alignItems: "flex-end", mt: "auto" },
-            React.createElement(Flex_1.Flex, { alignItems: "center", width: "100%", justifyContent: "center", bg: bg, height: height, mt: mt },
-                React.createElement(Text_1.Text, { color: color, fontFamily: fontFamily, fontSize: fontSize, width: "fit-content", height: "fit-content", demiLight: true }, "Copyright \u00A9 2018 Salesboost. Inc"))));
+        return (React.createElement(Flex_1.Flex, { alignItems: "center", justifyContent: "center", bg: bg, height: height, mt: mt },
+            React.createElement(Text_1.Text, { color: color, fontFamily: fontFamily, fontSize: fontSize, width: "fit-content", height: "fit-content", demiLight: true }, "Copyright \u00A9 2018 Salesboost. Inc")));
     };
     SalesboostFooter.defaultProps = {
         color: "black.hint",
@@ -39,9 +32,8 @@ var SalesboostFooter = /** @class */ (function (_super) {
         fontSize: ["h4", "h3", "h3"],
         fontFamily: "Noto Sans KR",
         height: ["32px", "50px"],
-        mt: "128px"
+        mt: "auto"
     };
     return SalesboostFooter;
 }(React.Component));
 exports.SalesboostFooter = SalesboostFooter;
-var templateObject_1;
