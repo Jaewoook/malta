@@ -22,8 +22,8 @@ var SalesboostFooter = /** @class */ (function (_super) {
         return _super.call(this, props) || this;
     }
     SalesboostFooter.prototype.render = function () {
-        var _a = this.props, color = _a.color, fontFamily = _a.fontFamily, fontSize = _a.fontSize, bg = _a.bg, height = _a.height;
-        return (React.createElement(Flex_1.Flex, { alignItems: "center", justifyContent: "center", bg: bg, height: height, mt: "auto" },
+        var _a = this.props, color = _a.color, fontFamily = _a.fontFamily, fontSize = _a.fontSize, bg = _a.bg, height = _a.height, mt = _a.mt;
+        return (React.createElement(Flex_1.Flex, { alignItems: "center", justifyContent: "center", bg: bg, height: height, mt: mt },
             React.createElement(Text_1.Text, { color: color, fontFamily: fontFamily, fontSize: fontSize, width: "fit-content", height: "fit-content", demiLight: true }, "Copyright \u00A9 2018 Salesboost. Inc")));
     };
     SalesboostFooter.defaultProps = {
@@ -31,7 +31,8 @@ var SalesboostFooter = /** @class */ (function (_super) {
         bg: "black._20",
         fontSize: ["h4", "h3", "h3"],
         fontFamily: "Noto Sans KR",
-        height: ["32px", "50px"]
+        height: ["32px", "50px"],
+        mt: "auto"
     };
     return SalesboostFooter;
 }(React.Component));
