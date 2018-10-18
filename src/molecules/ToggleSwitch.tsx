@@ -15,7 +15,7 @@ interface Props {
 
 const Wrapper = styled<any>(Flex)`
   position: relative;
-  background: ${props => (props.disabled ? colors.black.half : props.checked ? colors.mint : colors.black.hint)};
+  background: ${props => (props.disabled ? colors.black._20 : props.checked ? colors.mint : colors.black._20)};
   height: 24px;
   width: 44px;
   border-radius: 12px;
@@ -24,6 +24,9 @@ const Wrapper = styled<any>(Flex)`
   padding-right: 2px;
   cursor: pointer;
   transition: background 0.1s ease-out;
+  :hover {
+     background: ${props => (props.disabled ? colors.black._20 : props.checked ? "#0ea58a" : "rgba(22,27,72,0.3)")};
+  }
 `;
 
 const Circle = styled<any>(Flex)`
