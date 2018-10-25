@@ -271,8 +271,6 @@ const getIcons = (fill: string, name: string) => {
         <path d="M21.625 3.743l-8.51 8.51a.5.5 0 1 1-.708-.707l8.51-8.51h-4.792a.5.5 0 0 1 0-1h6a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V3.743z" />
       </g>
     }
-
   };
-
   return icons[name];
 };
