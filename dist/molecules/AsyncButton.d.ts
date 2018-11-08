@@ -2,6 +2,7 @@ import * as React from "react";
 import { ColorProps, BorderProps, BorderColorProps, BorderRadiusProps, FontSizeProps, HeightProps, SpaceProps, WidthProps } from "styled-system";
 interface AsyncButtonProps {
     hoverColor?: string;
+    spinnerColor?: string;
     label: string;
     disabled?: boolean;
     loading?: boolean;
