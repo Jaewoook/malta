@@ -1,2 +1,2 @@
 #!/bin/zsh
-rm -r ../auth-web/node_modules/malta/dist && cp -r dist ../auth-web/node_modules/malta/
+rm -r ../catalog-web/node_modules/malta/dist && cp -r dist ../catalog-web/node_modules/malta/
