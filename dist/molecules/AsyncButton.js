@@ -53,9 +53,9 @@ var AsyncButton = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     AsyncButton.prototype.render = function () {
-        var _a = this.props, color = _a.color, fontSize = _a.fontSize, label = _a.label, loading = _a.loading, disabled = _a.disabled, onClick = _a.onClick, width = _a.width, props = __rest(_a, ["color", "fontSize", "label", "loading", "disabled", "onClick", "width"]);
+        var _a = this.props, color = _a.color, fontSize = _a.fontSize, label = _a.label, loading = _a.loading, disabled = _a.disabled, onClick = _a.onClick, width = _a.width, spinnerColor = _a.spinnerColor, props = __rest(_a, ["color", "fontSize", "label", "loading", "disabled", "onClick", "width", "spinnerColor"]);
         return (React.createElement(Wrapper, __assign({}, props, { onClick: disabled ? function () { } : onClick, disabled: disabled }), loading ? React.createElement(Box_1.Box, { width: width },
-            React.createElement(Spinner_1.Spinner, { color: "white.standard" })) : React.createElement(Text_1.Text, { fontSize: fontSize, color: color }, label)));
+            React.createElement(Spinner_1.Spinner, { color: spinnerColor })) : React.createElement(Text_1.Text, { fontSize: fontSize, color: color }, label)));
     };
     return AsyncButton;
 }(React.Component));
@@ -73,6 +73,7 @@ AsyncButton.defaultProps = {
     disabled: false,
     loading: false,
     label: "Button",
-    width: "fit-content"
+    width: "fit-content",
+    spinnerColor: "white.standard",
 };
 var templateObject_1;

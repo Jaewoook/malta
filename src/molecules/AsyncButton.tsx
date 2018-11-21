@@ -24,6 +24,7 @@ import { getValueFromTheme } from "../commons/utils";
 
 interface AsyncButtonProps {
   hoverColor?: string;
+  spinnerColor?: string;
   label: string;
   disabled?: boolean;
   loading?: boolean;
@@ -53,10 +54,10 @@ export class AsyncButton extends React.Component<Props, any> {
   static defaultProps: Props;
 
   render() {
-    const { color, fontSize, label, loading, disabled, onClick, width, ...props } = this.props;
+    const { color, fontSize, label, loading, disabled, onClick, width, spinnerColor, ...props } = this.props;
     return (
       <Wrapper {...props} onClick={disabled ? () => { } : onClick} disabled={disabled}>
-        {loading ? <Box width={width}><Spinner color="white.standard" /></Box> : <Text fontSize={fontSize} color={color}>{label}</Text>}
+        {loading ? <Box width={width}><Spinner color={spinnerColor} /></Box> : <Text fontSize={fontSize} color={color}>{label}</Text>}
       </Wrapper>
     );
   }
@@ -75,5 +76,6 @@ AsyncButton.defaultProps = {
   disabled: false,
   loading: false,
   label: "Button",
-  width: "fit-content"
+  width: "fit-content",
+  spinnerColor: "white.standard",
 };
