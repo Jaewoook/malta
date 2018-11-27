@@ -4,9 +4,6 @@
 # dependencies
 node_modules
 
-# builds
-build
-
 # misc
 .DS_Store
 .env
@@ -23,5 +20,6 @@ yarn-error.log*
 # coverage
 coverage
 
-# docz build folder
-.docz
+
+#next document build
+docs/.next
