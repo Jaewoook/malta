@@ -10,7 +10,8 @@
     "outDir": "./dist",
     "preserveConstEnums": true,
     "target": "es5",
-    "declaration": true
+    "declaration": true,
+    "lib": ["es5", "es6", "dom"]
   },
   "include": [
     "types/**/*",
