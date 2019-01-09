@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var styled_system_1 = require("styled-system");
 var styled_components_1 = require("styled-components");
 exports.hover = styled_system_1.style({
-    prop: 'hover',
+    prop: "hover",
     cssProperty: ":hover"
 });
 exports.transition = styled_system_1.style({

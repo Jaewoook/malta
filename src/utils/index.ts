@@ -2,7 +2,7 @@ import { style } from "styled-system";
 import { css, ThemedCssFunction } from "styled-components";
 
 export const hover = style({
-  prop: 'hover',
+  prop: "hover",
   cssProperty: ":hover"
 });
 
