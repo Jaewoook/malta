@@ -8,8 +8,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var styled_components_1 = __importDefault(require("styled-components"));
-var styled_system_1 = require("../../../lib/styled-system");
-var Box_1 = require("./Box");
+var styled_system_1 = require("styled-system");
+var Block_1 = require("./Block");
 var medium = function (_a) {
     var medium = _a.medium;
     return medium ? "font-weight: 500;" : "";
@@ -54,7 +54,7 @@ var whiteSpace = function (_a) {
     var whiteSpace = _a.whiteSpace;
     return whiteSpace ? "white-space: " + whiteSpace + ";" : "";
 };
-exports.Text = styled_components_1.default(Box_1.Box.withComponent("p"))(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  hyphens: auto;\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"], ["\n  hyphens: auto;\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), medium, regular, demiLight, light, left, right, center, overflowWrap, textOverflow, whiteSpace, styled_system_1.fontSize, styled_system_1.fontFamily, styled_system_1.fontWeight, styled_system_1.textAlign, wordBreak, styled_system_1.letterSpacing, styled_system_1.lineHeight);
+exports.Text = styled_components_1.default(Block_1.Block.withComponent("p"))(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  hyphens: auto;\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"], ["\n  hyphens: auto;\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n  ", "\n"])), medium, regular, demiLight, light, left, right, center, overflowWrap, textOverflow, whiteSpace, styled_system_1.fontSize, styled_system_1.fontFamily, styled_system_1.fontWeight, styled_system_1.textAlign, wordBreak, styled_system_1.letterSpacing, styled_system_1.lineHeight);
 exports.Text.defaultProps = {
     color: "rgba(22,27,72,0.8)",
     fontSize: "h4",

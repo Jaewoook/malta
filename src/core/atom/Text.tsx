@@ -13,7 +13,7 @@ import {
   lineHeight,
   LineHeightProps,
 } from "styled-system";
-import { Box } from "./Box";
+import { Block } from "./Block";
 
 interface Props {
   medium?: boolean;
@@ -43,7 +43,7 @@ const whiteSpace = ({ whiteSpace }: Props) => whiteSpace ? `white-space: ${white
 
 type TextProps = Props & FontFamilyProps & FontSizeProps & TextAlignProps & FontWeightProps & LetterSpacingProps & LineHeightProps;
 
-export const Text = styled(Box.withComponent("p")) <TextProps>`
+export const Text = styled(Block.withComponent("p")) <TextProps>`
   hyphens: auto;
   ${medium}
   ${regular}

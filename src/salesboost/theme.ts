@@ -2,41 +2,61 @@ export const breakpoints = ["600px", "1200px"];
 
 export const colors = {
   white: {
-    standard: "#ffffff",
-    _75: "rgba(255, 255, 255, 0.75)",
-    _50: "rgba(255, 255, 255, 0.5)",
+    "_100": "rgba(255,255,255, 1.0)",
+    "_90": "rgba(255,255,255, 0.9)",
+    "_80": "rgba(255,255,255, 0.8)",
+    "_20": "rgba(255,255,255, 0.2)",
+  },
+  navy: {
+    "_100": "rgba(22,27,72, 1.0)",
+    "_90": "rgba(22,27,72, 0.9)",
+    "_80": "rgba(22,27,72, 0.8)",
+    "_70": "rgba(22,27,72, 0.7)",
+    "_60": "rgba(22,27,72, 0.6)",
+    "_50": "rgba(22,27,72, 0.5)",
+    "_40": "rgba(22,27,72, 0.4)",
+    "_30": "rgba(22,27,72, 0.3)",
+    "_20": "rgba(22,27,72, 0.2)",
+    "_10": "rgba(22,27,72, 0.1)",
+    "_8": "rgba(22,27,72, 0.08)",
+    "_5": "rgba(22,27,72, 0.05)",
+    "_3": "rgba(22,27,72, 0.03)",
   },
   blue: {
-    royal: "#454edf",
-    deep: "#161fba",
-    dark: "#030c90",
+    "_100": "rgba(22, 31, 186, 1.0)",
+    "_90": "rgba(69, 78, 223, 1.0)",
+    "_80": "rgba(69, 78, 223, 0.9)",
+    "_20": "rgba(69, 78, 223, 0.2)",
   },
   black: {
-    dark: "rgba(22, 27, 72, 0.9)",
-    standard: "rgba(22, 27, 72, 0.8)",
-    sub: "rgba(22, 27, 72, 0.6)",
-    half: "rgba(22, 27, 72, 0.5)",
-    hint: "rgba(22, 27, 72, 0.4)",
-    _20: "rgba(22, 27, 72, 0.2)",
-    _10: "rgba(22, 27, 72, 0.1)",
-    _8: "rgba(22, 27, 72, 0.08)",
-    _5: "rgba(22, 27, 72, 0.05)",
-    _4: "rgba(22, 27, 72, 0.04)",
-    _3: "rgba(22, 27, 72, 0.03)",
+    "_100": "rgba(0,0,0, 1.0)",
   },
-  red: "#f51a1a",
-  yellow: "#f5a921",
-  green: "#059d5b",
-  mint: "#23c1a6"
+  red: {
+    "_100": "rgba(243, 70, 70, 1.0)",
+  },
+  yellow: {
+    "_100": "rgba(245, 169, 33, 1.0)",
+  },
+  green: {
+    "_100": "rgba(5, 157, 91, 1.0)",
+  },
+  mint: {
+    "_100": "rgba(14, 165, 138, 1.0)",
+    "_90": "rgba(35, 193, 166, 0.1)",
+    "_20": "rgba(35, 193, 166, 0.2)",
+  }
 };
 
 export const fontsizes = {
   h1: 40,
-  h2: 20,
-  h3: 18,
-  h4: 16,
-  h5: 14,
-  h6: 12,
+  h2: 32,
+  h3: 24,
+  h4: 20,
+  h5: 18,
+  p: 16,
+  sub: 14,
+  caption: 12,
+  btn: 16
 };
 
 export const fontweights = {
@@ -52,13 +72,11 @@ export const fontfamilies = {
 
 export const space = [0, 8, 16, 32, 64, 128];
 
-export const lineheights = [1, 1.4, 1.6, 2];
+export const lineheights = ["1em", "1.4em", "1.6em", "2em"];
 
 export const letterspacings = ["1px", "2px", "4px", "8px"];
 
-export const borders = [0, 1, 2, 3, 4, 5];
-
-export const radii = [0, 2, 4, 8, 16, 32];
+export const radii = ["0", "2px", "4px", "8px", "16px", "32px"];
 
 export const shadows = [
   "none",
@@ -79,6 +97,5 @@ export const theme = {
   shadows,
   lineheights,
   letterspacings,
-  borders,
   radii,
 };

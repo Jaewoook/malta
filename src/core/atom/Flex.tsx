@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Box } from "./Box";
+import { Block } from "./Block";
 import {
   alignItems,
   AlignItemsProps,
@@ -13,7 +13,7 @@ import {
 
 type FlexProps = AlignItemsProps & JustifyContentProps & FlexDirectionProps & FlexWrapProps;
 
-export const Flex = styled(Box) <FlexProps>`
+export const Flex = styled(Block) <FlexProps>`
   display: flex;
   ${alignItems}
   ${justifyContent}

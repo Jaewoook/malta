@@ -37,15 +37,13 @@ import {
   OfReducerProps,
   transition,
   TransitionProps,
-  cursor,
-  CursorProps,
 } from "../../utils";
 
 type InputProps = SpaceProps & WidthProps & HeightProps & ColorProps
   & MaxWidthProps & MaxHeightProps & MinWidthProps & MinHeightProps
   & FlexProps & BordersProps & BorderRadiusProps
   & FontSizeProps & FontWeightProps & FontFamilyProps
-  & HoverProps & OfReducerProps & TransitionProps & CursorProps;
+  & HoverProps & OfReducerProps & TransitionProps;
 
 export const Input = styled.input<InputProps>`
   appearance: none;
@@ -67,7 +65,6 @@ export const Input = styled.input<InputProps>`
   ${hover}
   ${ofReducer}
   ${transition}
-  ${cursor}
 `;
 
 Input.defaultProps = {

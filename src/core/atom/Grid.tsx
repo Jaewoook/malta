@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Box } from "./Box";
+import { Block } from "./Block";
 import {
   gridAutoColumns,
   GridAutoColumnsProps,
@@ -26,7 +26,7 @@ type GridProps =
   & GridColumnGapProps & GridRowGapProps & GridTemplatesAreasProps
   & GridTemplatesColumnsProps & GridTemplatesRowsProps & GridGapProps;
 
-export const Grid = styled(Box) <GridProps>`
+export const Grid = styled(Block) <GridProps>`
   display: flex;
   ${gridAutoColumns}
   ${gridAutoFlow}

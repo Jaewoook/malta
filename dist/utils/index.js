@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var styled_system_1 = require("styled-system");
 var styled_components_1 = require("styled-components");
 exports.hover = styled_system_1.style({
-    prop: "hover",
+    prop: 'hover',
     cssProperty: ":hover"
 });
 exports.transition = styled_system_1.style({
@@ -14,7 +14,7 @@ exports.styleReducer = function () {
     for (var _i = 0; _i < arguments.length; _i++) {
         styles[_i] = arguments[_i];
     }
-    return styled_components_1.css({}, styles);
+    return styled_components_1.css("", styles);
 };
 exports.ofReducer = function (props) { return exports.styleReducer(props.of); };
 exports.cursor = function (props) { return ({

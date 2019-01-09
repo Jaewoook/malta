@@ -33,7 +33,7 @@ var StyledSvg = styled_components_1.default.svg.attrs(function (props) { return 
     xmlns: "http://www.w3.org/2000/svg",
     width: props.size,
     height: props.size
-}); })(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  ", "\n  ", "\n  ", "\n  transition: all 0.15s ease-out;\n"], ["\n  ", "\n  ", "\n  ", "\n  transition: all 0.15s ease-out;\n"])), styled_system_1.color, utils_1.hover, utils_1.cursor);
+}); })(templateObject_1 || (templateObject_1 = __makeTemplateObject(["\n  box-sizing: border-box;\n  ", "\n  ", "\n  ", "\n  transition: all 0.15s ease-out;\n"], ["\n  box-sizing: border-box;\n  ", "\n  ", "\n  ", "\n  transition: all 0.15s ease-out;\n"])), styled_system_1.color, utils_1.hover, utils_1.cursor);
 exports.Icon = function (props) {
     var ic = getIcons(props.name);
     return (React.createElement(StyledSvg, __assign({}, props, { viewBox: "0 0 " + ic.width + " " + ic.height }),
