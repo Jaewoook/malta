@@ -85,7 +85,7 @@ type BlockProps = SpaceProps & WidthProps & HeightProps & ColorProps
   & BorderColorProps & OverflowProps & PositionProps & ZIndexProps & TopProps & RightProps & BottomProps & LeftProps
   & HoverProps & OfReducerProps & TransitionProps & CursorProps & BorderProps;
 
-export const Block = styled.div<BoxProps>`
+export const Block = styled.div<BlockProps>`
   box-sizing: border-box;
   ${space}
   ${width}

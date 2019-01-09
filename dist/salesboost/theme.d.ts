@@ -1,32 +1,49 @@
 export declare const breakpoints: string[];
 export declare const colors: {
     white: {
-        standard: string;
-        _75: string;
-        _50: string;
+        "_100": string;
+        "_90": string;
+        "_80": string;
+        "_20": string;
+    };
+    navy: {
+        "_100": string;
+        "_90": string;
+        "_80": string;
+        "_70": string;
+        "_60": string;
+        "_50": string;
+        "_40": string;
+        "_30": string;
+        "_20": string;
+        "_10": string;
+        "_8": string;
+        "_5": string;
+        "_3": string;
     };
     blue: {
-        royal: string;
-        deep: string;
-        dark: string;
+        "_100": string;
+        "_90": string;
+        "_80": string;
+        "_20": string;
     };
     black: {
-        dark: string;
-        standard: string;
-        sub: string;
-        half: string;
-        hint: string;
-        _20: string;
-        _10: string;
-        _8: string;
-        _5: string;
-        _4: string;
-        _3: string;
+        "_100": string;
     };
-    red: string;
-    yellow: string;
-    green: string;
-    mint: string;
+    red: {
+        "_100": string;
+    };
+    yellow: {
+        "_100": string;
+    };
+    green: {
+        "_100": string;
+    };
+    mint: {
+        "_100": string;
+        "_90": string;
+        "_20": string;
+    };
 };
 export declare const fontsizes: {
     h1: number;
@@ -34,7 +51,10 @@ export declare const fontsizes: {
     h3: number;
     h4: number;
     h5: number;
-    h6: number;
+    p: number;
+    sub: number;
+    caption: number;
+    btn: number;
 };
 export declare const fontweights: {
     medium: number;
@@ -46,41 +66,57 @@ export declare const fontfamilies: {
     sans: string;
 };
 export declare const space: number[];
-export declare const lineheights: number[];
+export declare const lineheights: string[];
 export declare const letterspacings: string[];
-export declare const borders: number[];
-export declare const radii: number[];
+export declare const radii: string[];
 export declare const shadows: string[];
 export declare const theme: {
     breakpoints: string[];
     colors: {
         white: {
-            standard: string;
-            _75: string;
-            _50: string;
+            "_100": string;
+            "_90": string;
+            "_80": string;
+            "_20": string;
+        };
+        navy: {
+            "_100": string;
+            "_90": string;
+            "_80": string;
+            "_70": string;
+            "_60": string;
+            "_50": string;
+            "_40": string;
+            "_30": string;
+            "_20": string;
+            "_10": string;
+            "_8": string;
+            "_5": string;
+            "_3": string;
         };
         blue: {
-            royal: string;
-            deep: string;
-            dark: string;
+            "_100": string;
+            "_90": string;
+            "_80": string;
+            "_20": string;
         };
         black: {
-            dark: string;
-            standard: string;
-            sub: string;
-            half: string;
-            hint: string;
-            _20: string;
-            _10: string;
-            _8: string;
-            _5: string;
-            _4: string;
-            _3: string;
+            "_100": string;
         };
-        red: string;
-        yellow: string;
-        green: string;
-        mint: string;
+        red: {
+            "_100": string;
+        };
+        yellow: {
+            "_100": string;
+        };
+        green: {
+            "_100": string;
+        };
+        mint: {
+            "_100": string;
+            "_90": string;
+            "_20": string;
+        };
     };
     fontsizes: {
         h1: number;
@@ -88,7 +124,10 @@ export declare const theme: {
         h3: number;
         h4: number;
         h5: number;
-        h6: number;
+        p: number;
+        sub: number;
+        caption: number;
+        btn: number;
     };
     fontweights: {
         medium: number;
@@ -101,8 +140,7 @@ export declare const theme: {
     };
     space: number[];
     shadows: string[];
-    lineheights: number[];
+    lineheights: string[];
     letterspacings: string[];
-    borders: number[];
-    radii: number[];
+    radii: string[];
 };
