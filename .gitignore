@@ -25,3 +25,8 @@ coverage
 
 #next document build
 docs/.next
+
+#build files
+core
+salesboost
+uitls
