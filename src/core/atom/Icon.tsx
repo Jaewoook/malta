@@ -14,6 +14,7 @@ const StyledSvg = styled.svg.attrs((props: any) => ({
   width: props.size,
   height: props.size
 })) <any>`
+  box-sizing: border-box;
   ${color}
   ${hover}
   ${cursor}

@@ -25,6 +25,7 @@ interface ImgProps {
 type Props = WidthProps & HeightProps & ImgProps & FlexProps & MaxWidthProps & MaxHeightProps;
 
 export const Image = styled.img<Props>`
+  box-sizing: border-box;
   flex-shrink: 0;
   overflow: hidden;
   ${width}
