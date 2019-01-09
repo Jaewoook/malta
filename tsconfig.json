@@ -3,6 +3,8 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "jsx": "react",
     "module": "commonjs",
     "moduleResolution": "node",
@@ -11,13 +13,13 @@
     "preserveConstEnums": true,
     "target": "es5",
     "declaration": true,
-    "lib": ["es5", "es6", "dom"]
+    "lib": ["esnext", "dom"],
+    "typeRoots": [
+      "./node_modules/@types",
+    ],
   },
   "include": [
     "types/**/*",
     "src/**/*"
-  ],
-  "exclude": [
-    "node_modules"
   ]
 }

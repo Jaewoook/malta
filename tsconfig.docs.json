@@ -22,13 +22,11 @@
     ],
     "lib": [
       "dom",
-      "es2015",
-      "es2016"
+      "esnext"
     ]
   },
   "include": [
     "docs/**/*",
-    "src/**/*",
     "types/**/*"
   ]
 }
