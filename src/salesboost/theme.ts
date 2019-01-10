@@ -70,7 +70,7 @@ export const fontfamilies = {
   sans: "noto sans kr, arial, sans-serif"
 };
 
-export const space = [0, 8, 16, 32, 64, 128];
+export const space = [0, 4, 8, 16, 24, 32, 64, 128];
 
 export const lineheights = ["1em", "1.4em", "1.6em", "2em"];
 
