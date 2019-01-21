@@ -13,6 +13,7 @@ import {
   Button,
   Switch,
   Checkbox,
+  RadioButton,
 } from "../../salesboost";
 import {
   hover
@@ -34,6 +35,7 @@ class Index extends React.Component<any, any> {
     inputValue: "",
     switch: false,
     checked: false,
+    radioChecked: false,
   };
 
   render() {
