@@ -32,12 +32,11 @@ const Selected = styled<SelectedProps | any>(Flex)`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 16px;
-  margin: 8px 0;
   border-radius: 2px;
   border: solid 1px;
   border-color: ${props => props.isOpened ? "#454edf" : "rgba(22, 27, 72, 0.2)"};
   background-color: #fff;
+  box-shadow: 0 2px 6px 2px rgba(22, 27, 72, 0.03);
   cursor: pointer;
   :hover {
     border-color: ${props => !props.isOpened ? "rgba(22, 27, 72, 0.5)" : ""};
