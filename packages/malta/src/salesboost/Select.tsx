@@ -52,7 +52,7 @@ const DropdownWrapper = styled(Flex)`
   position: absolute;
   left: 0;
   right: 0;
-  margin-top: -4px;
+  margin-top: 4px;
   max-height: 330px;
   flex-direction: column;
   overflow-y: overlay;
