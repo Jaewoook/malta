@@ -29,6 +29,7 @@ interface SelectedProps {
 const Selected = styled<SelectedProps | any>(Flex)`
   width: 100%;
   height: 60px;
+  padding: 0 16px;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
