@@ -35,6 +35,7 @@ const LineStyle = css<any>`
 `;
 
 const Wrapper = styled.div<any>`
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: center;
