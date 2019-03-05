@@ -9,7 +9,7 @@ let MessageRootInstance: any = null;
 const MessageContainer = styled.div<any>`
   background: none;
   position: fixed;
-  top: 16px;
+  top: 76px;
   width: 440px;
   left: calc(50% - 220px);
   z-index: 990;
@@ -64,6 +64,7 @@ const MessageWrapper = styled.div<any>`
   border-radius: 4px;
   border: 1px solid rgba(22, 27, 72, 0.1);
   overflow-y: hidden;
+  box-shadow: 0 8px 16px 0 rgba(22, 27, 72, 0.08);
   background: ${props => props.type === "success" ? "#059D5B" : props.type === "error" ? "#F34646" : props.type === "warning" ? "#F5A921" : "#454EDF"};
   animation: ${props => props.closing ? animateClose : animateOpen} 0.12s ease-out both;
 `;
@@ -159,7 +160,12 @@ Message.newInstance = function newMessageInstance(callback: any) {
     return instance;
   }
 
-  ReactDOM.render(<Message ref={ref} />, document.getElementById("portal-root"));
+  const root = document.getElementById("portal-root");
+  const el = document.createElement("div");
+  el.setAttribute("id", "message-root");
+  root.appendChild(el);
+
+  ReactDOM.render(<Message ref={ref} />, el);
 };
 
 const getMessageRootInstance = (callback: any) => {
