@@ -70,7 +70,7 @@ const ServiceItem = (props: ServiceItemProps) => {
     <Flex width="100%" alignItems="center" cursor="pointer"
       of={[serviceItemStyle]}
       onClick={props.onClick} >
-      <Image src={props.image} width="48px" height="48px" mr="16px" />
+      <Image src={props.image} width="48px" height="48px" {...{ mr: "16px" }} />
       <Block>
         <Text>{props.title}</Text>
         <Text fontSize="12px" mt="6px" demiLight color="rgba(22, 27, 72, 0.6)" wordBreak="break-all">{props.description}</Text>
