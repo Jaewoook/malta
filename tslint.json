@@ -25,6 +25,13 @@
       "always",
       "ignore-bound-class-methods"
     ],
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "always",
+        "singleline": "never"
+      }
+    ],
     "whitespace": [
       true,
       "check-branch",
@@ -51,10 +58,17 @@
         "variable-declaration": "onespace"
       }
     ],
+    "no-console": true,
     "no-internal-module": true,
     "no-trailing-whitespace": true,
     "no-null-keyword": false,
     "prefer-const": true,
     "jsdoc-format": true
+  },
+  "linterOptions": {
+    "exclude": [
+      "**/*.js",
+      "**/*.jsx"
+    ]
   }
 }

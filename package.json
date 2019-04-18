@@ -9,6 +9,7 @@
     "build": "cd docs && next build",
     "test": "jest --coverage",
     "lint": "tslint -c tslint.json -p tsconfig.json",
+    "fix": "tslint --fix -c tslint.json -p tsconfig.json",
     "coverage": "codecov --token=a6047fcd-bff1-49b8-9d1d-adb91e6f9859"
   },
   "dependencies": {
