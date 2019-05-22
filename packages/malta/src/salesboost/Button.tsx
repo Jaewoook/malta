@@ -20,7 +20,9 @@ const SolidStyle = css<any>`
   :hover {
     background: ${props => props.hoverBg};
   }
-  ${props => props.disabled ? "background: rgba(22,27,72,0.3) !important;" : ""}
+  ${props => props.disabled ? `
+    background: ${props.disabledBg ? props.disabledBg : "rgba(22,27,72,0.3)"} !important;
+  ` : ""}
   ${color}
 `;
 
@@ -31,7 +33,11 @@ const LineStyle = css<any>`
     box-shadow: 0 2px 6px 2px rgba(22, 27, 72, 0.08);
     border: 1px solid rgba(22,27,72,0.4);
   }
-  ${props => props.disabled ? "background: rgba(22,27,72,0.1)!important; box-shadow: none!important; border: none!important;" : ""}
+  ${props => props.disabled ? `
+    background: ${props.disabledBg ? props.disabledBg : "rgba(22,27,72,0.1)"} !important;
+    box-shadow: none !important;
+    border: none !important;
+  `: ""}
 `;
 
 const Wrapper = styled.div<any>`
@@ -46,7 +52,7 @@ const Wrapper = styled.div<any>`
   ${borderRadius}
   transition: all 0.15s ease-out;
   ${props => props.line ? LineStyle : SolidStyle}
-  ${({ bg }) => bg ? `background-color: ${bg};` : ""}
+  ${(props) => props.bg ? `background-color: ${props.bg};` : ""}
 `;
 
 const Text = styled.p<any>`
@@ -61,6 +67,7 @@ interface Props {
   loading?: boolean;
   line?: boolean;
   disabled?: boolean;
+  disabledBg?: string;
   hoverBg?: string;
   bg?: string;
   onClick?: any;
@@ -90,5 +97,6 @@ Button.defaultProps = {
   borderRadius: "30px",
   bg: "rgba(69, 78, 223, 0.9)",
   hoverBg: "rgba(69, 78, 223, 0.7)",
+  disabledBg: "rgba(22, 27, 72, 0.3)",
   width: "fit-content",
 };
