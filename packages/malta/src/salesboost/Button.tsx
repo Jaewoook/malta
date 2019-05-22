@@ -37,7 +37,7 @@ const LineStyle = css<any>`
     background: ${props.disabledBg ? props.disabledBg : "rgba(22,27,72,0.1)"} !important;
     box-shadow: none !important;
     border: none !important;
-  `: ""}
+  ` : ""}
 `;
 
 const Wrapper = styled.div<any>`
@@ -81,9 +81,9 @@ export const Button: ButtonProps = (props) => {
   return (
     <Wrapper disabled={disabled} line={line} loading={loading} onClick={(disabled || loading) ? null : onClick} bg={bg} {...rest} >
       {loading
-      ? <Spinner />
-      : label ? <Text disabled={disabled} line={line} fontSize={fontSize} color={color}>{label}</Text>
-      : children}
+        ? <Spinner />
+        : label ? <Text disabled={disabled} line={line} fontSize={fontSize} color={color}>{label}</Text>
+          : children}
     </Wrapper>
   );
 };
