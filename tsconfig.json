@@ -3,21 +3,20 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "jsx": "react",
     "module": "commonjs",
     "moduleResolution": "node",
     "noImplicitAny": true,
-    "outDir": "./dist",
     "preserveConstEnums": true,
     "skipLibCheck": true,
-    "target": "es5",
-    "declaration": true
-  },
-  "include": [
-    "types/**/*",
-    "src/**/*"
-  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "target": "esnext",
+    "declaration": true,
+    "lib": ["esnext", "dom", "es2018"],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types"
+    ]
+  }
 }

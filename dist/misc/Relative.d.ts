@@ -1,2 +1,0 @@
-import { TopProps, BottomProps, LeftProps, RightProps, ZIndexProps } from "styled-system";
-export declare const Relative: import("styled-components").StyledComponent<"div", any, TopProps<import("styled-system/dist/space").TLengthStyledSystem> & BottomProps<import("styled-system/dist/space").TLengthStyledSystem> & LeftProps<import("styled-system/dist/space").TLengthStyledSystem> & RightProps<import("styled-system/dist/space").TLengthStyledSystem> & ZIndexProps, never>;
