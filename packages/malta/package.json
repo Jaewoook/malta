@@ -1,6 +1,6 @@
 {
   "name": "@salesboost/malta",
-  "version": "0.4.40",
+  "version": "0.5.0",
   "description": "",
   "main": "dist/index.js",
   "scripts": {
@@ -17,6 +17,6 @@
     "styled-system": "3.1.11"
   },
   "devDependencies": {
-    "@types/styled-system": "^4.1.0"
+    "@types/styled-system": "3.1.1"
   }
 }
