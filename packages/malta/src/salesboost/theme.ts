@@ -5,7 +5,11 @@ export const colors = {
     "_100": "rgba(255,255,255, 1.0)",
     "_90": "rgba(255,255,255, 0.9)",
     "_80": "rgba(255,255,255, 0.8)",
+    "_60": "rgba(255,255,255, 0.6)",
+    "_50": "rgba(255,255,255, 0.5)",
+    "_40": "rgba(255,255,255, 0.4)",
     "_20": "rgba(255,255,255, 0.2)",
+    "_10": "rgba(255,255,255, 0.1)",
   },
   navy: {
     "_100": "rgba(22,27,72, 1.0)",
@@ -44,7 +48,7 @@ export const colors = {
     "_100": "rgba(14, 165, 138, 1.0)",
     "_90": "rgba(35, 193, 166, 0.1)",
     "_20": "rgba(35, 193, 166, 0.2)",
-  }
+  },
 };
 
 export const fontsizes = {
@@ -56,7 +60,7 @@ export const fontsizes = {
   p: 16,
   sub: 14,
   caption: 12,
-  btn: 16
+  btn: 16,
 };
 
 export const fontweights = {
@@ -67,7 +71,7 @@ export const fontweights = {
 };
 
 export const fontfamilies = {
-  sans: "noto sans kr, arial, sans-serif"
+  sans: "noto sans kr, arial, sans-serif",
 };
 
 export const space = [0, 4, 8, 16, 24, 32, 64, 128];

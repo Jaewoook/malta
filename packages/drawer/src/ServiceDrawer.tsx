@@ -10,9 +10,8 @@ import {
 import { getCatalogURL, getPixelURL } from "@salesboost/common";
 
 interface ServiceDrawerProps {
-  onClickPixel?: () => void;
-  onClickCatalog?: () => void;
   opener: any;
+  userIndex: string;
 }
 
 const HeaderWrapper = styled.div`
@@ -71,7 +70,7 @@ const ServiceItem = (props: ServiceItemProps) => {
     <Flex width="100%" alignItems="center" cursor="pointer"
       of={[serviceItemStyle]}
       onClick={props.onClick} >
-      <Image src={props.image} width="48px" height="48px" mr="16px" />
+      <Image src={props.image} width="48px" height="48px" {...{ mr: "16px" }} />
       <Block>
         <Text>{props.title}</Text>
         <Text fontSize="12px" mt="6px" demiLight color="rgba(22, 27, 72, 0.6)" wordBreak="break-all">{props.description}</Text>
@@ -104,12 +103,12 @@ class Contents extends React.Component<any> {
             image="https://cdn.dev.salesboost.ai/static/img-logo-salesboostservice-pixel-img@2x.png"
             title="픽셀"
             description="픽셀 자동 설치 및 관리 서비스"
-            onClick={this.props.onClickPixel} />
+            onClick={() => { window.location.href = `${getPixelURL()}/main?authuser=${this.props.userIndex}`; }} />
           <ServiceItem
             image="https://cdn.dev.salesboost.ai/static/img-logo-salesboostservice-catalog-img@2x.png"
             title="카탈로그"
             description="카탈로그 자동 동기화 서비스"
-            onClick={this.props.onClickCatalog} />
+            onClick={() => { window.location.href = `${getCatalogURL()}/main?authuser=${this.props.userIndex}`; }} />
           {/* <ServiceItem
             image="https://cdn.dev.salesboost.ai/static/img-logo-salesboostservice-helper-img@2x.png"
             title="리포트"
@@ -128,8 +127,7 @@ class Contents extends React.Component<any> {
 
 Contents.defaultProps = {
   opener: null,
-  onClickCatalog: () => { window.location.href = getCatalogURL(); },
-  onClickPixel: () => { window.location.href = getPixelURL(); },
+  userIndex: "0",
 };
 
 export const ServiceDrawer = (props: ServiceDrawerProps) => {

@@ -13,10 +13,13 @@ import {
 
 export type FlexProps = AlignItemsProps & JustifyContentProps & FlexDirectionProps & FlexWrapProps;
 
-export const Flex = styled(Block) <FlexProps>`
-  display: flex;
+export const Flex = styled(Block)<FlexProps>`
   ${alignItems}
   ${justifyContent}
   ${flexDirection}
   ${flexWrap}
 `;
+
+Flex.defaultProps = {
+  display: "Flex",
+};
