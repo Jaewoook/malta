@@ -1,24 +1,47 @@
-# malta
+<div align="center">
+<h1>malta</h1>
 
-## NPM publish
-1. 모듈을 빌드한다. 모듈이 drawer일 경우
+<p>Salesboost UI library built with styled-component</p>
+
+[![style: styled-components](https://img.shields.io/badge/style-%F0%9F%92%85%20styled--components-orange.svg?colorB=daa357&colorA=db748e)](https://github.com/styled-components/styled-components)
+[![CircleCI](https://circleci.com/gh/salesboostio/malta.svg?style=svg)](https://circleci.com/gh/salesboostio/malta)
+![npm](https://img.shields.io/badge/dynamic/json.svg?label=npm&prefix=v&query=version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fsalesboostio%2Fmalta%2Fdev%2Fpackage.json)
+![dependencies](https://img.shields.io/david/salesboostio/malta.svg)
+![devDependencies](https://img.shields.io/david/dev/salesboostio/malta.svg)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com)
+
+</div>
+
+## Install
+
 ```
-yarn workspace @salesboost/drawer build
+yarn add @salesboost/malta
+```
+```
+npm install --save @salesboost/malta
 ```
 
-2. npm에 퍼블리시한다
+## Usage
+
 ```
-cd ./packages/drawer && npm version patch && npm publish
+import { Flex, Text } from "@salesboost/malta";
 ```
 
-3. 퍼블리시 커밋은 따로 작성한다
-```
-git add packages/drawer/package.json && git commit -m "npm drawer 1.0.xx release"
-```
+## Development
 
-4. 잘못 퍼블리싱되었거나 마이너한 수정이 있을 때는 해당 버전을 unpublish한다. (절대로 버전 넘버 없이 --force 옵션을 붙여서 unpublish 하면 안됨. 패키지가 통째로 날라감)
 ```
-npm unpublish @salesboost/drawer 1.0.xx
-```
+1. clone this repository to your computer
 
+$ git clone git@github.com:salesboostio/malta.git
+
+
+2. install package dependencies
+
+$ cd malta && yarn
+
+
+3. run playground local server
+
+$ yarn dev
+```
 
