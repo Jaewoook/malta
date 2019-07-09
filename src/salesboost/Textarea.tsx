@@ -10,6 +10,8 @@ import {
 } from "../core/atom/Textarea";
 
 const TextareaWrapper = styled(InnerTextarea)`
+  box-sizing: border-box;
+  border: 1px solid rgba(22, 27, 72, 0.2);
   background-color: ${({ disabled }) => disabled ? "rgba(22, 27, 72, 0.05)" : "#fff"};
   box-shadow: 0px 2px 6px 2px rgba(22, 27, 72, 0.08);
   color: ${({ disabled }) => disabled ? "rgba(22, 27, 72, 0.4)" : "rgba(22, 27, 72, 0.8)"};
@@ -17,6 +19,8 @@ const TextareaWrapper = styled(InnerTextarea)`
   font-weight: 300;
   line-height: 24px;
   padding: 16px;
+  outline: none;
+  resize: none;
   :focus {
     border: 1px solid rgb(69, 78, 223);
   }
