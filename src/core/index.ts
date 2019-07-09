@@ -6,7 +6,7 @@ export { Icon, IconProps } from "./atom/Icon";
 export { Image, ImageProps } from "./atom/Image";
 // Deprecated component
 // export { Input, InputProps } from "./atom/Input";
-export { Textarea, TextAreaProps } from "./atom/TextArea";
+export { Textarea, TextAreaProps } from "./atom/Textarea";
 export { Text, TextProps } from "./atom/Text";
 export { Br, BrProps } from "./atom/Br";
 export { Split, SplitProps } from "./atom/Split";
