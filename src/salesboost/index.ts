@@ -16,3 +16,4 @@ export { default as message } from "./Message2";
 export { default as notify } from "./Notification";
 export { default as dialog } from "./Dialog";
 export { Typo, TypoProps } from "./Typography";
+export { Textarea, TextareaProps } from "./Textarea";

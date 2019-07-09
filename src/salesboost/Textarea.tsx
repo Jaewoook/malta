@@ -32,7 +32,7 @@ interface Props {
   onTextChange?: (text: string) => void;
 }
 
-type TextareaProps = Props & SpaceProps & WidthProps & HeightProps;
+export type TextareaProps = Props & SpaceProps & WidthProps & HeightProps;
 
 export class Textarea extends React.Component<TextareaProps> {
 
