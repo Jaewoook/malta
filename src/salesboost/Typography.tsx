@@ -3,6 +3,7 @@ import {
   FontSizeProps,
   FontWeightProps,
   LineHeightProps,
+  TextAlignProps,
   SpaceProps,
 } from "styled-system";
 import { BlockProps, Text } from "../index";
@@ -103,12 +104,22 @@ const TypoInfo: TypoInfoType = {
 interface Props {
   name: TypoName;
   color?: string;
+  center?: boolean;
+  left?: boolean;
+  right?: boolean;
   onClick?: () => void;
 }
 
-export type TypoProps = Props & BlockProps & FontSizeProps & FontWeightProps & LineHeightProps & SpaceProps;
+export type TypoProps = Props & BlockProps & FontSizeProps & FontWeightProps & LineHeightProps & TextAlignProps & SpaceProps;
 
 export const Typo: React.FC<TypoProps> = (props) => {
-  const { color, name, ...styles } = props;
-  return <Text {...TypoInfo[name]} {...styles} color={color ? color : TypoInfo[name].color}>{props.children}</Text>;
+  const { color, name, left, center, right, ...styles } = props;
+  if (left)
+  return (
+    <Text {...TypoInfo[name]} {...styles}
+      color={color ? color : TypoInfo[name].color}
+      alignLeft={left} alignCenter={center} alignRight={right}>
+      {props.children}
+    </Text>
+  );
 };
