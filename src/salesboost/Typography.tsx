@@ -114,7 +114,6 @@ export type TypoProps = Props & BlockProps & FontSizeProps & FontWeightProps & L
 
 export const Typo: React.FC<TypoProps> = (props) => {
   const { color, name, left, center, right, ...styles } = props;
-  if (left)
   return (
     <Text {...TypoInfo[name]} {...styles}
       color={color ? color : TypoInfo[name].color}
