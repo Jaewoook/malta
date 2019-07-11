@@ -16,6 +16,7 @@ const TextareaWrapper = styled(InnerTextarea)`
   box-shadow: 0px 2px 6px 2px rgba(22, 27, 72, 0.08);
   color: ${({ disabled }) => disabled ? "rgba(22, 27, 72, 0.4)" : "rgba(22, 27, 72, 0.8)"};
   font-size: 16px;
+  font-family: Noto Sans KR, sans-serif;;
   font-weight: 300;
   line-height: 24px;
   padding: 16px;
