@@ -8,25 +8,21 @@ import {
 import styled from "styled-components";
 import {
   SpaceProps,
-  width,
   WidthProps,
+  HeightProps,
 } from "styled-system";
 
-const SelectWrapper = styled<any>(Block)`
+const SelectWrapper = styled(Block)`
   width: 327px;
-  ${width}
   position: relative;
 `;
 
-const HiddenSelect = styled.select`
-  display: none;
-`;
-
 interface SelectedProps {
+  disabled: boolean;
   isOpened: boolean;
 }
 
-const Selected = styled<SelectedProps | any>(Flex)`
+const Selected = styled(Flex)<SelectedProps>`
   width: 100%;
   height: 60px;
   padding: 0 16px;
@@ -35,15 +31,15 @@ const Selected = styled<SelectedProps | any>(Flex)`
   align-items: center;
   border-radius: 2px;
   border: solid 1px;
-  border-color: ${props => props.isOpened ? "#454edf" : "rgba(22, 27, 72, 0.2)"};
-  background-color: #fff;
+  border-color: ${({ isOpened }) => isOpened ? "#454edf" : "rgba(22, 27, 72, 0.2)"};
+  background-color: ${({ disabled }) => disabled ? "rgba(22, 27, 72, 0.05)" : "#fff"};
   box-shadow: 0 2px 6px 2px rgba(22, 27, 72, 0.03);
-  cursor: pointer;
+  cursor: ${({ disabled }) => disabled ? "not-allowed" : "pointer"};
   :hover {
-    border-color: ${props => !props.isOpened ? "rgba(22, 27, 72, 0.5)" : ""};
+    ${props => !props.isOpened ? "border-color: rgba(22, 27, 72, 0.5);" : ""}
   }
   ::placeholder {
-    color: rgba(22,35,72, 0.4);
+    color: rgba(22, 27, 72, 0.4);
   }
 `;
 
@@ -87,13 +83,15 @@ const DropdownItem = styled(Flex)`
 `;
 
 interface Props {
-  children: any;
+  children?: any;
+  disabled?: boolean;
   initialSelection?: number;
   placeholder?: string;
   onValueChange?: (value: string, index: number) => void;
 }
 
-type SelectProps = Props & SpaceProps & WidthProps;
+type SelectProps = Props & SpaceProps & WidthProps & HeightProps;
+
 
 interface State {
   index: number;
@@ -113,30 +111,19 @@ export class Select extends React.Component<SelectProps, State> {
     return options instanceof Array ? options[index].props.children : options.props.children;
   }
 
-  public render() {
-    const { children, onValueChange, ...styles } = this.props;
+  render() {
+    const { children, disabled, onValueChange, placeholder, height, ...styles } = this.props;
+    const { isOpened, value } = this.state;
     return (
       <SelectWrapper {...styles}>
-        <HiddenSelect>
-          {children}
-        </HiddenSelect>
-        <Selected isExpanded={this.state.isOpened} onClick={this.toggleDropdown}>
-          <Text fontSize={["16px", "18px"]} color="rgba(22,35,72,0.9)">{this.state.value || this.props.placeholder}</Text>
-          <Icon name={this.state.isOpened ? "arrow-up" : "arrow-down"} color="rgba(22,27,72,0.6)" size={16}/>
+        <Selected height={height} isOpened={isOpened} disabled={disabled} onClick={this.toggleDropdown}>
+          <Text fontSize={["16px", "18px"]} color="rgba(22,35,72,0.9)">{value || placeholder}</Text>
+          <Icon name={isOpened ? "arrow-up" : "arrow-down"} color="rgba(22,27,72,0.6)" size={16}/>
         </Selected>
         {this.renderDropdown()}
       </SelectWrapper>
     );
   }
-
-  toggleDropdown = () => {
-    this.setState(state => {
-      return {
-        ...state,
-        isOpened: !state.isOpened,
-      };
-    });
-  };
 
   renderDropdown = () => {
     const { children } = this.props;
@@ -152,7 +139,18 @@ export class Select extends React.Component<SelectProps, State> {
         )}
       </DropdownWrapper>
     );
-  };
+  }
+
+  toggleDropdown = () => {
+    if (this.props.disabled) {
+      return;
+    }
+
+    this.setState((state) => ({
+      ...state,
+      isOpened: !state.isOpened,
+    }));
+  }
 
   handleOptionClick = (index: number = 0) => {
     const { children, onValueChange } = this.props;
