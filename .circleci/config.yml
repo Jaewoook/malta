@@ -78,4 +78,6 @@ workflows:
             - prepare
           filters:
             branches:
-              only: dev
+              only:
+                - dev
+                - master
