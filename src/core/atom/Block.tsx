@@ -1,89 +1,89 @@
 import styled from "styled-components";
 import {
-  space,
-  SpaceProps,
-  width,
-  WidthProps,
-  height,
-  HeightProps,
-  color,
-  ColorProps,
-  justifySelf,
-  JustifySelfProps,
   alignSelf,
   AlignSelfProps,
-  order,
-  OrderProps,
+  border,
+  borderColor,
+  BorderColorProps,
+  BorderProps,
+  borderRadius,
+  BorderRadiusProps,
+  borders,
+  BordersProps,
+  bottom,
+  BottomProps,
+  boxShadow,
+  BoxShadowProps,
+  color,
+  ColorProps,
+  colorStyle,
+  ColorStyleProps,
   display,
   DisplayProps,
-  maxWidth,
-  MaxWidthProps,
-  maxHeight,
-  MaxHeightProps,
-  minWidth,
-  MinWidthProps,
-  minHeight,
-  MinHeightProps,
-  size,
-  SizeProps,
-  ratio,
-  RatioProps,
-  verticalAlign,
-  VerticalAlignProps,
+  flex,
   flexBasis,
   FlexBasisProps,
-  flex,
   FlexProps,
+  gridArea,
+  GridAreaProps,
   gridColumn,
   GridColumnProps,
   gridRow,
   GridRowProps,
-  gridArea,
-  GridAreaProps,
-  border,
-  BorderProps,
-  borders,
-  BordersProps,
-  borderRadius,
-  BorderRadiusProps,
-  boxShadow,
-  BoxShadowProps,
-  borderColor,
-  BorderColorProps,
+  height,
+  HeightProps,
+  justifySelf,
+  JustifySelfProps,
+  left,
+  LeftProps,
+  maxHeight,
+  MaxHeightProps,
+  maxWidth,
+  MaxWidthProps,
+  minHeight,
+  MinHeightProps,
+  minWidth,
+  MinWidthProps,
   opacity,
   OpacityProps,
+  order,
+  OrderProps,
   overflow,
   OverflowProps,
   position,
   PositionProps,
-  zIndex,
-  ZIndexProps,
-  top,
-  TopProps,
   right,
   RightProps,
-  bottom,
-  BottomProps,
-  left,
-  LeftProps,
+  size,
+  SizeProps,
+  space,
+  SpaceProps,
+  top,
+  TopProps,
+  verticalAlign,
+  VerticalAlignProps,
+  width,
+  WidthProps,
+  zIndex,
+  ZIndexProps,
 } from "styled-system";
 import {
+  cursor,
+  CursorProps,
   hover,
   HoverProps,
   ofReducer,
   OfReducerProps,
   transition,
   TransitionProps,
-  cursor,
-  CursorProps,
 } from "../../utils";
 
 export type BlockProps = SpaceProps & WidthProps & HeightProps & ColorProps
   & JustifySelfProps & AlignSelfProps & OrderProps & DisplayProps & MaxWidthProps & MaxHeightProps
-  & MinWidthProps & MinHeightProps & SizeProps & RatioProps & VerticalAlignProps & FlexBasisProps & OpacityProps
+  & MinWidthProps & MinHeightProps & SizeProps & VerticalAlignProps & FlexBasisProps & OpacityProps
   & FlexProps & GridColumnProps & GridRowProps & GridAreaProps & BordersProps & BorderRadiusProps & BoxShadowProps
   & BorderColorProps & OverflowProps & PositionProps & ZIndexProps & TopProps & RightProps & BottomProps & LeftProps
-  & HoverProps & OfReducerProps & TransitionProps & CursorProps & BorderProps;
+  & HoverProps & OfReducerProps & TransitionProps & CursorProps & BorderProps & ColorStyleProps;
 
 export const Block = styled.div<BlockProps>`
   box-sizing: border-box;
@@ -91,6 +91,7 @@ export const Block = styled.div<BlockProps>`
   ${width}
   ${height}
   ${color}
+  ${colorStyle}
   ${justifySelf}
   ${alignSelf}
   ${order}
@@ -100,13 +101,13 @@ export const Block = styled.div<BlockProps>`
   ${minWidth}
   ${minHeight}
   ${size}
-  ${ratio}
   ${verticalAlign}
   ${flexBasis}
   ${flex}
   ${gridColumn}
   ${gridRow}
   ${gridArea}
+  ${border}
   ${borders}
   ${borderRadius}
   ${boxShadow}

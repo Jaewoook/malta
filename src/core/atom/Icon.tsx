@@ -1,32 +1,29 @@
 import * as React from "react";
 import styled from "styled-components";
-import { color, ColorProps, space, SpaceProps } from "styled-system";
-import { getValueFromTheme, hover, HoverProps, cursor, CursorProps } from "../../utils";
+import { space, SpaceProps, textColor, TextColorProps } from "styled-system";
+import { cursor, CursorProps, hover, HoverProps } from "../../utils";
 
-type IconName = "arrow-down" | "arrow-left" | "arrow-right" | "arrow-up" | "back" | "check" | "circle-info" | "circle-question" | "circle-warning" | "circle-success" | "circle-error" | "close" | "crown" | "setting" | "giventake" | "gridview" | "helpbadge" | "listview" | "next" | "search" | "selectall" | "step" | "upload" | "reload" | "add" | "delete" | "doublearrow-left" | "doublearrow-right" | "edit" | "function" | "home" | "ascending" | "descending" | "logout" | "personal" | "support" | "link" | "global" | "guide" | "folder" | "hamburger" | "wand" | "download";
+type IconName = "arrow-down" | "arrow-left" | "arrow-right" | "arrow-up" | "back" | "check" | "circle-info" | "circle-question" | "circle-warning" | "circle-success" | "circle-error" | "close" | "crown" | "setting" | "giventake" | "gridview" | "helpbadge" | "listview" | "next" | "search" | "selectall" | "step" | "upload" | "reload" | "add" | "delete" | "doublearrow-left" | "doublearrow-right" | "edit" | "function" | "home" | "ascending" | "descending" | "logout" | "personal" | "support" | "link" | "global" | "guide" | "folder" | "hamburger" | "wand" | "download" | "statistics";
 
-interface Props {
+export interface IconProps extends HoverProps, TextColorProps, CursorProps, SpaceProps {
   name: IconName;
-  theme?: any;
   size?: number;
 }
 
-const StyledSvg = styled.svg.attrs((props: any) => ({
+const StyledSvg = styled.svg.attrs((props: { size?: number }) => ({
   xmlns: "http://www.w3.org/2000/svg",
   width: props.size,
   height: props.size,
-})) <any>`
+}))<any>`
   box-sizing: border-box;
-  ${color}
+  ${textColor}
   ${hover}
   ${cursor}
   ${space}
   transition: all 0.15s ease-out;
 `;
 
-export type IconProps = Props & HoverProps & ColorProps & CursorProps & SpaceProps;
-
-export const Icon: React.SFC<IconProps> = (props) => {
+export const Icon: React.FC<IconProps> = (props) => {
   const ic = getIcons(props.name);
   return (
     <StyledSvg {...props} viewBox={`0 0 ${ic.width} ${ic.height}`} >
@@ -324,6 +321,11 @@ const getIcons = (name: string) => {
       width: 24,
       height: 24,
       path: <path fill="currentColor" d="M12.999 16.537l3.39-3.39a.5.5 0 0 1 .707.707l-4.242 4.242a.5.5 0 0 1-.708 0l-4.242-4.242a.5.5 0 0 1 .707-.708l3.39 3.39A.507.507 0 0 1 12 16.5v-12a.5.5 0 1 1 1 0v12l-.001.037zm-.462.462a.507.507 0 0 1-.074 0l.037.037.037-.037zm8.963-3.756a.5.5 0 0 1 .5.5v4.5a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-4.5a.5.5 0 1 1 1 0v4.5a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1v-4.5a.5.5 0 0 1 .5-.5z" />,
+    },
+    statistics: {
+      width: 24,
+      height: 24,
+      path: <path fill="currentColor" d="M9.3993871,8.70181115 L5.46741549,12.6337828 C5.27215334,12.8290449 4.95557085,12.8290449 4.76030871,12.6337828 C4.56504656,12.4385206 4.56504656,12.1219381 4.76030871,11.926676 L8.93223872,7.75474597 C8.94164171,7.74534298 8.95132603,7.7363928 8.9612646,7.72789543 C9.10586349,7.59901008 9.31883497,7.56087116 9.50552955,7.64792827 L12.8460881,9.20565628 L18.5457379,4.07366856 C18.7509516,3.88889324 19.0671003,3.90546189 19.2518756,4.11067567 C19.4366509,4.31588944 19.4200822,4.63203807 19.2148685,4.81681338 L13.2697099,10.1698582 C13.1169626,10.3073925 12.9027539,10.333376 12.7270078,10.2530455 C12.7206922,10.2504066 12.7144025,10.2476282 12.7081424,10.2447091 L9.3993871,8.70181115 Z M7,14.2622424 C7.55228475,14.2622424 8,14.7099576 8,15.2622424 L8,18.2622424 C8,18.8145271 7.55228475,19.2622424 7,19.2622424 C6.44771525,19.2622424 6,18.8145271 6,18.2622424 L6,15.2622424 C6,14.7099576 6.44771525,14.2622424 7,14.2622424 Z M12,12.2622424 C12.5522847,12.2622424 13,12.7099576 13,13.2622424 L13,18.2622424 C13,18.8145271 12.5522847,19.2622424 12,19.2622424 C11.4477153,19.2622424 11,18.8145271 11,18.2622424 L11,13.2622424 C11,12.7099576 11.4477153,12.2622424 12,12.2622424 Z M17,9.26224239 C17.5522847,9.26224239 18,9.70995764 18,10.2622424 L18,18.2622424 C18,18.8145271 17.5522847,19.2622424 17,19.2622424 C16.4477153,19.2622424 16,18.8145271 16,18.2622424 L16,10.2622424 C16,9.70995764 16.4477153,9.26224239 17,9.26224239 Z" id="path-1"></path>,
     },
   };
   return icons[name];
