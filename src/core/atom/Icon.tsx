@@ -1,32 +1,29 @@
 import * as React from "react";
 import styled from "styled-components";
-import { color, ColorProps, space, SpaceProps } from "styled-system";
-import { hover, HoverProps, cursor, CursorProps } from "../../utils";
+import { space, SpaceProps, textColor, TextColorProps } from "styled-system";
+import { cursor, CursorProps, hover, HoverProps } from "../../utils";
 
 type IconName = "arrow-down" | "arrow-left" | "arrow-right" | "arrow-up" | "back" | "check" | "circle-info" | "circle-question" | "circle-warning" | "circle-success" | "circle-error" | "close" | "crown" | "setting" | "giventake" | "gridview" | "helpbadge" | "listview" | "next" | "search" | "selectall" | "step" | "upload" | "reload" | "add" | "delete" | "doublearrow-left" | "doublearrow-right" | "edit" | "function" | "home" | "ascending" | "descending" | "logout" | "personal" | "support" | "link" | "global" | "guide" | "folder" | "hamburger" | "wand" | "download" | "statistics";
 
-interface Props {
+export interface IconProps extends HoverProps, TextColorProps, CursorProps, SpaceProps {
   name: IconName;
-  theme?: any;
   size?: number;
 }
 
-const StyledSvg = styled.svg.attrs((props: any) => ({
+const StyledSvg = styled.svg.attrs((props: { size?: number }) => ({
   xmlns: "http://www.w3.org/2000/svg",
   width: props.size,
   height: props.size,
-})) <any>`
+}))<any>`
   box-sizing: border-box;
-  ${color}
+  ${textColor}
   ${hover}
   ${cursor}
   ${space}
   transition: all 0.15s ease-out;
 `;
 
-export type IconProps = Props & HoverProps & ColorProps & CursorProps & SpaceProps;
-
-export const Icon: React.SFC<IconProps> = (props) => {
+export const Icon: React.FC<IconProps> = (props) => {
   const ic = getIcons(props.name);
   return (
     <StyledSvg {...props} viewBox={`0 0 ${ic.width} ${ic.height}`} >
