@@ -13,7 +13,7 @@ import {
 } from "styled-system";
 
 const SelectWrapper = styled(Block)`
-  width: 327px;
+  width: ${({ width }) => width || "327px"};
   position: relative;
 `;
 
