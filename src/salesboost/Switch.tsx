@@ -25,6 +25,7 @@ const Wrapper = styled.div<any>`
   transition: background 0.1s ease-out;
   :hover {
     background: ${props => props.checked ? "#FFFFFF" : "rgba(27, 28, 37, 0.1)"};
+    border: ${props => props.checked ? "1px solid rgb(57, 67, 226)" : "1px solid rgba(27, 28, 37, 0.6)"};
   }
   ${space}
 `;
