@@ -13,9 +13,10 @@ const Wrapper = styled.div<any>`
   display: flex;
   box-sizing: border-box;
   position: relative;
-  background: ${props => (props.disabled ? "rgba(22,27,72,0.2)" : props.checked ? "#23C1A6" : "rgba(22,27,72,0.2)")};
+  background: ${props => props.checked ? "#FFFFFF" : "rgba(27, 28, 37, 0.1)"};
   height: 24px;
   width: 44px;
+  border: ${props => props.checked ? "1px solid rgba(27, 28, 37, 0.2)" : null};
   border-radius: 12px;
   align-items: center;
   padding-left: 2px;
@@ -23,7 +24,8 @@ const Wrapper = styled.div<any>`
   cursor: pointer;
   transition: background 0.1s ease-out;
   :hover {
-     background: ${props => (props.disabled ? "rgba(22,27,72,0.2)" : props.checked ? "#0ea58a" : "rgba(22,27,72,0.3)")};
+    background: ${props => props.checked ? "#FFFFFF" : "rgba(27, 28, 37, 0.1)"};
+    border: ${props => props.checked ? "1px solid rgb(57, 67, 226)" : "1px solid rgba(27, 28, 37, 0.6)"};
   }
   ${space}
 `;
@@ -34,7 +36,7 @@ const Circle = styled.div<any>`
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: ${props => props.disabled ? "rgba(255,255,255,0.6)" : "#FFF"};
+  background: ${props => props.checked ? "rgb(57, 67, 226)" : "#FFFFFF"};
   transform: translateX(${ props => props.checked ? "20" : "0"}px);
   transition: transform 0.1s ease-out;
 `;
@@ -43,7 +45,6 @@ const Circle = styled.div<any>`
 interface Props {
   checked?: boolean;
   loading?: boolean;
-  disabled?: boolean;
   onClick?: any;
   style?: any;
 }
@@ -52,26 +53,24 @@ export type SwitchProps = React.FC<Props & SpaceProps>;
 
 export const Switch: SwitchProps = (props) => {
 
-  const { checked, onClick, disabled, loading, ...rest } = props;
+  const { checked, onClick, loading, ...rest } = props;
 
   return (
     <Wrapper
       checked={checked}
-      disabled={disabled}
-      onClick={disabled ? () => { } : onClick}
+      onClick={onClick}
       {...rest}>
       {loading ?
         <Flex alignItems="center" justifyContent="center" width="100%" height="100%">
           <Spinner scale={0.5} color="#FFF" />
         </Flex>
-        : <Circle checked={checked} disabled={disabled} />
+        : <Circle checked={checked} />
       }
     </Wrapper>
   );
 };
 
 Switch.defaultProps = {
-  disabled: false,
   checked: false,
   loading: false,
   onClick: () => { },
