@@ -1,17 +1,12 @@
 import * as React from "react";
 import {
   Block,
+  BlockProps,
   Flex,
   Text,
 } from "../core";
 import styled from "styled-components";
-import { SpaceProps, width, WidthProps } from "styled-system";
 import { theme } from "./theme";
-
-const InputWrapper = styled<any>(Block)`
-  width: 327ox;
-  ${width}
-`;
 
 interface InnerInputProps {
   disabled?: boolean;
@@ -23,13 +18,12 @@ const InnerInput = styled.input<InnerInputProps>`
   height: 52px;
   box-sizing: border-box;
   padding: 0 16px;
-  color: #162348;
+  color: rgba(22, 27, 72, 0.9);
   font-size: 16px;
   font-family: ${theme.fontfamilies.sans};
-  font-weight: ${theme.fontweights.regular};
+  font-weight: 300;
   background: ${({ disabled }) => disabled ? "rgba(22, 27, 72, 0.05)" : "#fff"};
   border-radius: 2px;
-  box-shadow: 0 2px 6px 2px rgba(22, 27, 72, 0.03);
   border: ${({ valid }) => `${valid ? "rgba(22, 27, 72, 0.2)" : "#f51a1a"} solid 1px`};
   outline: none;
   -webkit-appearance: none;
@@ -37,7 +31,7 @@ const InnerInput = styled.input<InnerInputProps>`
     border: #454edf solid 1px;
   }
   ::placeholder {
-    opacity: 0.4;
+    color: rgba(22, 27, 72, 0.4);
   }
   ::-webkit-outer-spin-button,
   ::-webkit-inner-spin-button {
@@ -49,7 +43,7 @@ const InnerInput = styled.input<InnerInputProps>`
   }
 `;
 
-const Title = styled<any>(Text)`
+const Title = styled(Text)`
   margin-bottom: 8px;
   opacity: 0.8;
   color: #162348;
@@ -57,14 +51,14 @@ const Title = styled<any>(Text)`
   line-height: 20px;
 `;
 
-const Description = styled<any>(Text)`
+const Description = styled(Text)`
   margin-top: 8px;
   opacity: 0.8;
   color: #161b48;
   font-size: 14px;
 `;
 
-const Error = styled<any>(Text)`
+const Error = styled(Text)`
   margin-top: 8px;
   color: #f51a1a;
   opacity: 0.9;
@@ -82,17 +76,13 @@ const HelpMark = styled(Flex)`
   margin-right: 8px;
 `;
 
-interface HelpProps {
-  children: string;
-}
-
-const Help = (props: HelpProps) => {
+const Help: React.FC = ({ children }) => {
   return (
     <Flex width="100%" flexDirection="row" alignItems="center" mb={2}>
       <HelpMark>
         <Text color="#fff" fontSize="14px">HELP</Text>
       </HelpMark>
-      <Text color="#161fba" fontSize="14px" lineHeight="24px">{props.children}</Text>
+      <Text color="#161fba" fontSize="14px" lineHeight="24px">{children}</Text>
     </Flex>
   );
 };
@@ -100,6 +90,7 @@ const Help = (props: HelpProps) => {
 interface Props {
   type: string;
   value: string;
+  innerInputProps?: any;
   placeholder?: string;
   disabled?: boolean;
   helpText?: string;
@@ -110,19 +101,23 @@ interface Props {
   onEnterPress?: () => void;
 }
 
-type InputProps = Props & SpaceProps & WidthProps;
+type InputProps = Props & BlockProps;
 
 export class Input extends React.Component<InputProps> {
 
   static defaultProps = {
+    width: "327px",
     type: "text",
     value: "",
   };
 
   render() {
-    const { title, description, placeholder, helpText, errorText, disabled, value, type, onTextChange, onEnterPress, ...styles } = this.props;
+    const {
+      title, description, innerInputProps = {},
+      placeholder, helpText, errorText, disabled, value, type,
+      onTextChange, onEnterPress, color, ...styles } = this.props;
     return (
-      <InputWrapper {...styles}>
+      <Block {...styles}>
         {title ? <Title>{title}</Title> : null}
         {helpText ? <Help>{helpText}</Help> : null}
         <InnerInput
@@ -132,9 +127,10 @@ export class Input extends React.Component<InputProps> {
           valid={!errorText}
           disabled={disabled}
           placeholder={placeholder}
-          value={value}/>
+          value={value}
+          {...innerInputProps} />
         {this.renderBottomText()}
-      </InputWrapper>
+      </Block>
     );
   }
 
