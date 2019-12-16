@@ -118,7 +118,9 @@ export class Select extends React.Component<SelectProps, State> {
     return (
       <SelectWrapper ref={this.containerRef} {...styles}>
         <Selected height={height} isOpened={isOpened} disabled={disabled} onClick={this.toggleDropdown}>
-          <Typo name="body_161616_nv80_300" lineHeight="24px">{value || placeholder}</Typo>
+          <Typo name="body_161616_nv80_300" lineHeight="24px" style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+            {value || placeholder}
+          </Typo>
           <Icon name={isOpened ? "arrow-up" : "arrow-down"} color="rgba(22,27,72,0.6)" size={16}/>
         </Selected>
         {this.renderDropdown()}
